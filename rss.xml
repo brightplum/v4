@@ -1,41 +1,616 @@
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_rss' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-rss.html.twig' -->
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://bright-plum-v4.ddev.site/">
+<rss version="2.0" xml:base="http://127.0.0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>brightplum-v4</title>
-    <link>https://bright-plum-v4.ddev.site/</link>
-    <description/>
+    <link>http://127.0.0.1/</link>
+    <description></description>
     <language>en</language>
     
-    <item>
-  <title>Can you see this?</title>
-  <link>https://bright-plum-v4.ddev.site/node/2</link>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_row_rss' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-row-rss.html.twig' -->
+<item>
+  <title>Test one</title>
+  <link>http://127.0.0.1/node/7</link>
   <description>
-&lt;span&gt;Can you see this?&lt;/span&gt;
 
-            &lt;div class="text-content clearfix field field--name-field-title-for-blog field--type-text field--label-hidden field__item"&gt;How about this?&lt;/div&gt;
-      
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--title--case-studies.html.twig
+   x field--node--title.html.twig
+   * field--node--case-studies.html.twig
+   * field--title.html.twig
+   * field--string.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--title.html.twig&#039; --&gt;
+&lt;span&gt;Test one&lt;/span&gt;
 
-&lt;span&gt;&lt;time datetime="2024-05-03T12:00:36-05:00" title="Friday, May 3, 2024 - 12:00"&gt;Fri, 05/03/2024 - 12:00&lt;/time&gt;
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--title.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--uid--case-studies.html.twig
+   x field--node--uid.html.twig
+   * field--node--case-studies.html.twig
+   * field--uid.html.twig
+   * field--entity-reference.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--uid.html.twig&#039; --&gt;
+&lt;span&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;username&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/user/username.html.twig&#039; --&gt;
+&lt;span&gt;admin&lt;/span&gt;
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/user/username.html.twig&#039; --&gt;
+
 &lt;/span&gt;
 
-            &lt;div class="field field--name-field-logo-or-picture field--type-image field--label-hidden field__item"&gt;  &lt;img loading="lazy" src="https://bright-plum-v4.ddev.site/sites/default/files/2024-05/Screenshot%202024-04-24%20at%2014.27.26.png" width="397" height="425" alt="Drupalcon Black In Drupal Logo"&gt;
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--uid.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--created--case-studies.html.twig
+   x field--node--created.html.twig
+   * field--node--case-studies.html.twig
+   * field--created.html.twig
+   * field--created.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--created.html.twig&#039; --&gt;
+&lt;span&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;time&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/time.html.twig&#039; --&gt;
+&lt;time datetime=&quot;2024-05-06T23:33:24-05:00&quot; title=&quot;Monday, May 6, 2024 - 23:33&quot;&gt;Mon, 05/06/2024 - 23:33&lt;/time&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/time.html.twig&#039; --&gt;
+
+&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--created.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--field-case-study-picture--case-studies.html.twig
+   * field--node--field-case-study-picture.html.twig
+   * field--node--case-studies.html.twig
+   * field--field-case-study-picture.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+            &lt;div&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;media&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--default.html.twig
+   * media--image.html.twig
+   * media--default.html.twig
+   x media.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/content/media.html.twig&#039; --&gt;
+&lt;div&gt;
+  
+  
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+  &lt;div&gt;
+    &lt;div class=&quot;visually-hidden&quot;&gt;Image&lt;/div&gt;
+              &lt;div&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image_formatter&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image-formatter.html.twig&#039; --&gt;
+  
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image_style&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image-style.html.twig&#039; --&gt;
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image.html.twig&#039; --&gt;
+&lt;img loading=&quot;lazy&quot; src=&quot;/sites/default/files/styles/large/public/2024-05/sjorgens.png?itok=WgFsz1G7&quot; width=&quot;480&quot; height=&quot;240&quot; alt=&quot;fre&quot; /&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image.html.twig&#039; --&gt;
+
+
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image-style.html.twig&#039; --&gt;
+
+
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image-formatter.html.twig&#039; --&gt;
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+&lt;/div&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/content/media.html.twig&#039; --&gt;
 
 &lt;/div&gt;
       
-            &lt;div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"&gt;&lt;p&gt;Wargs chill rides. You cannot hide. I see you. There is no life in the void. Only death. Drops sitting Bracegirdle forges burned. Delayed hesitate wins from acorn Bifur. Girion quaint pay 14th that reach tomato mustn't glows. Storm arts fortress step drowned Dimrill parts mouse? Injuries foul Baggins greatest hands. Azog ship remembrance uttered suspicious shieldmaiden echoes entrusted flower. Gandalf swim suck burned swords trick hopeless. Arkenstone bell pits swarming mantle dawn crush.&lt;br&gt;Finished swept peril silver Dwarvish secret pie. Probably delay prove. Eat Lake-men looking reference. Committees understand Hobbiton! It must be taken deep into Mordor and cast back into the fiery chasm from whence it came. Gathering think sponge rip master's dominion flagon Envenom ai-'d visit. Oliphaunt rippling familiar ate Théoden's track leagues awaits. Resown ring Gandalf's missed one-fourteenth ceaselessly tunnels higher. Fit Samwise Gamgee thicket toy-makers. Easily character unoccupied pushing East-farthing stubbornness.&lt;br&gt;Amusing favor pain consumed Arwen Evenstar brooded. Family squash Durin plates spread spared rallying new knocks. Reference worse warts tubes Dol. Giant dear heavy Glóin. Massing prey craftsmen hoard skinned wall bitterness Barad-dûr handling? Gloin castle road inflicted. Rohan twisted lucky line delayed loses nightly. I was there the day the strength of Men failed.&lt;/p&gt;&lt;/div&gt;
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--body--case-studies.html.twig
+   * field--node--body.html.twig
+   * field--node--case-studies.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+            &lt;div&gt;&lt;p&gt;Thios is a test&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
       
-  &lt;div class="field field--name-field-blog-tag field--type-entity-reference field--label-above"&gt;
-    &lt;div class="field__label"&gt;Blog Tag&lt;/div&gt;
-          &lt;div class="field__items"&gt;
-              &lt;div class="field__item"&gt;&lt;a href="https://bright-plum-v4.ddev.site/taxonomy/term/1" hreflang="en"&gt;Code Info&lt;/a&gt;&lt;/div&gt;
-              &lt;/div&gt;
-      &lt;/div&gt;
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;links__node&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * links--node.html.twig
+   x links.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/navigation/links.html.twig&#039; --&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/navigation/links.html.twig&#039; --&gt;
+
 </description>
-  <pubDate>Fri, 03 May 2024 17:00:36 +0000</pubDate>
+  <pubDate>Tue, 07 May 2024 04:33:24 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">2 at https://bright-plum-v4.ddev.site</guid>
+    <guid isPermaLink="false">7 at http://127.0.0.1</guid>
     </item>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-row-rss.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_row_rss' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-row-rss.html.twig' -->
+<item>
+  <title>Legacy Project Chicago</title>
+  <link>http://127.0.0.1/node/5</link>
+  <description>
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--title--case-studies.html.twig
+   x field--node--title.html.twig
+   * field--node--case-studies.html.twig
+   * field--title.html.twig
+   * field--string.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--title.html.twig&#039; --&gt;
+&lt;span&gt;Legacy Project Chicago&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--title.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--uid--case-studies.html.twig
+   x field--node--uid.html.twig
+   * field--node--case-studies.html.twig
+   * field--uid.html.twig
+   * field--entity-reference.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--uid.html.twig&#039; --&gt;
+&lt;span&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;username&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/user/username.html.twig&#039; --&gt;
+&lt;span&gt;admin&lt;/span&gt;
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/user/username.html.twig&#039; --&gt;
+
+&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--uid.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--created--case-studies.html.twig
+   x field--node--created.html.twig
+   * field--node--case-studies.html.twig
+   * field--created.html.twig
+   * field--created.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--created.html.twig&#039; --&gt;
+&lt;span&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;time&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/time.html.twig&#039; --&gt;
+&lt;time datetime=&quot;2024-05-06T20:10:28-05:00&quot; title=&quot;Monday, May 6, 2024 - 20:10&quot;&gt;Mon, 05/06/2024 - 20:10&lt;/time&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/time.html.twig&#039; --&gt;
+
+&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--created.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--field-case-study-picture--case-studies.html.twig
+   * field--node--field-case-study-picture.html.twig
+   * field--node--case-studies.html.twig
+   * field--field-case-study-picture.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+            &lt;div&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;media&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--default.html.twig
+   * media--image.html.twig
+   * media--default.html.twig
+   x media.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/content/media.html.twig&#039; --&gt;
+&lt;div&gt;
+  
+  
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+  &lt;div&gt;
+    &lt;div class=&quot;visually-hidden&quot;&gt;Image&lt;/div&gt;
+              &lt;div&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image_formatter&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image-formatter.html.twig&#039; --&gt;
+  
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image_style&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image-style.html.twig&#039; --&gt;
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image.html.twig&#039; --&gt;
+&lt;img loading=&quot;lazy&quot; src=&quot;/sites/default/files/styles/large/public/2024-05/legacy.png?itok=7RPE6q_s&quot; width=&quot;480&quot; height=&quot;240&quot; alt=&quot;Legacy Project Chicag&quot; /&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image.html.twig&#039; --&gt;
+
+
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image-style.html.twig&#039; --&gt;
+
+
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image-formatter.html.twig&#039; --&gt;
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+&lt;/div&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/content/media.html.twig&#039; --&gt;
+
+&lt;/div&gt;
+      
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--body--case-studies.html.twig
+   * field--node--body.html.twig
+   * field--node--case-studies.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+            &lt;div&gt;&lt;p&gt;During the transition from Drupal 9 to 10, there were permission issues. There were many modules that fueled this issue, but we resolved it by making a custom module that overrode the other modules issues.&amp;nbsp;&lt;br&gt;&lt;br&gt;This upgrade took close to 60 hours and was extensively tested for quality assurance.&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+      
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;links__node&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * links--node.html.twig
+   x links.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/navigation/links.html.twig&#039; --&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/navigation/links.html.twig&#039; --&gt;
+
+</description>
+  <pubDate>Tue, 07 May 2024 01:10:28 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">5 at http://127.0.0.1</guid>
+    </item>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-row-rss.html.twig' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_row_rss' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-row-rss.html.twig' -->
+<item>
+  <title>Sjogren’s Foundation</title>
+  <link>http://127.0.0.1/node/4</link>
+  <description>
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--title--case-studies.html.twig
+   x field--node--title.html.twig
+   * field--node--case-studies.html.twig
+   * field--title.html.twig
+   * field--string.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--title.html.twig&#039; --&gt;
+&lt;span&gt;Sjogren’s Foundation&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--title.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--uid--case-studies.html.twig
+   x field--node--uid.html.twig
+   * field--node--case-studies.html.twig
+   * field--uid.html.twig
+   * field--entity-reference.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--uid.html.twig&#039; --&gt;
+&lt;span&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;username&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/user/username.html.twig&#039; --&gt;
+&lt;span&gt;admin&lt;/span&gt;
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/user/username.html.twig&#039; --&gt;
+
+&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--uid.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--created--case-studies.html.twig
+   x field--node--created.html.twig
+   * field--node--case-studies.html.twig
+   * field--created.html.twig
+   * field--created.html.twig
+   * field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/field--node--created.html.twig&#039; --&gt;
+&lt;span&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;time&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/time.html.twig&#039; --&gt;
+&lt;time datetime=&quot;2024-05-06T20:08:16-05:00&quot; title=&quot;Monday, May 6, 2024 - 20:08&quot;&gt;Mon, 05/06/2024 - 20:08&lt;/time&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/time.html.twig&#039; --&gt;
+
+&lt;/span&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/field--node--created.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--field-case-study-picture--case-studies.html.twig
+   * field--node--field-case-study-picture.html.twig
+   * field--node--case-studies.html.twig
+   * field--field-case-study-picture.html.twig
+   * field--entity-reference.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+            &lt;div&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;media&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--default.html.twig
+   * media--image.html.twig
+   * media--default.html.twig
+   x media.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/content/media.html.twig&#039; --&gt;
+&lt;div&gt;
+  
+  
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+  &lt;div&gt;
+    &lt;div class=&quot;visually-hidden&quot;&gt;Image&lt;/div&gt;
+              &lt;div&gt;
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image_formatter&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image-formatter.html.twig&#039; --&gt;
+  
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image_style&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image-style.html.twig&#039; --&gt;
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;image&#039; --&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/field/image.html.twig&#039; --&gt;
+&lt;img loading=&quot;lazy&quot; src=&quot;/sites/default/files/styles/large/public/2024-05/sjorgens.png?itok=WgFsz1G7&quot; width=&quot;480&quot; height=&quot;240&quot; alt=&quot;fre&quot; /&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image.html.twig&#039; --&gt;
+
+
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image-style.html.twig&#039; --&gt;
+
+
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/field/image-formatter.html.twig&#039; --&gt;
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+&lt;/div&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/content/media.html.twig&#039; --&gt;
+
+&lt;/div&gt;
+      
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;field&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * field--node--body--case-studies.html.twig
+   * field--node--body.html.twig
+   * field--node--case-studies.html.twig
+   * field--body.html.twig
+   * field--text-with-summary.html.twig
+   x field.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+            &lt;div&gt;&lt;p&gt;During the transition from Drupal 8 to Drupal 10, there were many difficulties that had to do a lot with undoing confusing code and not good practice code from previous developers. To fix these issues, we did a lot of testing and made careful and thoughtful changes.&lt;br&gt;&lt;br&gt;The site is stable now and we’ve moved from maintenance to working on new features for the site. Our work to refactor and update build customer trust and offered the opportunity to start work on many new features.&lt;/p&gt;&lt;/div&gt;
+      
+&lt;!-- END OUTPUT from &#039;themes/custom/brightplum/templates/field/field.html.twig&#039; --&gt;
+
+
+
+&lt;!-- THEME DEBUG --&gt;
+&lt;!-- THEME HOOK: &#039;links__node&#039; --&gt;
+&lt;!-- FILE NAME SUGGESTIONS:
+   * links--node.html.twig
+   x links.html.twig
+--&gt;
+&lt;!-- BEGIN OUTPUT from &#039;core/themes/stable9/templates/navigation/links.html.twig&#039; --&gt;
+
+&lt;!-- END OUTPUT from &#039;core/themes/stable9/templates/navigation/links.html.twig&#039; --&gt;
+
+</description>
+  <pubDate>Tue, 07 May 2024 01:08:16 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">4 at http://127.0.0.1</guid>
+    </item>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-row-rss.html.twig' -->
+
 
   </channel>
 </rss>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-rss.html.twig' -->
+
