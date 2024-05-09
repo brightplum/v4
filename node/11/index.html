@@ -3,7 +3,9 @@
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'html' -->
 <!-- FILE NAME SUGGESTIONS:
-   * html--blogs.html.twig
+   * html--node--11.html.twig
+   * html--node--%.html.twig
+   * html--node.html.twig
    x html.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/layout/html.html.twig' -->
@@ -17,14 +19,16 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="/themes/custom/brightplum/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="http://127.0.0.1/node/11" />
+<link rel="shortlink" href="http://127.0.0.1/node/11" />
 
-    <title>Blogs | brightplum-v4</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EV6F3YKtc6Fes9ErLOK9dEdc6Ktqc-biaZI18923g3Q.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ynLTC0v1geTern5KaU5qQB2ZRYc" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Kf9rFHc3uxDw7YNzTgPcPSPI8BfhGRZ62g2myDoJbR0.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ynLTC0v1geTern5KaU5qQB2ZRYc" />
+    <title>How to Implement Automatization Deployment Gitlab to Pantheon | brightplum-v4</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_47wfT6Q2O5tjBHJqjhyNr-1qqLnwXZH1TaiXjkjxRLs.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Fc1_JSrRggb2G6tIzlUpTnMg6rMN8gRofUXOJtdS3-Q.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
 
     
   </head>
-  <body class="path-blogs">
+  <body class="path-node">
         <a href="#main-content" class="visually-hidden focusable">
       Skip to main content
     </a>
@@ -40,7 +44,9 @@
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'page' -->
 <!-- FILE NAME SUGGESTIONS:
-   * page--blogs.html.twig
+   * page--node--11.html.twig
+   * page--node--%.html.twig
+   * page--node.html.twig
    x page.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/layout/page.html.twig' -->
@@ -119,7 +125,7 @@
         <a href="/who-we-are" data-drupal-link-system-path="node/8">Who we are</a>
               </li>
           <li>
-        <a href="/blog">Blog</a>
+        <a href="/blog" data-drupal-link-system-path="blog">Blog</a>
               </li>
         </ul>
   
@@ -137,8 +143,8 @@
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'block' -->
 <!-- FILE NAME SUGGESTIONS:
-   * block--brightplum-getintouchcta.html.twig
-   * block--block-content--a14f704d-c3e0-42ca-85d9-142393e3aa91.html.twig
+   * block--brightplum-getintouch.html.twig
+   * block--block-content--97c1013c-79c5-4826-ab7b-0eab1a5a8d2e.html.twig
    * block--block-content.html.twig
    * block--block-content.html.twig
    x block.html.twig
@@ -146,7 +152,7 @@
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/block/block.html.twig' -->
 
 
-<div id="block-brightplum-getintouchcta" class="block block-block-content block-block-contenta14f704d-c3e0-42ca-85d9-142393e3aa91">
+<div id="block-brightplum-getintouch" class="block block-block-content block-block-content97c1013c-79c5-4826-ab7b-0eab1a5a8d2e">
   
     
       <div class="block__content">
@@ -164,7 +170,7 @@
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-            <div><p class="button-white"><a href="#">Get in Touch</a></p></div>
+            <div><p class="button-white"><a href="mailto:fredric@brightplum.com">Get in Touch</a></p></div>
       
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
@@ -239,44 +245,126 @@
       
 
 <!-- THEME DEBUG -->
-<!-- THEME HOOK: 'container' -->
-<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/form/container.html.twig' -->
-<div class="views-element-container">
+<!-- THEME HOOK: 'node' -->
+<!-- FILE NAME SUGGESTIONS:
+   * node--view--frontpage--page-1.html.twig
+   * node--view--frontpage.html.twig
+   * node--11--full.html.twig
+   * node--11.html.twig
+   x node--blog--full.html.twig
+   * node--blog.html.twig
+   * node--full.html.twig
+   * node.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/content/node--blog--full.html.twig' -->
+
+
+<article data-history-node-id="11">
+  <div class="blog-full">
+    <div class="blog-full__header">
+      <div class="container-blog">
+        <div class="blog-full__title">
+          <h2>
+            
 
 <!-- THEME DEBUG -->
-<!-- THEME HOOK: 'views_view' -->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/views/views-view.html.twig' -->
-<div class="js-view-dom-id-541398d1ef684fae5884ec2eb9b4b38f77086781fb167266a7900712d9acadc8">
-  
-  
-  
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--node--title--blog.html.twig
+   x field--node--title.html.twig
+   * field--node--blog.html.twig
+   * field--title.html.twig
+   * field--string.html.twig
+   * field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/field--node--title.html.twig' -->
+<span>How to Implement Automatization Deployment Gitlab to Pantheon</span>
 
-  
-  
-  
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/field--node--title.html.twig' -->
 
-    
+
+          </h2>
+        </div>
+        <div class="blog-full__image">
+          
 
 <!-- THEME DEBUG -->
-<!-- THEME HOOK: 'views_mini_pager' -->
-<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-mini-pager.html.twig' -->
-
-<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-mini-pager.html.twig' -->
-
-
-
+<!-- THEME HOOK: 'media' -->
+<!-- FILE NAME SUGGESTIONS:
+   * media--source-image.html.twig
+   * media--image--default.html.twig
+   * media--image.html.twig
+   * media--default.html.twig
+   x media.html.twig
+-->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
+<div>
   
   
 
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--media--field-media-image--image.html.twig
+   * field--media--field-media-image.html.twig
+   * field--media--image.html.twig
+   * field--field-media-image.html.twig
+   * field--image.html.twig
+   x field.html.twig
+-->
+<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
+
+  <div>
+    <div class="visually-hidden">Image</div>
+              <div>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
   
-  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_style' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-style.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/styles/large/public/2024-05/blog1_1.png?itok=OWFENzop" width="480" height="252" alt="blog" />
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-style.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+</div>
+          </div>
+
+<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
+
+
 </div>
 
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/views/views-view.html.twig' -->
+<!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
 
-<!-- END OUTPUT from 'core/themes/stable9/templates/form/container.html.twig' -->
+        </div>
+      </div>
+    </div>
+    <div class="blog-full__body container-blog">
+      <span class="blog-full__body--date">Submitted on: May 8 2024</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</article>
+
+<!-- END OUTPUT from 'themes/custom/brightplum/templates/content/node--blog--full.html.twig' -->
 
 
     </div>
@@ -317,7 +405,7 @@
         </div>
       </div>
       <div class="footer__top--right button-purple">
-        <a href="/case-studies">Tell us about your project</a>
+        <a href="https://calendly.com/brightplum/30min">Tell us about your project</a>
       </div>
     </div>
     <div class="footer__bottom">
@@ -346,8 +434,8 @@
 
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"blogs","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ef007a8e11297a57dcb093a28770c6b61ebe1861a389119340b6f7bda4048e1f"}}</script>
-<script src="/sites/default/files/js/js_MSgJa8AlpG8yCGtRPh6vH3gIU9ylqaj_kdjwPavRGsw.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ynLTC0v1geTern5KaU5qQB2ZRYc"></script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/11","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ef007a8e11297a57dcb093a28770c6b61ebe1861a389119340b6f7bda4048e1f"}}</script>
+<script src="/sites/default/files/js/js_lembQ2hZt7s2_DkbM1caTTlNP2LuKRMfS6wxgymq4Lc.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x"></script>
 
   </body>
 </html>

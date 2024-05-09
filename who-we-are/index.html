@@ -24,7 +24,7 @@
 
     <title>Who we are | brightplum-v4</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_B2Ox1HN4vmwbwyztCEVQuEWuQXCcUHODAyZhY7AyfsM.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxFyDEOwCAIAMAPWX0TRAIkaAnI4O879sbLm4fWQEhqGMpy3GoNthfBnjzXdHNzCOAAlxwzysH6P722F5qm0PwAv9Me5Q" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Kf9rFHc3uxDw7YNzTgPcPSPI8BfhGRZ62g2myDoJbR0.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxFyDEOwCAIAMAPWX0TRAIkaAnI4O879sbLm4fWQEhqGMpy3GoNthfBnjzXdHNzCOAAlxwzysH6P722F5qm0PwAv9Me5Q" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Fc1_JSrRggb2G6tIzlUpTnMg6rMN8gRofUXOJtdS3-Q.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxFyDEOwCAIAMAPWX0TRAIkaAnI4O879sbLm4fWQEhqGMpy3GoNthfBnjzXdHNzCOAAlxwzysH6P722F5qm0PwAv9Me5Q" />
 
     
   </head>
@@ -125,7 +125,7 @@
         <a href="/who-we-are" data-drupal-link-system-path="node/8" class="is-active">Who we are</a>
               </li>
           <li>
-        <a href="/blog">Blog</a>
+        <a href="/blog" data-drupal-link-system-path="blog">Blog</a>
               </li>
         </ul>
   
@@ -143,8 +143,8 @@
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'block' -->
 <!-- FILE NAME SUGGESTIONS:
-   * block--brightplum-getintouchcta.html.twig
-   * block--block-content--a14f704d-c3e0-42ca-85d9-142393e3aa91.html.twig
+   * block--brightplum-getintouch.html.twig
+   * block--block-content--97c1013c-79c5-4826-ab7b-0eab1a5a8d2e.html.twig
    * block--block-content.html.twig
    * block--block-content.html.twig
    x block.html.twig
@@ -152,7 +152,7 @@
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/block/block.html.twig' -->
 
 
-<div id="block-brightplum-getintouchcta" class="block block-block-content block-block-contenta14f704d-c3e0-42ca-85d9-142393e3aa91">
+<div id="block-brightplum-getintouch" class="block block-block-content block-block-content97c1013c-79c5-4826-ab7b-0eab1a5a8d2e">
   
     
       <div class="block__content">
@@ -170,7 +170,7 @@
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-            <div><p class="button-white"><a href="#">Get in Touch</a></p></div>
+            <div><p class="button-white"><a href="mailto:fredric@brightplum.com">Get in Touch</a></p></div>
       
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
@@ -307,29 +307,41 @@
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
 <!-- FILE NAME SUGGESTIONS:
-   * paragraph--team-grid--default.html.twig
-   * paragraph--team-grid.html.twig
+   * paragraph--body--default.html.twig
+   x paragraph--body.html.twig
    * paragraph--default.html.twig
-   x paragraph.html.twig
+   * paragraph.html.twig
 -->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
-  <div class="paragraph paragraph--type--team-grid paragraph--view-mode--default">
-          
+<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--body.html.twig' -->
+
+  <div class="paragraph paragraph--type--body paragraph--view-mode--default body container">
+        <div class="body__content">
+      <p><span>Bright Plum, Inc.</span> is a fully remote, Drupal-focused agency focused on serving nonprofits, government agencies, healthcare IT organizations, and universities. We are a group of technical leaders ranging from architects to junior developers, many of whom are Acquia-certified with team members in all regions of the United States and Costa Rica. We operate with more than 15 years of experience in the open-source, complex publishing space and are a certified minority-owned business enterprise (MBE) through NMSDC.</p>
+    </div>
+      </div>
+
+<!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--body.html.twig' -->
+
+</div>
+              <div>
 
 <!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
+<!-- THEME HOOK: 'paragraph' -->
 <!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-grid--team-grid.html.twig
-   * field--paragraph--field-grid.html.twig
-   * field--paragraph--team-grid.html.twig
-   * field--field-grid.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
+   * paragraph--team-grid--default.html.twig
+   x paragraph--team-grid.html.twig
+   * paragraph--default.html.twig
+   * paragraph.html.twig
 -->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
+<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team-grid.html.twig' -->
 
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team-grid paragraph--view-mode--default team-grid">
+        <div class="container">
+			<div class="team-grid__title">
+				<h2>Meet our team</h2>
+			</div>
+			<div class="team-grid__grid">
+				
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -340,23 +352,10 @@
    * paragraph.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
-  <div class="paragraph paragraph--type--team paragraph--view-mode--default">
-          
 
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-profile--team.html.twig
-   * field--paragraph--field-profile.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-profile.html.twig
-   * field--entity-reference.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team paragraph--view-mode--default team">
+          <div class="team__image">
+        
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'media' -->
@@ -423,63 +422,12 @@
 
 <!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-name--team.html.twig
-   * field--paragraph--field-name.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-name.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Fredric Mitchell</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-job-title--team.html.twig
-   * field--paragraph--field-job-title.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-job-title.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>PRINCIPAL</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-social-cards--team.html.twig
-   * field--paragraph--field-social-cards.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-social-cards.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+      </div>
+      <div class="team__info">
+        <h4 class="team__name">Fredric Mitchell</h4>
+        <div class="team__job">PRINCIPAL</div>
+        <div class="team__name">
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -497,17 +445,12 @@
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
 
 </div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
+      </div>
       </div>
 
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
 
-</div>
-              <div>
+
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -518,23 +461,10 @@
    * paragraph.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
-  <div class="paragraph paragraph--type--team paragraph--view-mode--default">
-          
 
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-profile--team.html.twig
-   * field--paragraph--field-profile.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-profile.html.twig
-   * field--entity-reference.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team paragraph--view-mode--default team">
+          <div class="team__image">
+        
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'media' -->
@@ -601,63 +531,12 @@
 
 <!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-name--team.html.twig
-   * field--paragraph--field-name.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-name.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Jeremy Caldwell</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-job-title--team.html.twig
-   * field--paragraph--field-job-title.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-job-title.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Architect</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-social-cards--team.html.twig
-   * field--paragraph--field-social-cards.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-social-cards.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+      </div>
+      <div class="team__info">
+        <h4 class="team__name">Jeremy Caldwell</h4>
+        <div class="team__job">Architect</div>
+        <div class="team__name">
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -675,17 +554,12 @@
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
 
 </div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
+      </div>
       </div>
 
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
 
-</div>
-              <div>
+
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -696,23 +570,10 @@
    * paragraph.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
-  <div class="paragraph paragraph--type--team paragraph--view-mode--default">
-          
 
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-profile--team.html.twig
-   * field--paragraph--field-profile.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-profile.html.twig
-   * field--entity-reference.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team paragraph--view-mode--default team">
+          <div class="team__image">
+        
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'media' -->
@@ -779,63 +640,12 @@
 
 <!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-name--team.html.twig
-   * field--paragraph--field-name.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-name.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Esteban Valerio Hernandez</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-job-title--team.html.twig
-   * field--paragraph--field-job-title.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-job-title.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Lead Developer</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-social-cards--team.html.twig
-   * field--paragraph--field-social-cards.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-social-cards.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+      </div>
+      <div class="team__info">
+        <h4 class="team__name">Esteban Valerio Hernandez</h4>
+        <div class="team__job">Lead Developer</div>
+        <div class="team__name">
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -853,17 +663,12 @@
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
 
 </div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
+      </div>
       </div>
 
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
 
-</div>
-              <div>
+
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -874,23 +679,10 @@
    * paragraph.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
-  <div class="paragraph paragraph--type--team paragraph--view-mode--default">
-          
 
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-profile--team.html.twig
-   * field--paragraph--field-profile.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-profile.html.twig
-   * field--entity-reference.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team paragraph--view-mode--default team">
+          <div class="team__image">
+        
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'media' -->
@@ -957,63 +749,12 @@
 
 <!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-name--team.html.twig
-   * field--paragraph--field-name.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-name.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Jacqueline Atwood</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-job-title--team.html.twig
-   * field--paragraph--field-job-title.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-job-title.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Technical Project Manager</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-social-cards--team.html.twig
-   * field--paragraph--field-social-cards.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-social-cards.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+      </div>
+      <div class="team__info">
+        <h4 class="team__name">Jacqueline Atwood</h4>
+        <div class="team__job">Technical Project Manager</div>
+        <div class="team__name">
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1031,17 +772,12 @@
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
 
 </div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
+      </div>
       </div>
 
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
 
-</div>
-              <div>
+
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1052,23 +788,10 @@
    * paragraph.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
-  <div class="paragraph paragraph--type--team paragraph--view-mode--default">
-          
 
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-profile--team.html.twig
-   * field--paragraph--field-profile.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-profile.html.twig
-   * field--entity-reference.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team paragraph--view-mode--default team">
+          <div class="team__image">
+        
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'media' -->
@@ -1135,63 +858,12 @@
 
 <!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-name--team.html.twig
-   * field--paragraph--field-name.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-name.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Marco Alvarado</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-job-title--team.html.twig
-   * field--paragraph--field-job-title.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-job-title.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Developer</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-social-cards--team.html.twig
-   * field--paragraph--field-social-cards.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-social-cards.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+      </div>
+      <div class="team__info">
+        <h4 class="team__name">Marco Alvarado</h4>
+        <div class="team__job">Developer</div>
+        <div class="team__name">
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1209,17 +881,12 @@
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
 
 </div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
+      </div>
       </div>
 
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
 
-</div>
-              <div>
+
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1230,23 +897,10 @@
    * paragraph.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
-  <div class="paragraph paragraph--type--team paragraph--view-mode--default">
-          
 
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-profile--team.html.twig
-   * field--paragraph--field-profile.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-profile.html.twig
-   * field--entity-reference.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team paragraph--view-mode--default team">
+          <div class="team__image">
+        
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'media' -->
@@ -1313,63 +967,12 @@
 
 <!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-name--team.html.twig
-   * field--paragraph--field-name.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-name.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Gustavo Ramirez Fallas</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-job-title--team.html.twig
-   * field--paragraph--field-job-title.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-job-title.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Developer</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-social-cards--team.html.twig
-   * field--paragraph--field-social-cards.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-social-cards.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+      </div>
+      <div class="team__info">
+        <h4 class="team__name">Gustavo Ramirez Fallas</h4>
+        <div class="team__job">Developer</div>
+        <div class="team__name">
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1387,17 +990,12 @@
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
 
 </div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
+      </div>
       </div>
 
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
 
-</div>
-              <div>
+
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1408,23 +1006,10 @@
    * paragraph.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
-  <div class="paragraph paragraph--type--team paragraph--view-mode--default">
-          
 
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-profile--team.html.twig
-   * field--paragraph--field-profile.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-profile.html.twig
-   * field--entity-reference.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team paragraph--view-mode--default team">
+          <div class="team__image">
+        
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'media' -->
@@ -1491,63 +1076,12 @@
 
 <!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-name--team.html.twig
-   * field--paragraph--field-name.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-name.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Diego Pinto</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-job-title--team.html.twig
-   * field--paragraph--field-job-title.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-job-title.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Developer</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-social-cards--team.html.twig
-   * field--paragraph--field-social-cards.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-social-cards.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+      </div>
+      <div class="team__info">
+        <h4 class="team__name">Diego Pinto</h4>
+        <div class="team__job">Developer</div>
+        <div class="team__name">
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1565,17 +1099,12 @@
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
 
 </div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
+      </div>
       </div>
 
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
 
-</div>
-              <div>
+
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1586,23 +1115,10 @@
    * paragraph.html.twig
 -->
 <!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
-  <div class="paragraph paragraph--type--team paragraph--view-mode--default">
-          
 
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-profile--team.html.twig
-   * field--paragraph--field-profile.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-profile.html.twig
-   * field--entity-reference.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+  <div class="paragraph paragraph--type--team paragraph--view-mode--default team">
+          <div class="team__image">
+        
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'media' -->
@@ -1669,63 +1185,12 @@
 
 <!-- END OUTPUT from 'core/themes/stable9/templates/content/media.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-name--team.html.twig
-   * field--paragraph--field-name.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-name.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>K-Leigh Marbury</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-job-title--team.html.twig
-   * field--paragraph--field-job-title.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-job-title.html.twig
-   * field--string.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-            <div>Junior Developer</div>
-      
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- THEME HOOK: 'field' -->
-<!-- FILE NAME SUGGESTIONS:
-   * field--paragraph--field-social-cards--team.html.twig
-   * field--paragraph--field-social-cards.html.twig
-   * field--paragraph--team.html.twig
-   * field--field-social-cards.html.twig
-   * field--entity-reference-revisions.html.twig
-   x field.html.twig
--->
-<!-- BEGIN OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-      <div>
-              <div>
+      </div>
+      <div class="team__info">
+        <h4 class="team__name">K-Leigh Marbury</h4>
+        <div class="team__job">Junior Developer</div>
+        <div class="team__name">
 
 <!-- THEME DEBUG -->
 <!-- THEME HOOK: 'paragraph' -->
@@ -1743,24 +1208,17 @@
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
 
 </div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
-
-
+      </div>
       </div>
 
 <!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team.html.twig' -->
 
-</div>
-          </div>
-  
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/field/field.html.twig' -->
 
-
+			</div>
+    </div>
       </div>
 
-<!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph.html.twig' -->
+<!-- END OUTPUT from 'themes/custom/brightplum/templates/paragraphs/paragraph--team-grid.html.twig' -->
 
 </div>
           </div>
@@ -1825,7 +1283,7 @@
         </div>
       </div>
       <div class="footer__top--right button-purple">
-        <a href="/case-studies">Tell us about your project</a>
+        <a href="https://calendly.com/brightplum/30min">Tell us about your project</a>
       </div>
     </div>
     <div class="footer__bottom">
@@ -1855,7 +1313,7 @@
 
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/8","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ef007a8e11297a57dcb093a28770c6b61ebe1861a389119340b6f7bda4048e1f"}}</script>
-<script src="/sites/default/files/js/js_MSgJa8AlpG8yCGtRPh6vH3gIU9ylqaj_kdjwPavRGsw.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxFyDEOwCAIAMAPWX0TRAIkaAnI4O879sbLm4fWQEhqGMpy3GoNthfBnjzXdHNzCOAAlxwzysH6P722F5qm0PwAv9Me5Q"></script>
+<script src="/sites/default/files/js/js_lembQ2hZt7s2_DkbM1caTTlNP2LuKRMfS6wxgymq4Lc.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxFyDEOwCAIAMAPWX0TRAIkaAnI4O879sbLm4fWQEhqGMpy3GoNthfBnjzXdHNzCOAAlxwzysH6P722F5qm0PwAv9Me5Q"></script>
 
   </body>
 </html>
