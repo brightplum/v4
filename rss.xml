@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="http://127.0.0.1/">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://brightplum.com/">
   <channel>
     <title>brightplum-v4</title>
-    <link>http://127.0.0.1/</link>
+    <link>https://brightplum.com/</link>
     <description/>
     <language>en</language>
     
     <item>
   <title>American Hospital Association</title>
-  <link>http://127.0.0.1/node/15</link>
+  <link>https://brightplum.com/node/15</link>
   <description>&lt;span&gt;American Hospital Association&lt;/span&gt;
 
             &lt;div&gt;&lt;div&gt;
@@ -16,7 +16,7 @@
   
   &lt;div&gt;
     &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="http://127.0.0.1/sites/default/files/styles/large/public/2024-07/stock-meeting-diverse-conference-room-teaching-looking-at-computer_0.webp?itok=6-kZHOHX" width="480" height="320" alt="American Hospital Association"&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-07/stock-meeting-diverse-conference-room-teaching-looking-at-computer_0.webp?itok=6-kZHOHX" width="480" height="320" alt="American Hospital Association"&gt;
 
 
 &lt;/div&gt;
@@ -28,9 +28,9 @@
 &lt;span&gt;&lt;time datetime="2024-07-23T18:25:18-05:00" title="Tuesday, July 23, 2024 - 18:25"&gt;Tue, 07/23/2024 - 18:25&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;h3&gt;Maintenance work &amp;amp; Redesign&lt;/h3&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&amp;nbsp;&lt;br&gt;&lt;br&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;New integrations &amp;amp; custom features&lt;/h3&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&amp;nbsp;&lt;br&gt;&lt;br&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&amp;nbsp;&lt;br&gt;&lt;br&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;p&gt;In the backend, we created a newsletter implementation and updated functionality for certain components on the site. Project is still ongoing.&lt;/p&gt;&lt;/div&gt;
       
-            &lt;div&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;p&gt;The AHA Coding Clinic Advisor project focused on rebranding the site and making it more approachable for users. We focused on the frontend changes by creating a new design, and applying it in the creation of a new homepage, and blog post pages.&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
       
   &lt;div&gt;
     &lt;div&gt;Key elements&lt;/div&gt;
@@ -39,11 +39,11 @@
 </description>
   <pubDate>Tue, 23 Jul 2024 23:25:18 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">15 at http://127.0.0.1</guid>
+    <guid isPermaLink="false">15 at https://brightplum.com</guid>
     </item>
 <item>
   <title>How to Config Split</title>
-  <link>http://127.0.0.1/node/12</link>
+  <link>https://brightplum.com/node/12</link>
   <description>&lt;span&gt;How to Config Split&lt;/span&gt;
 
             &lt;div&gt;&lt;div&gt;
@@ -51,7 +51,7 @@
   
   &lt;div&gt;
     &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="http://127.0.0.1/sites/default/files/styles/large/public/2024-05/blog2.png?itok=_dG1z4O9" width="480" height="248" alt="blog 2"&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-05/blog2.png?itok=_dG1z4O9" width="480" height="248" alt="blog 2"&gt;
 
 
 &lt;/div&gt;
@@ -66,16 +66,16 @@
             &lt;div&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;br&gt;&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/div&gt;
       
       &lt;div&gt;
-              &lt;div&gt;&lt;a href="http://127.0.0.1/taxonomy/term/2" hreflang="en"&gt;Drupal Modules&lt;/a&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/2" hreflang="en"&gt;Drupal Modules&lt;/a&gt;&lt;/div&gt;
           &lt;/div&gt;
   </description>
   <pubDate>Wed, 08 May 2024 18:45:57 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">12 at http://127.0.0.1</guid>
+    <guid isPermaLink="false">12 at https://brightplum.com</guid>
     </item>
 <item>
   <title>How to Implement Automatization Deployment Gitlab to Pantheon</title>
-  <link>http://127.0.0.1/node/11</link>
+  <link>https://brightplum.com/node/11</link>
   <description>&lt;span&gt;How to Implement Automatization Deployment Gitlab to Pantheon&lt;/span&gt;
 
             &lt;div&gt;&lt;div&gt;
@@ -83,7 +83,7 @@
   
   &lt;div&gt;
     &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="http://127.0.0.1/sites/default/files/styles/large/public/2024-05/blog1_1.png?itok=OWFENzop" width="480" height="252" alt="blog"&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-05/blog1_1.png?itok=OWFENzop" width="480" height="252" alt="blog"&gt;
 
 
 &lt;/div&gt;
@@ -98,16 +98,16 @@
             &lt;div&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;br&gt;&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/div&gt;
       
       &lt;div&gt;
-              &lt;div&gt;&lt;a href="http://127.0.0.1/taxonomy/term/1" hreflang="en"&gt;Drupal 10&lt;/a&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/1" hreflang="en"&gt;Drupal 10&lt;/a&gt;&lt;/div&gt;
           &lt;/div&gt;
   </description>
   <pubDate>Wed, 08 May 2024 18:44:10 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">11 at http://127.0.0.1</guid>
+    <guid isPermaLink="false">11 at https://brightplum.com</guid>
     </item>
 <item>
   <title>Sjogren’s Foundation</title>
-  <link>http://127.0.0.1/node/4</link>
+  <link>https://brightplum.com/node/4</link>
   <description>&lt;span&gt;Sjogren’s Foundation&lt;/span&gt;
 
             &lt;div&gt;&lt;div&gt;
@@ -115,7 +115,7 @@
   
   &lt;div&gt;
     &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="http://127.0.0.1/sites/default/files/styles/large/public/2024-07/Woman%20pre%20workout.jpg?itok=KygbAHbH" width="480" height="317" alt="few"&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-07/Woman%20pre%20workout.jpg?itok=KygbAHbH" width="480" height="317" alt="few"&gt;
 
 
 &lt;/div&gt;
@@ -127,7 +127,7 @@
 &lt;span&gt;&lt;time datetime="2024-05-06T20:08:16-05:00" title="Monday, May 6, 2024 - 20:08"&gt;Mon, 05/06/2024 - 20:08&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;h2&gt;Maintenance work &amp;amp; Redesign&lt;/h2&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&amp;nbsp;&lt;br&gt;&lt;br&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;h3&gt;Update and Maintenance&lt;/h3&gt;&lt;p&gt;Sjogren’s Foundation was in need of a Drupal update and some key features for the site. During the transition from Drupal 8 to Drupal 10, there were many difficulties that had to do a lot with undoing confusing code and not good practice code from previous developers. To fix these issues, we did a lot of testing and made careful and thoughtful changes.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;The site is stable now and we’ve moved from maintenance to working on new features for the site. Our work to refactor and update build customer trust and offered the opportunity to start work on many new features.&lt;/p&gt;&lt;/div&gt;
       
             &lt;div&gt;&lt;p&gt;During the transition from Drupal 8 to Drupal 10, there were many difficulties that had to do a lot with undoing confusing code and not good practice code from previous developers. To fix these issues, we did a lot of testing and made careful and thoughtful changes.&lt;br&gt;&lt;br&gt;The site is stable now and we’ve moved from maintenance to working on new features for the site. Our work to refactor and update build customer trust and offered the opportunity to start work on many new features.&lt;/p&gt;&lt;/div&gt;
       
@@ -138,7 +138,7 @@
 </description>
   <pubDate>Tue, 07 May 2024 01:08:16 +0000</pubDate>
     <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">4 at http://127.0.0.1</guid>
+    <guid isPermaLink="false">4 at https://brightplum.com</guid>
     </item>
 
   </channel>
