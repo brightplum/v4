@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://brightplum.com/">
+  <channel>
+    <title>Bitbucket</title>
+    <link>https://brightplum.com/</link>
+    <description/>
+    <language>en</language>
+    
+    <item>
+  <title>How to integrate Phpcs with Drupal code standards on bitbucket pipelines</title>
+  <link>https://brightplum.com/blog/how-integrate-phpcs-drupal-code-standards-bitbucket-pipelines</link>
+  <description>&lt;span&gt;How to integrate Phpcs with Drupal code standards on bitbucket pipelines&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2024-07-30T21:37:45-05:00" title="Tuesday, July 30, 2024 - 21:37"&gt;Tue, 07/30/2024 - 21:37&lt;/time&gt;
+&lt;/span&gt;
+
+            &lt;div&gt;&lt;h2&gt;Steps:&lt;/h2&gt;&lt;p&gt;Create a new pipeline in the root of the project with the file name &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt; or if it exists add just the step and the trigger to the existed pipeline.&lt;/p&gt;&lt;p&gt;&lt;code&gt;# These are yaml anchors, reused later&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;x-bash-env-steps: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- &amp;amp;bash_env_export export BASH_ENV="$BITBUCKET_CLONE_DIR/.bashrc" &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- &amp;amp;bash_env_source source $BASH_ENV&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;# This is a larger yaml anchor, reused for each pipeline&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;pull_requests: &amp;amp;pull_requests &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- step: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;name: 'PHPCS' &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;image: wodby/drupal-php:7.4 &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;script: &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- composer install &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;options: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;max-time: 30&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;pipelines: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;pull-requests: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;# Using the custom pull_request pipeline on each pull request created. &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;'**': *pull_requests&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+      
+      &lt;div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/3" hreflang="en"&gt;Bitbucket&lt;/a&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/1" hreflang="en"&gt;Drupal 10&lt;/a&gt;&lt;/div&gt;
+          &lt;/div&gt;
+  </description>
+  <pubDate>Wed, 31 Jul 2024 02:37:45 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">20 at https://brightplum.com</guid>
+    </item>
+
+  </channel>
+</rss>

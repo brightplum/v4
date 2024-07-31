@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBFL8V1FTW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YBFL8V1FTW');
+    </script>
+    <meta charset="utf-8" />
+<meta name="description" content="Introduction In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs. current-page" />
+<link rel="canonical" href="https://brightplum.com/blog/how-implement-dynamic-underscore-js-drupal-solutions" />
+<meta name="author" content="Fredric Mitchell" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/themes/custom/brightplum/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>How to implement dynamic underscore in JS, for Drupal solutions | Bright Plum, Inc.</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_47wfT6Q2O5tjBHJqjhyNr-1qqLnwXZH1TaiXjkjxRLs.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_G9s_SzN7pbijycEjjBiNgAJApvnJeRhE5PKh05REx5s.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
+
+    
+  </head>
+  <body class="path-node">
+        <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container">
+
+  <header role="banner">
+      <div class="container">
+    
+
+<div id="block-brightplum-site-branding" class="block block-system block-system-branding-block">
+  
+    
+        <a href="/" rel="home">
+      <img src="/themes/custom/brightplum/logo.svg" alt="Home" fetchpriority="high" />
+    </a>
+      
+</div>
+<nav role="navigation" aria-labelledby="block-brightplum-main-menu-menu" id="block-brightplum-main-menu">
+            
+  <h2 class="visually-hidden" id="block-brightplum-main-menu-menu">Main navigation</h2>
+  
+
+        
+              <ul>
+              <li>
+        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+          <li>
+        <a href="/case-studies" data-drupal-link-system-path="case-studies">Case Studies</a>
+              </li>
+          <li>
+        <a href="/who-we-are" data-drupal-link-system-path="node/8">Who we are</a>
+              </li>
+          <li>
+        <a href="/blog" data-drupal-link-system-path="blog">Blog</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+<div id="block-brightplum-getintouch" class="block block-block-content block-block-content97c1013c-79c5-4826-ab7b-0eab1a5a8d2e">
+  
+    
+      <div class="block__content">
+      
+            <div><p class="button-white"><a href="mailto:fredric@brightplum.com">Get in Touch</a></p></div>
+      
+    </div>
+  </div>
+
+  </div>
+
+  </header>
+
+  
+  
+
+  
+
+  
+
+  
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="layout-content">
+        <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+
+<div id="block-brightplum-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      
+
+<article data-history-node-id="22">
+  <div class="blog-full">
+    <div class="blog-full__header">
+      <div class="container-blog">
+        <div class="blog-full__title">
+          <a href="/blog">Back to blogs</a>
+          <h2>
+            <span>How to implement dynamic underscore in JS, for Drupal solutions</span>
+
+          </h2>
+        </div>
+        <div class="blog-full__image">
+          
+        </div>
+      </div>
+    </div>
+    <div class="blog-full__body container-blog">
+      <span class="blog-full__body--date">Submitted on: July 30 2024</span>
+      <h3>Introduction</h3><p>&nbsp;</p><p>In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.</p><p>The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs.</p><p>&nbsp;</p><h3>Example Code</h3><p>&nbsp;</p><p><code>JS: &nbsp; &nbsp; &nbsp;</code></p><p><code>// Click event for elements with the 'high-word' class &nbsp; &nbsp; &nbsp;</code></p><p><code>container.addEventListener("click", (event) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>if (event.target.classList.contains("high-word")) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>removeHighWord(); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>} &nbsp; &nbsp; &nbsp;</code></p><p><code>}); &nbsp; &nbsp; &nbsp;</code></p><p><code>// Escape special characters in a string for use in a regular expression &nbsp; &nbsp; &nbsp;</code></p><p><code>const escapeRegExp = (string) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&amp;"); &nbsp; &nbsp; &nbsp;</code></p><p><code>}; &nbsp; &nbsp; &nbsp;</code></p><p><code>// Remove HTML tags from a string &nbsp; &nbsp; &nbsp;</code></p><p><code>const removeAllTags = (string) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return string.replace(/&lt;\/?[^&gt;]+(&gt;|$)/g, ""); &nbsp; &nbsp; &nbsp;</code></p><p><code>}; &nbsp; &nbsp; &nbsp;</code></p><p><code>// Check if the matched text is inside an HTML tag &nbsp; &nbsp; &nbsp;</code></p><p><code>const isInsideTag = (text, index) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const openingTag = text.slice(0, index).lastIndexOf("&lt;"); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const closingTag = text.slice(0, index).lastIndexOf("&gt;"); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return openingTag &gt; closingTag; &nbsp; &nbsp; &nbsp;</code></p><p><code>}; &nbsp; &nbsp; &nbsp;</code></p><p><code>// Highlight a word or phrase within a paragraph element (p) &nbsp; &nbsp; &nbsp;</code></p><p><code>const highlightWordInP = (p, word) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>if (p) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const escapedWord = escapeRegExp(word); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const cleanWord = removeAllTags(escapedWord); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const wordParts = cleanWord.split(/\s+/); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const regexPattern = wordParts &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.map((part) =&gt; `(${part})`) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.join("(?:&lt;[^&gt;]*&gt;|&amp;[^;]*;|\\W)*"); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const regex = new RegExp(regexPattern, "gi"); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>let text = p.innerHTML; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>let highlightedText = text.replace(regex, (match, ...args) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const index = args[args.length - 2]; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>if (isInsideTag(text, index)) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</code></p><p><code>// Match is inside a tag, don't highlight it &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return match; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>} else { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return match &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.split(/\s+/) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.map((part) =&gt; `&lt;span class='high-word'&gt;${part}&lt;/span&gt;`) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.join(" "); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>}); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>p.innerHTML = highlightedText; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>} &nbsp; &nbsp; &nbsp;</code></p><p><code>}; &nbsp; &nbsp; &nbsp;</code></p><p><code>// This function removes the &lt;span&gt; element but keeps its content &nbsp; &nbsp; &nbsp;</code></p><p><code>const removeHighWord = () =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const highlightedElements = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>document.getElementsByClassName("high-word"); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>[...highlightedElements].forEach((el) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const parent = el.parentNode; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const textNode = document.createTextNode(el.textContent); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>parent.replaceChild(textNode, el); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>}); &nbsp; &nbsp; &nbsp;</code></p><p><code>};</code></p><p><code>Css:</code></p><p><code>.high-word { &nbsp;</code></p><p><code>background-color: rgba(0, 255, 0, 0.5); &nbsp;cursor: pointer;</code></p><p><code>}</code></p><p>&nbsp;</p><p>&nbsp;</p><h3>Explanation</h3><h3>&nbsp;</h3><p>The code introduces a function called `highlightWordInP`, which accepts two arguments: a paragraph element `p` (but you can also pass it a div that has a set of text tags) and a `word` to be highlighted. The function does the following:</p><p>&nbsp;</p><ol><li>Escapes special characters in the word using the `escapeRegExp` function.</li><li>Removes HTML tags from the word using the `removeAllTags` function.</li><li>Splits the word into parts and creates a regular expression that matches the word, ignoring HTML tags, HTML entities, and non-alphabetic characters between the word parts.</li><li>Replaces matches of the word in the paragraph's innerHTML with a `&lt;span&gt;` element containing a specific CSS class for underlining.</li></ol><p>&nbsp;</p><h3>Use Cases</h3><h3>&nbsp;</h3><p>You can use this dynamic underlining technique in various scenarios, such as:</p><p>- Highlighting search terms within search results.</p><p>- Emphasizing important keywords within a text.</p><p>- Creating a visual cue for specific words or phrases based on user interaction or other conditions.</p><p>To use the <code>highlightWordInP</code></p><p>The difference, and for which I like this code, is that it recognizes between labels.</p><p>All the solutions that I found, to apply to a custom element of a form or a preview, do not adapt to what I needed here, since it was something very custom.</p><p>By using a class, we can control underlining, bold among other values.</p><p>The most common problem that happened was:</p><p><code>&lt;p&gt;&lt;b&gt;This text&lt;/b&gt; has different tags&lt;/p&gt;</code></p><p>the conventional underscores were lost or they did it wrong when underlining this content, since when searching for matches it generated problems because the contents were between tags, for example when passing a text like "This text has different labels", it did not find the matches Due to the different tags, it worked as long as the contents were in the same tag, not separated between paragraphs or other possible elements, which the method shown in this article solves. function, simply pass the paragraph element and the word to be highlighted as arguments. The function will then apply the highlighting as specified.</p>
+    </div>
+  </div>
+</article>
+
+    </div>
+  </div>
+
+  </div>
+
+    </div>
+    
+    
+  </main>
+
+      <footer role="contentinfo">
+        <div class="footer container">
+    <div class="footer__top">
+      <div class="footer__top--left">
+        <img class="footer__logo" src="/themes/custom/brightplum/images/footer-logo.svg" alt="Bright Plum">
+        <div class="footer__copyright">
+          <p>Copyright © Bright Plum, Inc. 2024</p>
+          <p>DUNS Number: 016712388</p>
+          <p>CAGE: 99FE6</p>
+          <p>NAICS: 541511, 541512, 541513, 541519, 541611, 611420, 611430</p>
+        </div>
+      </div>
+      <div class="footer__top--right button-purple">
+        <a href="https://calendly.com/brightplum/30min">Tell us about your project</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__legal">
+        <a href="/legal">Privacy Policy</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://github.com/brightplum" class="github"><img src="/themes/custom/brightplum/images/github-footer.svg" alt="Github"></a>
+        <a href="https://www.linkedin.com/company/bright-plum-inc/" class="linkedin"><img src="/themes/custom/brightplum/images/linkedin-footer.svg" alt="Linkedin"></a>
+      </div>
+    </div>
+  </div>
+
+    </footer>
+  
+</div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/22","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ef007a8e11297a57dcb093a28770c6b61ebe1861a389119340b6f7bda4048e1f"}}</script>
+<script src="/sites/default/files/js/js_DA-mz8hpp93MIb_5uih51ETqnzLuDoRNqUS34bhYykw.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x"></script>
+
+  </body>
+</html>

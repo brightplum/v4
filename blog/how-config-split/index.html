@@ -12,8 +12,8 @@
       gtag('config', 'G-YBFL8V1FTW');
     </script>
     <meta charset="utf-8" />
-<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.current-page" />
-<link rel="canonical" href="https://brightplum.com/node/11" />
+<meta name="description" content="A quick summary of when we need config split:Config split module is useful when we need some modules for development or testing but we don&#039;t want them in live (or any other environment), with this module we are allow to configure sub config folders that will be loaded just when we allow them to be loaded in the settings.php.current-page" />
+<link rel="canonical" href="https://brightplum.com/blog/how-config-split" />
 <meta name="author" content="Fredric Mitchell" />
 <meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
 <meta name="MobileOptimized" content="width" />
@@ -21,9 +21,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="/themes/custom/brightplum/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>How to Implement Automatization Deployment Gitlab to Pantheon | Bright Plum, Inc.</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_a-nmcbwNYP9QTdtPsfOqckQVGGb6NTFUkP3ki0mTnJs.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_OQiYtqtHW8dPH63Q4vae0Eg4CSELJ1rMdjebQG2usAk.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
+    <title>How to Config Split | Bright Plum, Inc.</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_47wfT6Q2O5tjBHJqjhyNr-1qqLnwXZH1TaiXjkjxRLs.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_G9s_SzN7pbijycEjjBiNgAJApvnJeRhE5PKh05REx5s.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
 
     
   </head>
@@ -64,7 +64,7 @@
         <a href="/who-we-are" data-drupal-link-system-path="node/8">Who we are</a>
               </li>
           <li>
-        <a href="/blog" data-drupal-link-system-path="node/14">Blog</a>
+        <a href="/blog" data-drupal-link-system-path="blog">Blog</a>
               </li>
         </ul>
   
@@ -109,36 +109,28 @@
       <div class="block__content">
       
 
-<article data-history-node-id="11">
+<article data-history-node-id="12">
   <div class="blog-full">
     <div class="blog-full__header">
       <div class="container-blog">
         <div class="blog-full__title">
+          <a href="/blog">Back to blogs</a>
           <h2>
-            <span>How to Implement Automatization Deployment Gitlab to Pantheon</span>
+            <span>How to Config Split</span>
 
           </h2>
         </div>
         <div class="blog-full__image">
-          <div>
-  
-  
-  <div>
-    <div class="visually-hidden">Image</div>
-              <div>  <img loading="lazy" src="/sites/default/files/styles/large/public/2024-05/blog1_1.png?itok=OWFENzop" width="480" height="252" alt="blog" />
-
-
-</div>
-          </div>
-
-</div>
-
+          
         </div>
       </div>
     </div>
     <div class="blog-full__body container-blog">
       <span class="blog-full__body--date">Submitted on: May 8 2024</span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p><strong>A quick summary of when we need config split:</strong></p><blockquote><p>Config split module is useful when we need some modules for development or testing but we don't want them in live (or any other environment), with this module we are allow to configure sub config folders that will be loaded just when we allow them to be loaded in the settings.php.</p></blockquote><h3>Basic config steps</h3><ul><li>Install the latest config split version for the Drupal version you have, can be found here:</li><li><a href="https://www.drupal.org/project/config_split">https://www.drupal.org/project/config_split</a></li><li>Enable the module with <code>drush en config_split</code></li><li>Go to module config with this route <code>/admin/config/development/configuration/config-split</code> this route may change but you can always go to the extend page and search the module, in there you'll see the configuration link.</li><li>On the config split configuration page you'll see a page with all the configured splits, in our case that its a newly install module we won't have any. If we click on "Add Configuration Split setting" button we'll get the configuration for a new config split.&nbsp;</li><li>In there we can fill the following fields:<ul><li>Label: Put a descriptive label so you don't get confuse on what its in that split.</li><li>Description: Write a quick description of what will be store in that config split</li><li>Storage: We have 3 options here <strong>Folder, Collection, Database, </strong>we don't need to change the default that is folder unless we need a very specific config that requires the others.</li><li>Folder: Where the config split will be saved, try to save it under a folder with a similar name as the label.</li><li>Status: This control whenever a split will load or not, by default true but with this we can do the magic in settings.php to conditionally load the splits.</li><li>Complete split: This let us remove an entire config from the default config and put it in our split.</li><li>Partial split: Let us add a patch to add/remove config after the default config ran (for example core.extension let us enable/disable modules).</li></ul></li><li>Once we fill the needed fields we can save that split.</li><li>Now if we run <code>drush cex</code> to get the config split out.</li><li>Then if we want to load this split conditionally we can add this code to the settings.php:<ul><li><code>if ([ContitionsToNotLoad]) {
+ &nbsp;$config['config_split.config_split.test']['status'] = FALSE;
+}</code>
+</li></ul></li></ul>
     </div>
   </div>
 </article>
@@ -186,8 +178,8 @@
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/11","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"c41dc604b8d49136104c675f149d5a70ca3a4037e10d472855ad57fd5a9719e6"}}</script>
-<script src="/sites/default/files/js/js_OBnPjjYzjYZBAp9aqMPBZB9HJsBqZX4ZDzbluKknz8w.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwCDaAoW"></script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/12","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"ef007a8e11297a57dcb093a28770c6b61ebe1861a389119340b6f7bda4048e1f"}}</script>
+<script src="/sites/default/files/js/js_DA-mz8hpp93MIb_5uih51ETqnzLuDoRNqUS34bhYykw.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x"></script>
 
   </body>
 </html>

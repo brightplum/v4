@@ -8,27 +8,16 @@
     
     <item>
   <title>How to Config Split</title>
-  <link>https://brightplum.com/node/12</link>
+  <link>https://brightplum.com/blog/how-config-split</link>
   <description>&lt;span&gt;How to Config Split&lt;/span&gt;
-
-            &lt;div&gt;&lt;div&gt;
-  
-  
-  &lt;div&gt;
-    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-05/blog2.png?itok=_dG1z4O9" width="480" height="248" alt="blog 2"&gt;
-
-
-&lt;/div&gt;
-          &lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-05-08T13:45:57-05:00" title="Wednesday, May 8, 2024 - 13:45"&gt;Wed, 05/08/2024 - 13:45&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;br&gt;&lt;br&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;p&gt;&lt;strong&gt;A quick summary of when we need config split:&lt;/strong&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Config split module is useful when we need some modules for development or testing but we don't want them in live (or any other environment), with this module we are allow to configure sub config folders that will be loaded just when we allow them to be loaded in the settings.php.&lt;/p&gt;&lt;/blockquote&gt;&lt;h3&gt;Basic config steps&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Install the latest config split version for the Drupal version you have, can be found here:&lt;/li&gt;&lt;li&gt;&lt;a href="https://www.drupal.org/project/config_split"&gt;https://www.drupal.org/project/config_split&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Enable the module with &lt;code&gt;drush en config_split&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Go to module config with this route &lt;code&gt;/admin/config/development/configuration/config-split&lt;/code&gt; this route may change but you can always go to the extend page and search the module, in there you'll see the configuration link.&lt;/li&gt;&lt;li&gt;On the config split configuration page you'll see a page with all the configured splits, in our case that its a newly install module we won't have any. If we click on "Add Configuration Split setting" button we'll get the configuration for a new config split.&amp;nbsp;&lt;/li&gt;&lt;li&gt;In there we can fill the following fields:&lt;ul&gt;&lt;li&gt;Label: Put a descriptive label so you don't get confuse on what its in that split.&lt;/li&gt;&lt;li&gt;Description: Write a quick description of what will be store in that config split&lt;/li&gt;&lt;li&gt;Storage: We have 3 options here &lt;strong&gt;Folder, Collection, Database, &lt;/strong&gt;we don't need to change the default that is folder unless we need a very specific config that requires the others.&lt;/li&gt;&lt;li&gt;Folder: Where the config split will be saved, try to save it under a folder with a similar name as the label.&lt;/li&gt;&lt;li&gt;Status: This control whenever a split will load or not, by default true but with this we can do the magic in settings.php to conditionally load the splits.&lt;/li&gt;&lt;li&gt;Complete split: This let us remove an entire config from the default config and put it in our split.&lt;/li&gt;&lt;li&gt;Partial split: Let us add a patch to add/remove config after the default config ran (for example core.extension let us enable/disable modules).&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Once we fill the needed fields we can save that split.&lt;/li&gt;&lt;li&gt;Now if we run &lt;code&gt;drush cex&lt;/code&gt; to get the config split out.&lt;/li&gt;&lt;li&gt;Then if we want to load this split conditionally we can add this code to the settings.php:&lt;ul&gt;&lt;li&gt;&lt;code&gt;if ([ContitionsToNotLoad]) {
+ &amp;nbsp;$config['config_split.config_split.test']['status'] = FALSE;
+}&lt;/code&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/2" hreflang="en"&gt;Drupal Modules&lt;/a&gt;&lt;/div&gt;
