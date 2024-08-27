@@ -10,11 +10,45 @@
   <title>How to Implement Automatization Deployment Gitlab to Pantheon</title>
   <link>https://brightplum.com/blog/how-implement-automatization-deployment-gitlab-pantheon</link>
   <description>&lt;span&gt;How to Implement Automatization Deployment Gitlab to Pantheon&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/gitlab-pantheon.png?itok=S_y3VZr5" width="480" height="270" alt="gitlab pantheon"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-05-08T13:44:10-05:00" title="Wednesday, May 8, 2024 - 13:44"&gt;Wed, 05/08/2024 - 13:44&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;p&gt;To start creating an automatization between Gitlab and Pantheon we need to following some steps.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;Create a file and script to make the magic and pushing everything to Pantheon from Gitlab.&lt;/p&gt;&lt;p&gt;Basic Script:&lt;/p&gt;&lt;p&gt;&lt;code&gt;stages: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- deploy before_script: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;# See https://docs.gitlab.com/ee/ci/ssh_keys/README.html &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- eval $(ssh-agent -s) &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - &amp;gt; /dev/null &amp;nbsp;- mkdir -p $HOME/.ssh &amp;amp;&amp;amp; echo "StrictHostKeyChecking no" &amp;gt;&amp;gt; "$HOME/.ssh/config" &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git config --global user.email "$GITLAB_USER_EMAIL" &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git config --global user.name "Gitlab CI"&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;deploy:dev: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;stage: deploy &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;environment: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;name: dev &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;url: https://dev-$PANTHEON_SITE.pantheonsite.io/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;script: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git config checkout.defaultRemote origin &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git remote add pantheon $PANTHEON_GIT_URL &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git fetch pantheon &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git branch -v &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git checkout master &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git push pantheon master --force &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;only: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- master&lt;/code&gt;&lt;/p&gt;&lt;p&gt;Gitlab by default use "&lt;code&gt;.gitlab-ci.yml&lt;/code&gt;" as a name for the file&lt;/p&gt;&lt;/li&gt;&lt;li&gt;Get this code and create a new file with the name &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; in your project root.&lt;/li&gt;&lt;li&gt;Commit and push this file to the repository project in Gitlab on the master branch.&lt;/li&gt;&lt;li&gt;Once you have this file in the Gitlab repository, let's configure some variables used on the script. For example &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE&lt;/code&gt;&lt;/li&gt;&lt;li&gt;To configure these variables we need to go to Gitlab Project page then in the left sidebar menu there is the a &lt;code&gt;Settings&lt;/code&gt; option. Click on this menu item and then click on &lt;code&gt;CI/CD &lt;/code&gt;submenu item.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Then go to that page and go to the &lt;code&gt;Variables&lt;/code&gt; section&lt;/li&gt;&lt;li&gt;Now create the variables that you used on the script. In this case we used &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;so now we need to set a value for them.&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_GIT_URL. &lt;/code&gt;Go to Pantheon and copy the git url and page on value field.&amp;nbsp;&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;it is the name of the site.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Click on update variable and then we can start to pushing things automatically on pantheon.&lt;/li&gt;&lt;li&gt;Check in the left sidebar the CI/CD menu item all deployments and check the jobs.&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;p&gt;To start creating an automatization between Gitlab and Pantheon we need to following some steps.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;Create a file and script to make the magic and pushing everything to Pantheon from Gitlab.&lt;/p&gt;&lt;p&gt;Basic Script:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;stages:  
+- deploy before_script:  
+# See https://docs.gitlab.com/ee/ci/ssh_keys/README.html  
+- eval $(ssh-agent -s)  
+- echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - &amp;gt; /dev/null  - mkdir -p $HOME/.ssh &amp;amp;&amp;amp; echo "StrictHostKeyChecking no" &amp;gt;&amp;gt; "$HOME/.ssh/config"  
+- git config --global user.email "$GITLAB_USER_EMAIL"  
+- git config --global user.name "Gitlab CI"
+deploy:dev:  
+stage: deploy  
+environment:    
+name: dev    
+url: https://dev-$PANTHEON_SITE.pantheonsite.io/  
+script:    
+- git config checkout.defaultRemote origin    
+- git remote add pantheon $PANTHEON_GIT_URL    
+- git fetch pantheon    
+- git branch -v    
+- git checkout master    
+- git push pantheon master --force  
+only:    
+- master&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Gitlab by default use "&lt;code&gt;.gitlab-ci.yml&lt;/code&gt;" as a name for the file&lt;/p&gt;&lt;/li&gt;&lt;li&gt;Get this code and create a new file with the name &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; in your project root.&lt;/li&gt;&lt;li&gt;Commit and push this file to the repository project in Gitlab on the master branch.&lt;/li&gt;&lt;li&gt;Once you have this file in the Gitlab repository, let's configure some variables used on the script. For example &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE&lt;/code&gt;&lt;/li&gt;&lt;li&gt;To configure these variables we need to go to Gitlab Project page then in the left sidebar menu there is the a &lt;code&gt;Settings&lt;/code&gt; option. Click on this menu item and then click on &lt;code&gt;CI/CD &lt;/code&gt;submenu item.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Then go to that page and go to the &lt;code&gt;Variables&lt;/code&gt; section&lt;/li&gt;&lt;li&gt;Now create the variables that you used on the script. In this case we used &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;so now we need to set a value for them.&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_GIT_URL. &lt;/code&gt;Go to Pantheon and copy the git url and page on value field.&amp;nbsp;&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;it is the name of the site.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Click on update variable and then we can start to pushing things automatically on pantheon.&lt;/li&gt;&lt;li&gt;Check in the left sidebar the CI/CD menu item all deployments and check the jobs.&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/1" hreflang="en"&gt;Drupal 10&lt;/a&gt;&lt;/div&gt;

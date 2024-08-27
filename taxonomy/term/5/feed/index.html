@@ -10,7 +10,21 @@
   <title>Providing Technical Guidance</title>
   <link>https://brightplum.com/blog/providing-technical-guidance</link>
   <description>&lt;span&gt;Providing Technical Guidance&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/ProvidingTechnicalGuidance.png?itok=hrZDzE7m" width="480" height="270" alt="Providing Technical Guidance"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-07-30T22:26:31-05:00" title="Tuesday, July 30, 2024 - 22:26"&gt;Tue, 07/30/2024 - 22:26&lt;/time&gt;
 &lt;/span&gt;
 
@@ -28,11 +42,87 @@
   <title>How to implement dynamic underscore in JS, for Drupal solutions</title>
   <link>https://brightplum.com/blog/how-implement-dynamic-underscore-js-drupal-solutions</link>
   <description>&lt;span&gt;How to implement dynamic underscore in JS, for Drupal solutions&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/drupal-default.webp?itok=mJTA5T-v" width="480" height="270" alt="Drupal default"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-07-30T22:14:30-05:00" title="Tuesday, July 30, 2024 - 22:14"&gt;Tue, 07/30/2024 - 22:14&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.&lt;/p&gt;&lt;p&gt;The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example Code&lt;/h3&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;code&gt;JS: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Click event for elements with the 'high-word' class &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;container.addEventListener("click", (event) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;if (event.target.classList.contains("high-word")) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;removeHighWord(); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}); &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Escape special characters in a string for use in a regular expression &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const escapeRegExp = (string) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&amp;amp;"); &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Remove HTML tags from a string &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const removeAllTags = (string) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return string.replace(/&amp;lt;\/?[^&amp;gt;]+(&amp;gt;|$)/g, ""); &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Check if the matched text is inside an HTML tag &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const isInsideTag = (text, index) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const openingTag = text.slice(0, index).lastIndexOf("&amp;lt;"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const closingTag = text.slice(0, index).lastIndexOf("&amp;gt;"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return openingTag &amp;gt; closingTag; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Highlight a word or phrase within a paragraph element (p) &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const highlightWordInP = (p, word) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;if (p) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const escapedWord = escapeRegExp(word); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const cleanWord = removeAllTags(escapedWord); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const wordParts = cleanWord.split(/\s+/); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const regexPattern = wordParts &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.map((part) =&amp;gt; `(${part})`) &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.join("(?:&amp;lt;[^&amp;gt;]*&amp;gt;|&amp;amp;[^;]*;|\\W)*"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const regex = new RegExp(regexPattern, "gi"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;let text = p.innerHTML; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;let highlightedText = text.replace(regex, (match, ...args) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const index = args[args.length - 2]; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;if (isInsideTag(text, index)) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Match is inside a tag, don't highlight it &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return match; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} else { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return match &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.split(/\s+/) &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.map((part) =&amp;gt; `&amp;lt;span class='high-word'&amp;gt;${part}&amp;lt;/span&amp;gt;`) &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.join(" "); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;p.innerHTML = highlightedText; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// This function removes the &amp;lt;span&amp;gt; element but keeps its content &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const removeHighWord = () =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const highlightedElements = &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;document.getElementsByClassName("high-word"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;[...highlightedElements].forEach((el) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const parent = el.parentNode; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const textNode = document.createTextNode(el.textContent); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;parent.replaceChild(textNode, el); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}); &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;};&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;Css:&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.high-word { &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;background-color: rgba(0, 255, 0, 0.5); &amp;nbsp;cursor: pointer;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Explanation&lt;/h3&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;p&gt;The code introduces a function called `highlightWordInP`, which accepts two arguments: a paragraph element `p` (but you can also pass it a div that has a set of text tags) and a `word` to be highlighted. The function does the following:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Escapes special characters in the word using the `escapeRegExp` function.&lt;/li&gt;&lt;li&gt;Removes HTML tags from the word using the `removeAllTags` function.&lt;/li&gt;&lt;li&gt;Splits the word into parts and creates a regular expression that matches the word, ignoring HTML tags, HTML entities, and non-alphabetic characters between the word parts.&lt;/li&gt;&lt;li&gt;Replaces matches of the word in the paragraph's innerHTML with a `&amp;lt;span&amp;gt;` element containing a specific CSS class for underlining.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Use Cases&lt;/h3&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;p&gt;You can use this dynamic underlining technique in various scenarios, such as:&lt;/p&gt;&lt;p&gt;- Highlighting search terms within search results.&lt;/p&gt;&lt;p&gt;- Emphasizing important keywords within a text.&lt;/p&gt;&lt;p&gt;- Creating a visual cue for specific words or phrases based on user interaction or other conditions.&lt;/p&gt;&lt;p&gt;To use the &lt;code&gt;highlightWordInP&lt;/code&gt;&lt;/p&gt;&lt;p&gt;The difference, and for which I like this code, is that it recognizes between labels.&lt;/p&gt;&lt;p&gt;All the solutions that I found, to apply to a custom element of a form or a preview, do not adapt to what I needed here, since it was something very custom.&lt;/p&gt;&lt;p&gt;By using a class, we can control underlining, bold among other values.&lt;/p&gt;&lt;p&gt;The most common problem that happened was:&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;This text&amp;lt;/b&amp;gt; has different tags&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;the conventional underscores were lost or they did it wrong when underlining this content, since when searching for matches it generated problems because the contents were between tags, for example when passing a text like "This text has different labels", it did not find the matches Due to the different tags, it worked as long as the contents were in the same tag, not separated between paragraphs or other possible elements, which the method shown in this article solves. function, simply pass the paragraph element and the word to be highlighted as arguments. The function will then apply the highlighting as specified.&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.&lt;/p&gt;&lt;p&gt;The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example Code&lt;/h3&gt;&lt;p&gt;JS: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;// Click event for elements with the 'high-word' class      
+container.addEventListener("click", (event) =&amp;gt; {        
+	if (event.target.classList.contains("high-word")) {          
+		removeHighWord();        
+	}      
+}); 
+
+// Escape special characters in a string for use in a regular expression      
+const escapeRegExp = (string) =&amp;gt; {        
+	return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&amp;amp;");      
+}; 
+     
+// Remove HTML tags from a string      
+const removeAllTags = (string) =&amp;gt; {        
+	return string.replace(/&amp;lt;\/?[^&amp;gt;]+(&amp;gt;|$)/g, "");      
+};
+      
+// Check if the matched text is inside an HTML tag      
+const isInsideTag = (text, index) =&amp;gt; {        
+	const openingTag = text.slice(0, index).lastIndexOf("&amp;lt;");        
+	const closingTag = text.slice(0, index).lastIndexOf("&amp;gt;");        
+	return openingTag &amp;gt; closingTag;      
+};
+      
+// Highlight a word or phrase within a paragraph element (p)      
+const highlightWordInP = (p, word) =&amp;gt; {        
+	if (p) {          
+		const escapedWord = escapeRegExp(word);          
+		const cleanWord = removeAllTags(escapedWord);          
+		const wordParts = cleanWord.split(/\s+/);          
+		const regexPattern = wordParts            
+		.map((part) =&amp;gt; `(${part})`)            
+		.join("(?:&amp;lt;[^&amp;gt;]*&amp;gt;|&amp;amp;[^;]*;|\\W)*");          
+		const regex = new RegExp(regexPattern, "gi");          
+		let text = p.innerHTML;          
+		let highlightedText = text.replace(regex, (match, ...args) =&amp;gt; {            
+			const index = args[args.length - 2];            
+			if (isInsideTag(text, index)) {             
+				// Match is inside a tag, don't highlight it              
+				return match;            
+			} else {              
+				return match                
+				.split(/\s+/)                
+				.map((part) =&amp;gt; `&amp;lt;span class='high-word'&amp;gt;${part}&amp;lt;/span&amp;gt;`)                
+				.join(" ");            
+			}          
+		});          
+		p.innerHTML = highlightedText;        
+	}      
+};
+      
+// This function removes the &amp;lt;span&amp;gt; element but keeps its content      
+const removeHighWord = () =&amp;gt; {        
+	const highlightedElements =          
+	document.getElementsByClassName("high-word");        
+	[...highlightedElements].forEach((el) =&amp;gt; {          
+		const parent = el.parentNode;          
+		const textNode = document.createTextNode(el.textContent);          
+		parent.replaceChild(textNode, el);        
+	});      
+};&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Css:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;.high-word {  
+	background-color: rgba(0, 255, 0, 0.5);  cursor: pointer;
+}&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;Explanation&lt;/h3&gt;&lt;p&gt;The code introduces a function called `highlightWordInP`, which accepts two arguments: a paragraph element `p` (but you can also pass it a div that has a set of text tags) and a `word` to be highlighted. The function does the following:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Escapes special characters in the word using the `escapeRegExp` function.&lt;/li&gt;&lt;li&gt;Removes HTML tags from the word using the `removeAllTags` function.&lt;/li&gt;&lt;li&gt;Splits the word into parts and creates a regular expression that matches the word, ignoring HTML tags, HTML entities, and non-alphabetic characters between the word parts.&lt;/li&gt;&lt;li&gt;Replaces matches of the word in the paragraph's innerHTML with a `&amp;lt;span&amp;gt;` element containing a specific CSS class for underlining.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Use Cases&lt;/h3&gt;&lt;p&gt;You can use this dynamic underlining technique in various scenarios, such as:&lt;/p&gt;&lt;p&gt;- Highlighting search terms within search results.&lt;/p&gt;&lt;p&gt;- Emphasizing important keywords within a text.&lt;/p&gt;&lt;p&gt;- Creating a visual cue for specific words or phrases based on user interaction or other conditions.&lt;/p&gt;&lt;p&gt;To use the &lt;code&gt;highlightWordInP&lt;/code&gt;&lt;/p&gt;&lt;p&gt;The difference, and for which I like this code, is that it recognizes between labels.&lt;/p&gt;&lt;p&gt;All the solutions that I found, to apply to a custom element of a form or a preview, do not adapt to what I needed here, since it was something very custom.&lt;/p&gt;&lt;p&gt;By using a class, we can control underlining, bold among other values.&lt;/p&gt;&lt;p&gt;The most common problem that happened was:&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;This text&amp;lt;/b&amp;gt; has different tags&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;The conventional underscores were lost or they did it wrong when underlining this content, since when searching for matches it generated problems because the contents were between tags, for example when passing a text like "This text has different labels", it did not find the matches Due to the different tags, it worked as long as the contents were in the same tag, not separated between paragraphs or other possible elements, which the method shown in this article solves. function, simply pass the paragraph element and the word to be highlighted as arguments. The function will then apply the highlighting as specified.&lt;/p&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/5" hreflang="en"&gt;Developer Processes&lt;/a&gt;&lt;/div&gt;
@@ -47,11 +137,103 @@
   <title>How to Implement Event Subscriber</title>
   <link>https://brightplum.com/blog/how-implement-event-subscriber</link>
   <description>&lt;span&gt;How to Implement Event Subscriber&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/How-To-Create-Event-Subscribers-In-Drupal-8-%28Part-1%29%201.png?itok=FTk9mQKU" width="480" height="191" alt="Event-Subscribers"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-07-30T22:01:32-05:00" title="Tuesday, July 30, 2024 - 22:01"&gt;Tue, 07/30/2024 - 22:01&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;In this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;What is an Event Subscriber?&lt;/h3&gt;&lt;p&gt;Event subscribers in Drupal are a way to extend and modify the behavior of your application by listening to specific events dispatched by the system. They are part of the Symfony Event Dispatcher component, which is integrated into Drupal. By subscribing to events, you can react to changes in the system, perform additional actions, or modify the default behavior of certain operations.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example of an Event Subscriber&lt;/h3&gt;&lt;p&gt;&lt;code&gt;&amp;lt;?php&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;namespace Drupal\anyModule\EventSubscriber; use Drupal\Core\Session\AccountProxy;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Symfony\Component\EventDispatcher\EventSubscriberInterface;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\core_event_dispatcher\Event\Entity\EntityPresaveEvent;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\hook_event_dispatcher\HookEventDispatcherInterface; use Drupal\Core\Entity\EntityTypeManager;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\Core\Entity\EntityInterface; use Drupal\Core\Database\Connection; use Drupal\Core\Cache\Cache;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\Core\File\FileSystem;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/**&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;* Any module Customization for event subscriber.&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;*/&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;class eventSubscriber implements EventSubscriberInterface { &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* Current user service. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @var \Drupal\Core\Session\AccountProxy &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;protected $currentUser; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* The entity manager. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @var \Drupal\Core\Entity\EntityTypeManager &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;protected $entityTypeManager; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* The database connection. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @var \Drupal\Core\Database\Connection &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;protected $connection; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* The file system. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @var \Drupal\Core\File\FileSystem &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;protected $fileSystem; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* {@inheritdoc} &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;public function __construct(AccountProxy $current_user, EntityTypeManager $entity_type_manager, Connection $connection, FileSystem $file_system) { &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Reference the current_user service. &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;currentUser = $current_user; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;entityTypeManager = $entity_type_manager; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;connection = $connection; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;fileSystem = $file_system; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* {@inheritdoc} &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;public static function getSubscribedEvents() { &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return [ &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm', &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm', &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;]; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* Alter node form. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @param \Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent $event &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp; The event. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;public function alterMclNodeForm(FormIdAlterEvent $event): void { &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$form = &amp;amp;$event-&amp;gt;getForm(); &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// This is a example: In a form you need to hide buttons for some reason or &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;//similar things, which cannot be done from the display form of the content type, &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;//we can do it from here: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;hiddenRemoveButtonOfMediaEntityTable($form);&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// This method is example. &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;This would be the event subscriber, but take into account that this should ideally go inside a custom module that you have created for our specific need, the event subscriber by itself does not work, we must invoke it, and this is done in the services file .yml&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Something like this:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;code&gt;services: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;anyModule.event_subscriber: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;class: Drupal\anyModule\EventSubscriber\EventSubscriber &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;arguments: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- "@current_user" &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- "@entity_type.manager" &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- "@database" &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- "@file_system" &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;tags: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- { name: event_subscriber }&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;With this it should work, it is important to remember that we must clean the cache and activate our custom module, something like this:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;ddev drush on anyModule ( If you use lando is the same, "lando drush on anyModule")&lt;/li&gt;&lt;li&gt;ddev drush cr ( If you use lando is the same, "lando drush cr")&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Code from a site project that implements this functionality:&lt;/p&gt;&lt;p&gt;&lt;a href="https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php"&gt;https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;Use Cases and Possibilities&lt;/h3&gt;&lt;p&gt;Event subscribers can be used for a wide variety of purposes in Drupal, including:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Altering the forms&lt;/li&gt;&lt;li&gt;Altering nodes.&lt;/li&gt;&lt;li&gt;Responding to user authentication events&lt;/li&gt;&lt;li&gt;etc,...&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;By using event subscribers, you can extend and customize your Drupal application to fit your specific needs, and react to various events happening throughout the system.&lt;/p&gt;&lt;p&gt;Here examples of original page of hook event dispatcher: &lt;a href="https://github.com/pdenooijer/hook_event_dispatcher"&gt;https://github.com/pdenooijer/hook_event_dispatcher&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;h2&gt;Conclusion&lt;/h2&gt;&lt;p&gt;The interesting thing about using this approach, instead of simply applying an alter hook or any hook in a .module, is how neat and simplified the code looks, since you can tidy up your code with the object-oriented programming structure and apply dependency injection and with it, call multiple services and everything will be easier to understand and it will look much better, for large projects, I think this is a very cool alternative that is worth trying&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;In this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;What is an Event Subscriber?&lt;/h3&gt;&lt;p&gt;Event subscribers in Drupal are a way to extend and modify the behavior of your application by listening to specific events dispatched by the system. They are part of the Symfony Event Dispatcher component, which is integrated into Drupal. By subscribing to events, you can react to changes in the system, perform additional actions, or modify the default behavior of certain operations.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example of an Event Subscriber&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;&amp;lt;?php
+ namespace Drupal\anyModule\EventSubscriber; use Drupal\Core\Session\AccountProxy;
+ use Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent;
+ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+ use Drupal\core_event_dispatcher\Event\Entity\EntityPresaveEvent;
+ use Drupal\hook_event_dispatcher\HookEventDispatcherInterface; 
+ use Drupal\Core\Entity\EntityTypeManager;
+ use Drupal\Core\Entity\EntityInterface; 
+ use Drupal\Core\Database\Connection; use Drupal\Core\Cache\Cache;
+ use Drupal\Core\File\FileSystem;
+ 
+/**
+ * Any module Customization for event subscriber.
+ */
+class eventSubscriber implements EventSubscriberInterface {  
+/**   
+* Current user service.   
+*   
+* @var \Drupal\Core\Session\AccountProxy   
+*/  protected $currentUser;  
+/**   
+* The entity manager.   
+*   
+* @var \Drupal\Core\Entity\EntityTypeManager   
+*/  protected $entityTypeManager;  
+/**   
+* The database connection.   
+*   
+* @var \Drupal\Core\Database\Connection   
+*/  
+protected $connection;  
+/**   
+* The file system.   
+*   
+* @var \Drupal\Core\File\FileSystem   
+*/  protected $fileSystem;  
+/**   
+* {@inheritdoc}   
+*/  
+public function __construct(AccountProxy $current_user, EntityTypeManager $entity_type_manager, Connection $connection, FileSystem $file_system) {    
+	// Reference the current_user service.    
+	$this-&amp;gt;currentUser = $current_user;    
+	$this-&amp;gt;entityTypeManager = $entity_type_manager;    
+	$this-&amp;gt;connection = $connection;    
+	$this-&amp;gt;fileSystem = $file_system;  
+}  
+/**   
+* {@inheritdoc}   
+*/  
+public static function getSubscribedEvents() {    
+	return [      
+		'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm',      
+		'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm',    
+	];  
+}  
+/**   
+* Alter node form.   
+*   
+* @param \Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent $event   
+*   The event.   
+*/  
+public function alterMclNodeForm(FormIdAlterEvent $event): void {    
+	$form = &amp;amp;$event-&amp;gt;getForm();    
+	// This is a example: In a form you need to hide buttons for some reason or        
+	//similar things, which cannot be done from the display form of the content type,    
+	//we can do it from here:    
+	$this-&amp;gt;hiddenRemoveButtonOfMediaEntityTable($form); 
+	// This method is example.  
+}
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;This would be the event subscriber, but take into account that this should ideally go inside a custom module that you have created for our specific need, the event subscriber by itself does not work, we must invoke it, and this is done in the services file .yml&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Something like this:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;services:  
+anyModule.event_subscriber:    
+class: Drupal\anyModule\EventSubscriber\EventSubscriber    
+arguments:      
+- "@current_user"      
+- "@entity_type.manager"      
+- "@database"      
+- "@file_system"    
+tags:      
+- { name: event_subscriber }&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;With this it should work, it is important to remember that we must clean the cache and activate our custom module, something like this:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;ddev drush on anyModule ( If you use lando is the same, "lando drush on anyModule")&lt;/li&gt;&lt;li&gt;ddev drush cr ( If you use lando is the same, "lando drush cr")&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Code from a site project that implements this functionality:&lt;/p&gt;&lt;p&gt;&lt;a href="https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php"&gt;https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;Use Cases and Possibilities&lt;/h3&gt;&lt;p&gt;Event subscribers can be used for a wide variety of purposes in Drupal, including:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Altering the forms&lt;/li&gt;&lt;li&gt;Altering nodes.&lt;/li&gt;&lt;li&gt;Responding to user authentication events&lt;/li&gt;&lt;li&gt;etc,...&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;By using event subscribers, you can extend and customize your Drupal application to fit your specific needs, and react to various events happening throughout the system.&lt;/p&gt;&lt;p&gt;Here examples of original page of hook event dispatcher: &lt;a href="https://github.com/pdenooijer/hook_event_dispatcher"&gt;https://github.com/pdenooijer/hook_event_dispatcher&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;h2&gt;Conclusion&lt;/h2&gt;&lt;p&gt;The interesting thing about using this approach, instead of simply applying an alter hook or any hook in a .module, is how neat and simplified the code looks, since you can tidy up your code with the object-oriented programming structure and apply dependency injection and with it, call multiple services and everything will be easier to understand and it will look much better, for large projects, I think this is a very cool alternative that is worth trying.&lt;/p&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/5" hreflang="en"&gt;Developer Processes&lt;/a&gt;&lt;/div&gt;

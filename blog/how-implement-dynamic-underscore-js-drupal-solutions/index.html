@@ -12,7 +12,7 @@
       gtag('config', 'G-YBFL8V1FTW');
     </script>
     <meta charset="utf-8" />
-<meta name="description" content="Introduction In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs. current-page" />
+<meta name="description" content="Through this method, we can highlight specific words or phrases within a paragraph element (p).current-page" />
 <link rel="canonical" href="https://brightplum.com/blog/how-implement-dynamic-underscore-js-drupal-solutions" />
 <meta name="author" content="Fredric Mitchell" />
 <meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
@@ -23,7 +23,7 @@
 
     <title>How to implement dynamic underscore in JS, for Drupal solutions | Bright Plum, Inc.</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_47wfT6Q2O5tjBHJqjhyNr-1qqLnwXZH1TaiXjkjxRLs.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_R2wJYBe0uT81fo2Z03nKGhbEKHgVphZV1X-7cSPg8H8.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_sJiYyvcY0oeYKG6yZ7MCWQXm0WnpBalcnUNP5DRCi54.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
 
     
   </head>
@@ -120,14 +120,73 @@
 
           </h2>
         </div>
-        <div class="blog-full__image">
-          
-        </div>
       </div>
     </div>
     <div class="blog-full__body container-blog">
       <span class="blog-full__body--date">Submitted on: July 30 2024</span>
-      <h3>Introduction</h3><p>&nbsp;</p><p>In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.</p><p>The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs.</p><p>&nbsp;</p><h3>Example Code</h3><p>&nbsp;</p><p><code>JS: &nbsp; &nbsp; &nbsp;</code></p><p><code>// Click event for elements with the 'high-word' class &nbsp; &nbsp; &nbsp;</code></p><p><code>container.addEventListener("click", (event) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>if (event.target.classList.contains("high-word")) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>removeHighWord(); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>} &nbsp; &nbsp; &nbsp;</code></p><p><code>}); &nbsp; &nbsp; &nbsp;</code></p><p><code>// Escape special characters in a string for use in a regular expression &nbsp; &nbsp; &nbsp;</code></p><p><code>const escapeRegExp = (string) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&amp;"); &nbsp; &nbsp; &nbsp;</code></p><p><code>}; &nbsp; &nbsp; &nbsp;</code></p><p><code>// Remove HTML tags from a string &nbsp; &nbsp; &nbsp;</code></p><p><code>const removeAllTags = (string) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return string.replace(/&lt;\/?[^&gt;]+(&gt;|$)/g, ""); &nbsp; &nbsp; &nbsp;</code></p><p><code>}; &nbsp; &nbsp; &nbsp;</code></p><p><code>// Check if the matched text is inside an HTML tag &nbsp; &nbsp; &nbsp;</code></p><p><code>const isInsideTag = (text, index) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const openingTag = text.slice(0, index).lastIndexOf("&lt;"); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const closingTag = text.slice(0, index).lastIndexOf("&gt;"); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return openingTag &gt; closingTag; &nbsp; &nbsp; &nbsp;</code></p><p><code>}; &nbsp; &nbsp; &nbsp;</code></p><p><code>// Highlight a word or phrase within a paragraph element (p) &nbsp; &nbsp; &nbsp;</code></p><p><code>const highlightWordInP = (p, word) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>if (p) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const escapedWord = escapeRegExp(word); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const cleanWord = removeAllTags(escapedWord); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const wordParts = cleanWord.split(/\s+/); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const regexPattern = wordParts &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.map((part) =&gt; `(${part})`) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.join("(?:&lt;[^&gt;]*&gt;|&amp;[^;]*;|\\W)*"); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const regex = new RegExp(regexPattern, "gi"); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>let text = p.innerHTML; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>let highlightedText = text.replace(regex, (match, ...args) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const index = args[args.length - 2]; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>if (isInsideTag(text, index)) { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</code></p><p><code>// Match is inside a tag, don't highlight it &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return match; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>} else { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>return match &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.split(/\s+/) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.map((part) =&gt; `&lt;span class='high-word'&gt;${part}&lt;/span&gt;`) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>.join(" "); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>}); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>p.innerHTML = highlightedText; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>} &nbsp; &nbsp; &nbsp;</code></p><p><code>}; &nbsp; &nbsp; &nbsp;</code></p><p><code>// This function removes the &lt;span&gt; element but keeps its content &nbsp; &nbsp; &nbsp;</code></p><p><code>const removeHighWord = () =&gt; { &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const highlightedElements = &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>document.getElementsByClassName("high-word"); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>[...highlightedElements].forEach((el) =&gt; { &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const parent = el.parentNode; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>const textNode = document.createTextNode(el.textContent); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>parent.replaceChild(textNode, el); &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>}); &nbsp; &nbsp; &nbsp;</code></p><p><code>};</code></p><p><code>Css:</code></p><p><code>.high-word { &nbsp;</code></p><p><code>background-color: rgba(0, 255, 0, 0.5); &nbsp;cursor: pointer;</code></p><p><code>}</code></p><p>&nbsp;</p><p>&nbsp;</p><h3>Explanation</h3><h3>&nbsp;</h3><p>The code introduces a function called `highlightWordInP`, which accepts two arguments: a paragraph element `p` (but you can also pass it a div that has a set of text tags) and a `word` to be highlighted. The function does the following:</p><p>&nbsp;</p><ol><li>Escapes special characters in the word using the `escapeRegExp` function.</li><li>Removes HTML tags from the word using the `removeAllTags` function.</li><li>Splits the word into parts and creates a regular expression that matches the word, ignoring HTML tags, HTML entities, and non-alphabetic characters between the word parts.</li><li>Replaces matches of the word in the paragraph's innerHTML with a `&lt;span&gt;` element containing a specific CSS class for underlining.</li></ol><p>&nbsp;</p><h3>Use Cases</h3><h3>&nbsp;</h3><p>You can use this dynamic underlining technique in various scenarios, such as:</p><p>- Highlighting search terms within search results.</p><p>- Emphasizing important keywords within a text.</p><p>- Creating a visual cue for specific words or phrases based on user interaction or other conditions.</p><p>To use the <code>highlightWordInP</code></p><p>The difference, and for which I like this code, is that it recognizes between labels.</p><p>All the solutions that I found, to apply to a custom element of a form or a preview, do not adapt to what I needed here, since it was something very custom.</p><p>By using a class, we can control underlining, bold among other values.</p><p>The most common problem that happened was:</p><p><code>&lt;p&gt;&lt;b&gt;This text&lt;/b&gt; has different tags&lt;/p&gt;</code></p><p>the conventional underscores were lost or they did it wrong when underlining this content, since when searching for matches it generated problems because the contents were between tags, for example when passing a text like "This text has different labels", it did not find the matches Due to the different tags, it worked as long as the contents were in the same tag, not separated between paragraphs or other possible elements, which the method shown in this article solves. function, simply pass the paragraph element and the word to be highlighted as arguments. The function will then apply the highlighting as specified.</p>
+      <h3>Introduction</h3><p>In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.</p><p>The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs.</p><p>&nbsp;</p><h3>Example Code</h3><p>JS: &nbsp; &nbsp; &nbsp;</p><pre><code class="language-plaintext">// Click event for elements with the 'high-word' class      
+container.addEventListener("click", (event) =&gt; {        
+	if (event.target.classList.contains("high-word")) {          
+		removeHighWord();        
+	}      
+}); 
+
+// Escape special characters in a string for use in a regular expression      
+const escapeRegExp = (string) =&gt; {        
+	return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&amp;");      
+}; 
+     
+// Remove HTML tags from a string      
+const removeAllTags = (string) =&gt; {        
+	return string.replace(/&lt;\/?[^&gt;]+(&gt;|$)/g, "");      
+};
+      
+// Check if the matched text is inside an HTML tag      
+const isInsideTag = (text, index) =&gt; {        
+	const openingTag = text.slice(0, index).lastIndexOf("&lt;");        
+	const closingTag = text.slice(0, index).lastIndexOf("&gt;");        
+	return openingTag &gt; closingTag;      
+};
+      
+// Highlight a word or phrase within a paragraph element (p)      
+const highlightWordInP = (p, word) =&gt; {        
+	if (p) {          
+		const escapedWord = escapeRegExp(word);          
+		const cleanWord = removeAllTags(escapedWord);          
+		const wordParts = cleanWord.split(/\s+/);          
+		const regexPattern = wordParts            
+		.map((part) =&gt; `(${part})`)            
+		.join("(?:&lt;[^&gt;]*&gt;|&amp;[^;]*;|\\W)*");          
+		const regex = new RegExp(regexPattern, "gi");          
+		let text = p.innerHTML;          
+		let highlightedText = text.replace(regex, (match, ...args) =&gt; {            
+			const index = args[args.length - 2];            
+			if (isInsideTag(text, index)) {             
+				// Match is inside a tag, don't highlight it              
+				return match;            
+			} else {              
+				return match                
+				.split(/\s+/)                
+				.map((part) =&gt; `&lt;span class='high-word'&gt;${part}&lt;/span&gt;`)                
+				.join(" ");            
+			}          
+		});          
+		p.innerHTML = highlightedText;        
+	}      
+};
+      
+// This function removes the &lt;span&gt; element but keeps its content      
+const removeHighWord = () =&gt; {        
+	const highlightedElements =          
+	document.getElementsByClassName("high-word");        
+	[...highlightedElements].forEach((el) =&gt; {          
+		const parent = el.parentNode;          
+		const textNode = document.createTextNode(el.textContent);          
+		parent.replaceChild(textNode, el);        
+	});      
+};</code></pre><p>Css:</p><pre><code class="language-plaintext">.high-word {  
+	background-color: rgba(0, 255, 0, 0.5);  cursor: pointer;
+}</code></pre><h3>&nbsp;</h3><h3>Explanation</h3><p>The code introduces a function called `highlightWordInP`, which accepts two arguments: a paragraph element `p` (but you can also pass it a div that has a set of text tags) and a `word` to be highlighted. The function does the following:</p><p>&nbsp;</p><ol><li>Escapes special characters in the word using the `escapeRegExp` function.</li><li>Removes HTML tags from the word using the `removeAllTags` function.</li><li>Splits the word into parts and creates a regular expression that matches the word, ignoring HTML tags, HTML entities, and non-alphabetic characters between the word parts.</li><li>Replaces matches of the word in the paragraph's innerHTML with a `&lt;span&gt;` element containing a specific CSS class for underlining.</li></ol><p>&nbsp;</p><h3>Use Cases</h3><p>You can use this dynamic underlining technique in various scenarios, such as:</p><p>- Highlighting search terms within search results.</p><p>- Emphasizing important keywords within a text.</p><p>- Creating a visual cue for specific words or phrases based on user interaction or other conditions.</p><p>To use the <code>highlightWordInP</code></p><p>The difference, and for which I like this code, is that it recognizes between labels.</p><p>All the solutions that I found, to apply to a custom element of a form or a preview, do not adapt to what I needed here, since it was something very custom.</p><p>By using a class, we can control underlining, bold among other values.</p><p>The most common problem that happened was:</p><p><code>&lt;p&gt;&lt;b&gt;This text&lt;/b&gt; has different tags&lt;/p&gt;</code></p><p>The conventional underscores were lost or they did it wrong when underlining this content, since when searching for matches it generated problems because the contents were between tags, for example when passing a text like "This text has different labels", it did not find the matches Due to the different tags, it worked as long as the contents were in the same tag, not separated between paragraphs or other possible elements, which the method shown in this article solves. function, simply pass the paragraph element and the word to be highlighted as arguments. The function will then apply the highlighting as specified.</p>
     </div>
   </div>
 </article>

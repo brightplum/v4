@@ -12,7 +12,7 @@
       gtag('config', 'G-YBFL8V1FTW');
     </script>
     <meta charset="utf-8" />
-<meta name="description" content="Steps:Create a new pipeline in the root of the project with the file name bitbucket-pipelines.yml or if it exists add just the step and the trigger to the existed pipeline.# These are yaml anchors, reused laterx-bash-env-steps:  - &amp;bash_env_export export BASH_ENV=&quot;$BITBUCKET_CLONE_DIR/.bashrc&quot;  - &amp;bash_env_source source $BASH_ENV# This is a larger yaml anchor, reused for each pipelinepull_requests: &amp;pull_requests  current-page" />
+<meta name="description" content="Create a new pipeline in the root of the project with the file name bitbucket-pipelines.yml or if it exists add just the step and the trigger to the existed pipeline.current-page" />
 <link rel="canonical" href="https://brightplum.com/blog/how-integrate-phpcs-drupal-code-standards-bitbucket-pipelines" />
 <meta name="author" content="Fredric Mitchell" />
 <meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
@@ -23,7 +23,7 @@
 
     <title>How to integrate Phpcs with Drupal code standards on bitbucket pipelines | Bright Plum, Inc.</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_47wfT6Q2O5tjBHJqjhyNr-1qqLnwXZH1TaiXjkjxRLs.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_R2wJYBe0uT81fo2Z03nKGhbEKHgVphZV1X-7cSPg8H8.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_sJiYyvcY0oeYKG6yZ7MCWQXm0WnpBalcnUNP5DRCi54.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
 
     
   </head>
@@ -120,14 +120,36 @@
 
           </h2>
         </div>
-        <div class="blog-full__image">
-          
-        </div>
       </div>
     </div>
     <div class="blog-full__body container-blog">
       <span class="blog-full__body--date">Submitted on: July 30 2024</span>
-      <h2>Steps:</h2><p>Create a new pipeline in the root of the project with the file name <code>bitbucket-pipelines.yml</code> or if it exists add just the step and the trigger to the existed pipeline.</p><p><code># These are yaml anchors, reused later</code></p><p><code>x-bash-env-steps: &nbsp;</code></p><p><code>- &amp;bash_env_export export BASH_ENV="$BITBUCKET_CLONE_DIR/.bashrc" &nbsp;</code></p><p><code>- &amp;bash_env_source source $BASH_ENV</code></p><p><code># This is a larger yaml anchor, reused for each pipeline</code></p><p><code>pull_requests: &amp;pull_requests &nbsp;</code></p><p><code>- step: &nbsp; &nbsp; &nbsp;</code></p><p><code>name: 'PHPCS' &nbsp; &nbsp; &nbsp;</code></p><p><code>image: wodby/drupal-php:7.4 &nbsp; &nbsp; &nbsp;</code></p><p><code>script: &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>- composer install &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom</code></p><p><code>- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom &nbsp;</code></p><p><code>- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom</code></p><p><code>options: &nbsp;</code></p><p><code>max-time: 30</code></p><p><code>pipelines: &nbsp;</code></p><p><code>pull-requests: &nbsp; &nbsp;</code></p><p><code># Using the custom pull_request pipeline on each pull request created. &nbsp; &nbsp;</code></p><p><code>'**': *pull_requests</code></p><p>&nbsp;</p>
+      <h2>Steps:</h2><p>Create a new pipeline in the root of the project with the file name <code>bitbucket-pipelines.yml</code> or if it exists add just the step and the trigger to the existed pipeline.</p><pre><code class="language-plaintext"># These are yaml anchors, reused later
+x-bash-env-steps:  
+- &amp;bash_env_export export BASH_ENV="$BITBUCKET_CLONE_DIR/.bashrc"  
+- &amp;bash_env_source source $BASH_ENV
+# This is a larger yaml anchor, reused for each pipeline
+pull_requests: &amp;pull_requests  
+- step:      
+name: 'PHPCS'      
+image: wodby/drupal-php:7.4      
+script:        
+- composer install        
+- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom
+- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom        
+- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom        
+- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom        
+- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom  
+- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom        
+- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom        
+- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom
+options:  
+max-time: 30
+pipelines:  
+pull-requests:    
+# Using the custom pull_request pipeline on each pull request created.    
+'**': *pull_requests
+</code></pre>
     </div>
   </div>
 </article>

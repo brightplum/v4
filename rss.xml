@@ -10,7 +10,21 @@
   <title>Providing Technical Guidance</title>
   <link>https://brightplum.com/blog/providing-technical-guidance</link>
   <description>&lt;span&gt;Providing Technical Guidance&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/ProvidingTechnicalGuidance.png?itok=hrZDzE7m" width="480" height="270" alt="Providing Technical Guidance"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-07-30T22:26:31-05:00" title="Tuesday, July 30, 2024 - 22:26"&gt;Tue, 07/30/2024 - 22:26&lt;/time&gt;
 &lt;/span&gt;
 
@@ -28,11 +42,87 @@
   <title>How to implement dynamic underscore in JS, for Drupal solutions</title>
   <link>https://brightplum.com/blog/how-implement-dynamic-underscore-js-drupal-solutions</link>
   <description>&lt;span&gt;How to implement dynamic underscore in JS, for Drupal solutions&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/drupal-default.webp?itok=mJTA5T-v" width="480" height="270" alt="Drupal default"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-07-30T22:14:30-05:00" title="Tuesday, July 30, 2024 - 22:14"&gt;Tue, 07/30/2024 - 22:14&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.&lt;/p&gt;&lt;p&gt;The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example Code&lt;/h3&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;code&gt;JS: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Click event for elements with the 'high-word' class &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;container.addEventListener("click", (event) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;if (event.target.classList.contains("high-word")) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;removeHighWord(); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}); &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Escape special characters in a string for use in a regular expression &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const escapeRegExp = (string) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&amp;amp;"); &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Remove HTML tags from a string &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const removeAllTags = (string) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return string.replace(/&amp;lt;\/?[^&amp;gt;]+(&amp;gt;|$)/g, ""); &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Check if the matched text is inside an HTML tag &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const isInsideTag = (text, index) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const openingTag = text.slice(0, index).lastIndexOf("&amp;lt;"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const closingTag = text.slice(0, index).lastIndexOf("&amp;gt;"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return openingTag &amp;gt; closingTag; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Highlight a word or phrase within a paragraph element (p) &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const highlightWordInP = (p, word) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;if (p) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const escapedWord = escapeRegExp(word); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const cleanWord = removeAllTags(escapedWord); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const wordParts = cleanWord.split(/\s+/); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const regexPattern = wordParts &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.map((part) =&amp;gt; `(${part})`) &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.join("(?:&amp;lt;[^&amp;gt;]*&amp;gt;|&amp;amp;[^;]*;|\\W)*"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const regex = new RegExp(regexPattern, "gi"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;let text = p.innerHTML; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;let highlightedText = text.replace(regex, (match, ...args) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const index = args[args.length - 2]; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;if (isInsideTag(text, index)) { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Match is inside a tag, don't highlight it &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return match; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} else { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return match &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.split(/\s+/) &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.map((part) =&amp;gt; `&amp;lt;span class='high-word'&amp;gt;${part}&amp;lt;/span&amp;gt;`) &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.join(" "); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;p.innerHTML = highlightedText; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// This function removes the &amp;lt;span&amp;gt; element but keeps its content &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const removeHighWord = () =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const highlightedElements = &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;document.getElementsByClassName("high-word"); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;[...highlightedElements].forEach((el) =&amp;gt; { &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const parent = el.parentNode; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;const textNode = document.createTextNode(el.textContent); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;parent.replaceChild(textNode, el); &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}); &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;};&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;Css:&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;.high-word { &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;background-color: rgba(0, 255, 0, 0.5); &amp;nbsp;cursor: pointer;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Explanation&lt;/h3&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;p&gt;The code introduces a function called `highlightWordInP`, which accepts two arguments: a paragraph element `p` (but you can also pass it a div that has a set of text tags) and a `word` to be highlighted. The function does the following:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Escapes special characters in the word using the `escapeRegExp` function.&lt;/li&gt;&lt;li&gt;Removes HTML tags from the word using the `removeAllTags` function.&lt;/li&gt;&lt;li&gt;Splits the word into parts and creates a regular expression that matches the word, ignoring HTML tags, HTML entities, and non-alphabetic characters between the word parts.&lt;/li&gt;&lt;li&gt;Replaces matches of the word in the paragraph's innerHTML with a `&amp;lt;span&amp;gt;` element containing a specific CSS class for underlining.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Use Cases&lt;/h3&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;p&gt;You can use this dynamic underlining technique in various scenarios, such as:&lt;/p&gt;&lt;p&gt;- Highlighting search terms within search results.&lt;/p&gt;&lt;p&gt;- Emphasizing important keywords within a text.&lt;/p&gt;&lt;p&gt;- Creating a visual cue for specific words or phrases based on user interaction or other conditions.&lt;/p&gt;&lt;p&gt;To use the &lt;code&gt;highlightWordInP&lt;/code&gt;&lt;/p&gt;&lt;p&gt;The difference, and for which I like this code, is that it recognizes between labels.&lt;/p&gt;&lt;p&gt;All the solutions that I found, to apply to a custom element of a form or a preview, do not adapt to what I needed here, since it was something very custom.&lt;/p&gt;&lt;p&gt;By using a class, we can control underlining, bold among other values.&lt;/p&gt;&lt;p&gt;The most common problem that happened was:&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;This text&amp;lt;/b&amp;gt; has different tags&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;the conventional underscores were lost or they did it wrong when underlining this content, since when searching for matches it generated problems because the contents were between tags, for example when passing a text like "This text has different labels", it did not find the matches Due to the different tags, it worked as long as the contents were in the same tag, not separated between paragraphs or other possible elements, which the method shown in this article solves. function, simply pass the paragraph element and the word to be highlighted as arguments. The function will then apply the highlighting as specified.&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;In this article, we will discuss how to implement dynamic underlining in JavaScript for Drupal solutions. Through this method, we can highlight specific words or phrases within a paragraph element (p). This technique can be useful in cases such as highlighting search terms, emphasizing keywords in a text, or highlighting certain words based on specific conditions.&lt;/p&gt;&lt;p&gt;The idea of using this is in cases where custom modules are not very flexible, we can add this little JS, and apply our solution based on our specific needs.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example Code&lt;/h3&gt;&lt;p&gt;JS: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;// Click event for elements with the 'high-word' class      
+container.addEventListener("click", (event) =&amp;gt; {        
+	if (event.target.classList.contains("high-word")) {          
+		removeHighWord();        
+	}      
+}); 
+
+// Escape special characters in a string for use in a regular expression      
+const escapeRegExp = (string) =&amp;gt; {        
+	return string.replace(/[.*+\-?^${}()|[\]\\]/g, "\\$&amp;amp;");      
+}; 
+     
+// Remove HTML tags from a string      
+const removeAllTags = (string) =&amp;gt; {        
+	return string.replace(/&amp;lt;\/?[^&amp;gt;]+(&amp;gt;|$)/g, "");      
+};
+      
+// Check if the matched text is inside an HTML tag      
+const isInsideTag = (text, index) =&amp;gt; {        
+	const openingTag = text.slice(0, index).lastIndexOf("&amp;lt;");        
+	const closingTag = text.slice(0, index).lastIndexOf("&amp;gt;");        
+	return openingTag &amp;gt; closingTag;      
+};
+      
+// Highlight a word or phrase within a paragraph element (p)      
+const highlightWordInP = (p, word) =&amp;gt; {        
+	if (p) {          
+		const escapedWord = escapeRegExp(word);          
+		const cleanWord = removeAllTags(escapedWord);          
+		const wordParts = cleanWord.split(/\s+/);          
+		const regexPattern = wordParts            
+		.map((part) =&amp;gt; `(${part})`)            
+		.join("(?:&amp;lt;[^&amp;gt;]*&amp;gt;|&amp;amp;[^;]*;|\\W)*");          
+		const regex = new RegExp(regexPattern, "gi");          
+		let text = p.innerHTML;          
+		let highlightedText = text.replace(regex, (match, ...args) =&amp;gt; {            
+			const index = args[args.length - 2];            
+			if (isInsideTag(text, index)) {             
+				// Match is inside a tag, don't highlight it              
+				return match;            
+			} else {              
+				return match                
+				.split(/\s+/)                
+				.map((part) =&amp;gt; `&amp;lt;span class='high-word'&amp;gt;${part}&amp;lt;/span&amp;gt;`)                
+				.join(" ");            
+			}          
+		});          
+		p.innerHTML = highlightedText;        
+	}      
+};
+      
+// This function removes the &amp;lt;span&amp;gt; element but keeps its content      
+const removeHighWord = () =&amp;gt; {        
+	const highlightedElements =          
+	document.getElementsByClassName("high-word");        
+	[...highlightedElements].forEach((el) =&amp;gt; {          
+		const parent = el.parentNode;          
+		const textNode = document.createTextNode(el.textContent);          
+		parent.replaceChild(textNode, el);        
+	});      
+};&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Css:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;.high-word {  
+	background-color: rgba(0, 255, 0, 0.5);  cursor: pointer;
+}&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;Explanation&lt;/h3&gt;&lt;p&gt;The code introduces a function called `highlightWordInP`, which accepts two arguments: a paragraph element `p` (but you can also pass it a div that has a set of text tags) and a `word` to be highlighted. The function does the following:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Escapes special characters in the word using the `escapeRegExp` function.&lt;/li&gt;&lt;li&gt;Removes HTML tags from the word using the `removeAllTags` function.&lt;/li&gt;&lt;li&gt;Splits the word into parts and creates a regular expression that matches the word, ignoring HTML tags, HTML entities, and non-alphabetic characters between the word parts.&lt;/li&gt;&lt;li&gt;Replaces matches of the word in the paragraph's innerHTML with a `&amp;lt;span&amp;gt;` element containing a specific CSS class for underlining.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Use Cases&lt;/h3&gt;&lt;p&gt;You can use this dynamic underlining technique in various scenarios, such as:&lt;/p&gt;&lt;p&gt;- Highlighting search terms within search results.&lt;/p&gt;&lt;p&gt;- Emphasizing important keywords within a text.&lt;/p&gt;&lt;p&gt;- Creating a visual cue for specific words or phrases based on user interaction or other conditions.&lt;/p&gt;&lt;p&gt;To use the &lt;code&gt;highlightWordInP&lt;/code&gt;&lt;/p&gt;&lt;p&gt;The difference, and for which I like this code, is that it recognizes between labels.&lt;/p&gt;&lt;p&gt;All the solutions that I found, to apply to a custom element of a form or a preview, do not adapt to what I needed here, since it was something very custom.&lt;/p&gt;&lt;p&gt;By using a class, we can control underlining, bold among other values.&lt;/p&gt;&lt;p&gt;The most common problem that happened was:&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;This text&amp;lt;/b&amp;gt; has different tags&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;The conventional underscores were lost or they did it wrong when underlining this content, since when searching for matches it generated problems because the contents were between tags, for example when passing a text like "This text has different labels", it did not find the matches Due to the different tags, it worked as long as the contents were in the same tag, not separated between paragraphs or other possible elements, which the method shown in this article solves. function, simply pass the paragraph element and the word to be highlighted as arguments. The function will then apply the highlighting as specified.&lt;/p&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/5" hreflang="en"&gt;Developer Processes&lt;/a&gt;&lt;/div&gt;
@@ -47,11 +137,103 @@
   <title>How to Implement Event Subscriber</title>
   <link>https://brightplum.com/blog/how-implement-event-subscriber</link>
   <description>&lt;span&gt;How to Implement Event Subscriber&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/How-To-Create-Event-Subscribers-In-Drupal-8-%28Part-1%29%201.png?itok=FTk9mQKU" width="480" height="191" alt="Event-Subscribers"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-07-30T22:01:32-05:00" title="Tuesday, July 30, 2024 - 22:01"&gt;Tue, 07/30/2024 - 22:01&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;In this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;What is an Event Subscriber?&lt;/h3&gt;&lt;p&gt;Event subscribers in Drupal are a way to extend and modify the behavior of your application by listening to specific events dispatched by the system. They are part of the Symfony Event Dispatcher component, which is integrated into Drupal. By subscribing to events, you can react to changes in the system, perform additional actions, or modify the default behavior of certain operations.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example of an Event Subscriber&lt;/h3&gt;&lt;p&gt;&lt;code&gt;&amp;lt;?php&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;namespace Drupal\anyModule\EventSubscriber; use Drupal\Core\Session\AccountProxy;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Symfony\Component\EventDispatcher\EventSubscriberInterface;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\core_event_dispatcher\Event\Entity\EntityPresaveEvent;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\hook_event_dispatcher\HookEventDispatcherInterface; use Drupal\Core\Entity\EntityTypeManager;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\Core\Entity\EntityInterface; use Drupal\Core\Database\Connection; use Drupal\Core\Cache\Cache;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;use Drupal\Core\File\FileSystem;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/**&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;* Any module Customization for event subscriber.&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;&amp;nbsp;*/&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;class eventSubscriber implements EventSubscriberInterface { &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* Current user service. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @var \Drupal\Core\Session\AccountProxy &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;protected $currentUser; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* The entity manager. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @var \Drupal\Core\Entity\EntityTypeManager &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;protected $entityTypeManager; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* The database connection. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @var \Drupal\Core\Database\Connection &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;protected $connection; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* The file system. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @var \Drupal\Core\File\FileSystem &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;protected $fileSystem; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* {@inheritdoc} &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;public function __construct(AccountProxy $current_user, EntityTypeManager $entity_type_manager, Connection $connection, FileSystem $file_system) { &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// Reference the current_user service. &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;currentUser = $current_user; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;entityTypeManager = $entity_type_manager; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;connection = $connection; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;fileSystem = $file_system; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* {@inheritdoc} &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;public static function getSubscribedEvents() { &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;return [ &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm', &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm', &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;]; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;} &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;/** &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* Alter node form. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* @param \Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent $event &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;* &amp;nbsp; The event. &amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;*/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;public function alterMclNodeForm(FormIdAlterEvent $event): void { &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$form = &amp;amp;$event-&amp;gt;getForm(); &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// This is a example: In a form you need to hide buttons for some reason or &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;//similar things, which cannot be done from the display form of the content type, &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;//we can do it from here: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;$this-&amp;gt;hiddenRemoveButtonOfMediaEntityTable($form);&amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;// This method is example. &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;}&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;This would be the event subscriber, but take into account that this should ideally go inside a custom module that you have created for our specific need, the event subscriber by itself does not work, we must invoke it, and this is done in the services file .yml&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Something like this:&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;code&gt;services: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;anyModule.event_subscriber: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;class: Drupal\anyModule\EventSubscriber\EventSubscriber &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;arguments: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- "@current_user" &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- "@entity_type.manager" &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- "@database" &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- "@file_system" &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;tags: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- { name: event_subscriber }&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;With this it should work, it is important to remember that we must clean the cache and activate our custom module, something like this:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;ddev drush on anyModule ( If you use lando is the same, "lando drush on anyModule")&lt;/li&gt;&lt;li&gt;ddev drush cr ( If you use lando is the same, "lando drush cr")&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Code from a site project that implements this functionality:&lt;/p&gt;&lt;p&gt;&lt;a href="https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php"&gt;https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;Use Cases and Possibilities&lt;/h3&gt;&lt;p&gt;Event subscribers can be used for a wide variety of purposes in Drupal, including:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Altering the forms&lt;/li&gt;&lt;li&gt;Altering nodes.&lt;/li&gt;&lt;li&gt;Responding to user authentication events&lt;/li&gt;&lt;li&gt;etc,...&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;By using event subscribers, you can extend and customize your Drupal application to fit your specific needs, and react to various events happening throughout the system.&lt;/p&gt;&lt;p&gt;Here examples of original page of hook event dispatcher: &lt;a href="https://github.com/pdenooijer/hook_event_dispatcher"&gt;https://github.com/pdenooijer/hook_event_dispatcher&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;h2&gt;Conclusion&lt;/h2&gt;&lt;p&gt;The interesting thing about using this approach, instead of simply applying an alter hook or any hook in a .module, is how neat and simplified the code looks, since you can tidy up your code with the object-oriented programming structure and apply dependency injection and with it, call multiple services and everything will be easier to understand and it will look much better, for large projects, I think this is a very cool alternative that is worth trying&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;In this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;What is an Event Subscriber?&lt;/h3&gt;&lt;p&gt;Event subscribers in Drupal are a way to extend and modify the behavior of your application by listening to specific events dispatched by the system. They are part of the Symfony Event Dispatcher component, which is integrated into Drupal. By subscribing to events, you can react to changes in the system, perform additional actions, or modify the default behavior of certain operations.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example of an Event Subscriber&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;&amp;lt;?php
+ namespace Drupal\anyModule\EventSubscriber; use Drupal\Core\Session\AccountProxy;
+ use Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent;
+ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+ use Drupal\core_event_dispatcher\Event\Entity\EntityPresaveEvent;
+ use Drupal\hook_event_dispatcher\HookEventDispatcherInterface; 
+ use Drupal\Core\Entity\EntityTypeManager;
+ use Drupal\Core\Entity\EntityInterface; 
+ use Drupal\Core\Database\Connection; use Drupal\Core\Cache\Cache;
+ use Drupal\Core\File\FileSystem;
+ 
+/**
+ * Any module Customization for event subscriber.
+ */
+class eventSubscriber implements EventSubscriberInterface {  
+/**   
+* Current user service.   
+*   
+* @var \Drupal\Core\Session\AccountProxy   
+*/  protected $currentUser;  
+/**   
+* The entity manager.   
+*   
+* @var \Drupal\Core\Entity\EntityTypeManager   
+*/  protected $entityTypeManager;  
+/**   
+* The database connection.   
+*   
+* @var \Drupal\Core\Database\Connection   
+*/  
+protected $connection;  
+/**   
+* The file system.   
+*   
+* @var \Drupal\Core\File\FileSystem   
+*/  protected $fileSystem;  
+/**   
+* {@inheritdoc}   
+*/  
+public function __construct(AccountProxy $current_user, EntityTypeManager $entity_type_manager, Connection $connection, FileSystem $file_system) {    
+	// Reference the current_user service.    
+	$this-&amp;gt;currentUser = $current_user;    
+	$this-&amp;gt;entityTypeManager = $entity_type_manager;    
+	$this-&amp;gt;connection = $connection;    
+	$this-&amp;gt;fileSystem = $file_system;  
+}  
+/**   
+* {@inheritdoc}   
+*/  
+public static function getSubscribedEvents() {    
+	return [      
+		'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm',      
+		'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm',    
+	];  
+}  
+/**   
+* Alter node form.   
+*   
+* @param \Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent $event   
+*   The event.   
+*/  
+public function alterMclNodeForm(FormIdAlterEvent $event): void {    
+	$form = &amp;amp;$event-&amp;gt;getForm();    
+	// This is a example: In a form you need to hide buttons for some reason or        
+	//similar things, which cannot be done from the display form of the content type,    
+	//we can do it from here:    
+	$this-&amp;gt;hiddenRemoveButtonOfMediaEntityTable($form); 
+	// This method is example.  
+}
+}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;This would be the event subscriber, but take into account that this should ideally go inside a custom module that you have created for our specific need, the event subscriber by itself does not work, we must invoke it, and this is done in the services file .yml&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Something like this:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;services:  
+anyModule.event_subscriber:    
+class: Drupal\anyModule\EventSubscriber\EventSubscriber    
+arguments:      
+- "@current_user"      
+- "@entity_type.manager"      
+- "@database"      
+- "@file_system"    
+tags:      
+- { name: event_subscriber }&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;With this it should work, it is important to remember that we must clean the cache and activate our custom module, something like this:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;ddev drush on anyModule ( If you use lando is the same, "lando drush on anyModule")&lt;/li&gt;&lt;li&gt;ddev drush cr ( If you use lando is the same, "lando drush cr")&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Code from a site project that implements this functionality:&lt;/p&gt;&lt;p&gt;&lt;a href="https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php"&gt;https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;Use Cases and Possibilities&lt;/h3&gt;&lt;p&gt;Event subscribers can be used for a wide variety of purposes in Drupal, including:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Altering the forms&lt;/li&gt;&lt;li&gt;Altering nodes.&lt;/li&gt;&lt;li&gt;Responding to user authentication events&lt;/li&gt;&lt;li&gt;etc,...&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;By using event subscribers, you can extend and customize your Drupal application to fit your specific needs, and react to various events happening throughout the system.&lt;/p&gt;&lt;p&gt;Here examples of original page of hook event dispatcher: &lt;a href="https://github.com/pdenooijer/hook_event_dispatcher"&gt;https://github.com/pdenooijer/hook_event_dispatcher&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;h2&gt;Conclusion&lt;/h2&gt;&lt;p&gt;The interesting thing about using this approach, instead of simply applying an alter hook or any hook in a .module, is how neat and simplified the code looks, since you can tidy up your code with the object-oriented programming structure and apply dependency injection and with it, call multiple services and everything will be easier to understand and it will look much better, for large projects, I think this is a very cool alternative that is worth trying.&lt;/p&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/5" hreflang="en"&gt;Developer Processes&lt;/a&gt;&lt;/div&gt;
@@ -65,11 +247,50 @@
   <title>How to integrate Phpcs with Drupal code standards on bitbucket pipelines</title>
   <link>https://brightplum.com/blog/how-integrate-phpcs-drupal-code-standards-bitbucket-pipelines</link>
   <description>&lt;span&gt;How to integrate Phpcs with Drupal code standards on bitbucket pipelines&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/Using-Bitbucket-Pipeline-in-a-PHP-App-Banner.jpg?itok=mJ8URlxO" width="480" height="252" alt="Using-Bitbucket-Pipeline"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-07-30T21:37:45-05:00" title="Tuesday, July 30, 2024 - 21:37"&gt;Tue, 07/30/2024 - 21:37&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;h2&gt;Steps:&lt;/h2&gt;&lt;p&gt;Create a new pipeline in the root of the project with the file name &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt; or if it exists add just the step and the trigger to the existed pipeline.&lt;/p&gt;&lt;p&gt;&lt;code&gt;# These are yaml anchors, reused later&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;x-bash-env-steps: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- &amp;amp;bash_env_export export BASH_ENV="$BITBUCKET_CLONE_DIR/.bashrc" &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- &amp;amp;bash_env_source source $BASH_ENV&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;# This is a larger yaml anchor, reused for each pipeline&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;pull_requests: &amp;amp;pull_requests &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- step: &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;name: 'PHPCS' &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;image: wodby/drupal-php:7.4 &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;script: &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- composer install &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;options: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;max-time: 30&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;pipelines: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;pull-requests: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;# Using the custom pull_request pipeline on each pull request created. &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;'**': *pull_requests&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;h2&gt;Steps:&lt;/h2&gt;&lt;p&gt;Create a new pipeline in the root of the project with the file name &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt; or if it exists add just the step and the trigger to the existed pipeline.&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;# These are yaml anchors, reused later
+x-bash-env-steps:  
+- &amp;amp;bash_env_export export BASH_ENV="$BITBUCKET_CLONE_DIR/.bashrc"  
+- &amp;amp;bash_env_source source $BASH_ENV
+# This is a larger yaml anchor, reused for each pipeline
+pull_requests: &amp;amp;pull_requests  
+- step:      
+name: 'PHPCS'      
+image: wodby/drupal-php:7.4      
+script:        
+- composer install        
+- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom
+- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom        
+- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom        
+- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom        
+- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom  
+- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom        
+- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom        
+- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom
+options:  
+max-time: 30
+pipelines:  
+pull-requests:    
+# Using the custom pull_request pipeline on each pull request created.    
+'**': *pull_requests
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/3" hreflang="en"&gt;Bitbucket&lt;/a&gt;&lt;/div&gt;
@@ -119,14 +340,27 @@
   <title>How to Config Split</title>
   <link>https://brightplum.com/blog/how-config-split</link>
   <description>&lt;span&gt;How to Config Split&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/config-split.png?itok=Q36BYQZl" width="480" height="250" alt="config-split"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-05-08T13:45:57-05:00" title="Wednesday, May 8, 2024 - 13:45"&gt;Wed, 05/08/2024 - 13:45&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;p&gt;&lt;strong&gt;A quick summary of when we need config split:&lt;/strong&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Config split module is useful when we need some modules for development or testing but we don't want them in live (or any other environment), with this module we are allow to configure sub config folders that will be loaded just when we allow them to be loaded in the settings.php.&lt;/p&gt;&lt;/blockquote&gt;&lt;h3&gt;Basic config steps&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Install the latest config split version for the Drupal version you have, can be found here:&lt;/li&gt;&lt;li&gt;&lt;a href="https://www.drupal.org/project/config_split"&gt;https://www.drupal.org/project/config_split&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Enable the module with &lt;code&gt;drush en config_split&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Go to module config with this route &lt;code&gt;/admin/config/development/configuration/config-split&lt;/code&gt; this route may change but you can always go to the extend page and search the module, in there you'll see the configuration link.&lt;/li&gt;&lt;li&gt;On the config split configuration page you'll see a page with all the configured splits, in our case that its a newly install module we won't have any. If we click on "Add Configuration Split setting" button we'll get the configuration for a new config split.&amp;nbsp;&lt;/li&gt;&lt;li&gt;In there we can fill the following fields:&lt;ul&gt;&lt;li&gt;Label: Put a descriptive label so you don't get confuse on what its in that split.&lt;/li&gt;&lt;li&gt;Description: Write a quick description of what will be store in that config split&lt;/li&gt;&lt;li&gt;Storage: We have 3 options here &lt;strong&gt;Folder, Collection, Database, &lt;/strong&gt;we don't need to change the default that is folder unless we need a very specific config that requires the others.&lt;/li&gt;&lt;li&gt;Folder: Where the config split will be saved, try to save it under a folder with a similar name as the label.&lt;/li&gt;&lt;li&gt;Status: This control whenever a split will load or not, by default true but with this we can do the magic in settings.php to conditionally load the splits.&lt;/li&gt;&lt;li&gt;Complete split: This let us remove an entire config from the default config and put it in our split.&lt;/li&gt;&lt;li&gt;Partial split: Let us add a patch to add/remove config after the default config ran (for example core.extension let us enable/disable modules).&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Once we fill the needed fields we can save that split.&lt;/li&gt;&lt;li&gt;Now if we run &lt;code&gt;drush cex&lt;/code&gt; to get the config split out.&lt;/li&gt;&lt;li&gt;Then if we want to load this split conditionally we can add this code to the settings.php:&lt;ul&gt;&lt;li&gt;&lt;code&gt;if ([ContitionsToNotLoad]) {
- &amp;nbsp;$config['config_split.config_split.test']['status'] = FALSE;
-}&lt;/code&gt;
-&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;p&gt;&lt;strong&gt;A quick summary of when we need config split:&lt;/strong&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Config split module is useful when we need some modules for development or testing but we don't want them in live (or any other environment), with this module we are allow to configure sub config folders that will be loaded just when we allow them to be loaded in the settings.php.&lt;/p&gt;&lt;/blockquote&gt;&lt;h3&gt;Basic config steps&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Install the latest config split version for the Drupal version you have, can be found here:&lt;/li&gt;&lt;li&gt;&lt;a href="https://www.drupal.org/project/config_split"&gt;https://www.drupal.org/project/config_split&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Enable the module with &lt;code&gt;drush en config_split&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Go to module config with this route &lt;code&gt;/admin/config/development/configuration/config-split&lt;/code&gt; this route may change but you can always go to the extend page and search the module, in there you'll see the configuration link.&lt;/li&gt;&lt;li&gt;On the config split configuration page you'll see a page with all the configured splits, in our case that its a newly install module we won't have any. If we click on "Add Configuration Split setting" button we'll get the configuration for a new config split.&amp;nbsp;&lt;/li&gt;&lt;li&gt;In there we can fill the following fields:&lt;ul&gt;&lt;li&gt;Label: Put a descriptive label so you don't get confuse on what its in that split.&lt;/li&gt;&lt;li&gt;Description: Write a quick description of what will be store in that config split&lt;/li&gt;&lt;li&gt;Storage: We have 3 options here &lt;strong&gt;Folder, Collection, Database, &lt;/strong&gt;we don't need to change the default that is folder unless we need a very specific config that requires the others.&lt;/li&gt;&lt;li&gt;Folder: Where the config split will be saved, try to save it under a folder with a similar name as the label.&lt;/li&gt;&lt;li&gt;Status: This control whenever a split will load or not, by default true but with this we can do the magic in settings.php to conditionally load the splits.&lt;/li&gt;&lt;li&gt;Complete split: This let us remove an entire config from the default config and put it in our split.&lt;/li&gt;&lt;li&gt;Partial split: Let us add a patch to add/remove config after the default config ran (for example core.extension let us enable/disable modules).&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Once we fill the needed fields we can save that split.&lt;/li&gt;&lt;li&gt;Now if we run &lt;code&gt;drush cex&lt;/code&gt; to get the config split out.&lt;/li&gt;&lt;li&gt;&lt;p&gt;Then if we want to load this split conditionally we can add this code to the settings.php:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;if ([ContitionsToNotLoad]) {  
+	$config['config_split.config_split.test']['status'] = FALSE; 
+}&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/2" hreflang="en"&gt;Drupal Modules&lt;/a&gt;&lt;/div&gt;
@@ -140,11 +374,45 @@
   <title>How to Implement Automatization Deployment Gitlab to Pantheon</title>
   <link>https://brightplum.com/blog/how-implement-automatization-deployment-gitlab-pantheon</link>
   <description>&lt;span&gt;How to Implement Automatization Deployment Gitlab to Pantheon&lt;/span&gt;
-&lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/gitlab-pantheon.png?itok=S_y3VZr5" width="480" height="270" alt="gitlab pantheon"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
 &lt;span&gt;&lt;time datetime="2024-05-08T13:44:10-05:00" title="Wednesday, May 8, 2024 - 13:44"&gt;Wed, 05/08/2024 - 13:44&lt;/time&gt;
 &lt;/span&gt;
 
-            &lt;div&gt;&lt;p&gt;To start creating an automatization between Gitlab and Pantheon we need to following some steps.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;Create a file and script to make the magic and pushing everything to Pantheon from Gitlab.&lt;/p&gt;&lt;p&gt;Basic Script:&lt;/p&gt;&lt;p&gt;&lt;code&gt;stages: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- deploy before_script: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;# See https://docs.gitlab.com/ee/ci/ssh_keys/README.html &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- eval $(ssh-agent -s) &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - &amp;gt; /dev/null &amp;nbsp;- mkdir -p $HOME/.ssh &amp;amp;&amp;amp; echo "StrictHostKeyChecking no" &amp;gt;&amp;gt; "$HOME/.ssh/config" &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git config --global user.email "$GITLAB_USER_EMAIL" &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git config --global user.name "Gitlab CI"&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;deploy:dev: &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;stage: deploy &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;environment: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;name: dev &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;url: https://dev-$PANTHEON_SITE.pantheonsite.io/ &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;script: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git config checkout.defaultRemote origin &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git remote add pantheon $PANTHEON_GIT_URL &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git fetch pantheon &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git branch -v &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git checkout master &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- git push pantheon master --force &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;only: &amp;nbsp; &amp;nbsp;&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;- master&lt;/code&gt;&lt;/p&gt;&lt;p&gt;Gitlab by default use "&lt;code&gt;.gitlab-ci.yml&lt;/code&gt;" as a name for the file&lt;/p&gt;&lt;/li&gt;&lt;li&gt;Get this code and create a new file with the name &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; in your project root.&lt;/li&gt;&lt;li&gt;Commit and push this file to the repository project in Gitlab on the master branch.&lt;/li&gt;&lt;li&gt;Once you have this file in the Gitlab repository, let's configure some variables used on the script. For example &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE&lt;/code&gt;&lt;/li&gt;&lt;li&gt;To configure these variables we need to go to Gitlab Project page then in the left sidebar menu there is the a &lt;code&gt;Settings&lt;/code&gt; option. Click on this menu item and then click on &lt;code&gt;CI/CD &lt;/code&gt;submenu item.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Then go to that page and go to the &lt;code&gt;Variables&lt;/code&gt; section&lt;/li&gt;&lt;li&gt;Now create the variables that you used on the script. In this case we used &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;so now we need to set a value for them.&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_GIT_URL. &lt;/code&gt;Go to Pantheon and copy the git url and page on value field.&amp;nbsp;&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;it is the name of the site.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Click on update variable and then we can start to pushing things automatically on pantheon.&lt;/li&gt;&lt;li&gt;Check in the left sidebar the CI/CD menu item all deployments and check the jobs.&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;p&gt;To start creating an automatization between Gitlab and Pantheon we need to following some steps.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;Create a file and script to make the magic and pushing everything to Pantheon from Gitlab.&lt;/p&gt;&lt;p&gt;Basic Script:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;stages:  
+- deploy before_script:  
+# See https://docs.gitlab.com/ee/ci/ssh_keys/README.html  
+- eval $(ssh-agent -s)  
+- echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - &amp;gt; /dev/null  - mkdir -p $HOME/.ssh &amp;amp;&amp;amp; echo "StrictHostKeyChecking no" &amp;gt;&amp;gt; "$HOME/.ssh/config"  
+- git config --global user.email "$GITLAB_USER_EMAIL"  
+- git config --global user.name "Gitlab CI"
+deploy:dev:  
+stage: deploy  
+environment:    
+name: dev    
+url: https://dev-$PANTHEON_SITE.pantheonsite.io/  
+script:    
+- git config checkout.defaultRemote origin    
+- git remote add pantheon $PANTHEON_GIT_URL    
+- git fetch pantheon    
+- git branch -v    
+- git checkout master    
+- git push pantheon master --force  
+only:    
+- master&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Gitlab by default use "&lt;code&gt;.gitlab-ci.yml&lt;/code&gt;" as a name for the file&lt;/p&gt;&lt;/li&gt;&lt;li&gt;Get this code and create a new file with the name &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; in your project root.&lt;/li&gt;&lt;li&gt;Commit and push this file to the repository project in Gitlab on the master branch.&lt;/li&gt;&lt;li&gt;Once you have this file in the Gitlab repository, let's configure some variables used on the script. For example &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE&lt;/code&gt;&lt;/li&gt;&lt;li&gt;To configure these variables we need to go to Gitlab Project page then in the left sidebar menu there is the a &lt;code&gt;Settings&lt;/code&gt; option. Click on this menu item and then click on &lt;code&gt;CI/CD &lt;/code&gt;submenu item.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Then go to that page and go to the &lt;code&gt;Variables&lt;/code&gt; section&lt;/li&gt;&lt;li&gt;Now create the variables that you used on the script. In this case we used &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;so now we need to set a value for them.&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_GIT_URL. &lt;/code&gt;Go to Pantheon and copy the git url and page on value field.&amp;nbsp;&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;it is the name of the site.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Click on update variable and then we can start to pushing things automatically on pantheon.&lt;/li&gt;&lt;li&gt;Check in the left sidebar the CI/CD menu item all deployments and check the jobs.&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
       
       &lt;div&gt;
               &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/1" hreflang="en"&gt;Drupal 10&lt;/a&gt;&lt;/div&gt;

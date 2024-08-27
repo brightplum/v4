@@ -12,7 +12,7 @@
       gtag('config', 'G-YBFL8V1FTW');
     </script>
     <meta charset="utf-8" />
-<meta name="description" content="IntroductionIn this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal. current-page" />
+<meta name="description" content="Basic code examples, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.current-page" />
 <link rel="canonical" href="https://brightplum.com/blog/how-implement-event-subscriber" />
 <meta name="author" content="Fredric Mitchell" />
 <meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
@@ -23,7 +23,7 @@
 
     <title>How to Implement Event Subscriber | Bright Plum, Inc.</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_47wfT6Q2O5tjBHJqjhyNr-1qqLnwXZH1TaiXjkjxRLs.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_R2wJYBe0uT81fo2Z03nKGhbEKHgVphZV1X-7cSPg8H8.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_sJiYyvcY0oeYKG6yZ7MCWQXm0WnpBalcnUNP5DRCi54.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJwrriwuSc3VT0osTtVJKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwAWyQ6x" />
 
     
   </head>
@@ -120,14 +120,89 @@
 
           </h2>
         </div>
-        <div class="blog-full__image">
-          
-        </div>
       </div>
     </div>
     <div class="blog-full__body container-blog">
       <span class="blog-full__body--date">Submitted on: July 30 2024</span>
-      <h3>Introduction</h3><p>In this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.</p><p>&nbsp;</p><h3>What is an Event Subscriber?</h3><p>Event subscribers in Drupal are a way to extend and modify the behavior of your application by listening to specific events dispatched by the system. They are part of the Symfony Event Dispatcher component, which is integrated into Drupal. By subscribing to events, you can react to changes in the system, perform additional actions, or modify the default behavior of certain operations.</p><p>&nbsp;</p><h3>Example of an Event Subscriber</h3><p><code>&lt;?php</code></p><p><code>&nbsp;namespace Drupal\anyModule\EventSubscriber; use Drupal\Core\Session\AccountProxy;</code></p><p><code>&nbsp;use Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent;</code></p><p><code>&nbsp;use Symfony\Component\EventDispatcher\EventSubscriberInterface;</code></p><p><code>&nbsp;use Drupal\core_event_dispatcher\Event\Entity\EntityPresaveEvent;</code></p><p><code>&nbsp;use Drupal\hook_event_dispatcher\HookEventDispatcherInterface; use Drupal\Core\Entity\EntityTypeManager;</code></p><p><code>&nbsp;use Drupal\Core\Entity\EntityInterface; use Drupal\Core\Database\Connection; use Drupal\Core\Cache\Cache;</code></p><p><code>&nbsp;use Drupal\Core\File\FileSystem;</code></p><p><code>/**</code></p><p><code>&nbsp;* Any module Customization for event subscriber.</code></p><p><code>&nbsp;*/</code></p><p><code>class eventSubscriber implements EventSubscriberInterface { &nbsp;</code></p><p><code>/** &nbsp;&nbsp;</code></p><p><code>* Current user service. &nbsp;&nbsp;</code></p><p><code>* &nbsp;&nbsp;</code></p><p><code>* @var \Drupal\Core\Session\AccountProxy &nbsp;&nbsp;</code></p><p><code>*/ &nbsp;protected $currentUser; &nbsp;</code></p><p><code>/** &nbsp;&nbsp;</code></p><p><code>* The entity manager. &nbsp;&nbsp;</code></p><p><code>* &nbsp;&nbsp;</code></p><p><code>* @var \Drupal\Core\Entity\EntityTypeManager &nbsp;&nbsp;</code></p><p><code>*/ &nbsp;protected $entityTypeManager; &nbsp;</code></p><p><code>/** &nbsp;&nbsp;</code></p><p><code>* The database connection. &nbsp;&nbsp;</code></p><p><code>* &nbsp;&nbsp;</code></p><p><code>* @var \Drupal\Core\Database\Connection &nbsp;&nbsp;</code></p><p><code>*/ &nbsp;</code></p><p><code>protected $connection; &nbsp;</code></p><p><code>/** &nbsp;&nbsp;</code></p><p><code>* The file system. &nbsp;&nbsp;</code></p><p><code>* &nbsp;&nbsp;</code></p><p><code>* @var \Drupal\Core\File\FileSystem &nbsp;&nbsp;</code></p><p><code>*/ &nbsp;protected $fileSystem; &nbsp;</code></p><p><code>/** &nbsp;&nbsp;</code></p><p><code>* {@inheritdoc} &nbsp;&nbsp;</code></p><p><code>*/ &nbsp;</code></p><p><code>public function __construct(AccountProxy $current_user, EntityTypeManager $entity_type_manager, Connection $connection, FileSystem $file_system) { &nbsp; &nbsp;</code></p><p><code>// Reference the current_user service. &nbsp; &nbsp;</code></p><p><code>$this-&gt;currentUser = $current_user; &nbsp; &nbsp;</code></p><p><code>$this-&gt;entityTypeManager = $entity_type_manager; &nbsp; &nbsp;</code></p><p><code>$this-&gt;connection = $connection; &nbsp; &nbsp;</code></p><p><code>$this-&gt;fileSystem = $file_system; &nbsp;</code></p><p><code>} &nbsp;</code></p><p><code>/** &nbsp;&nbsp;</code></p><p><code>* {@inheritdoc} &nbsp;&nbsp;</code></p><p><code>*/ &nbsp;</code></p><p><code>public static function getSubscribedEvents() { &nbsp; &nbsp;</code></p><p><code>return [ &nbsp; &nbsp; &nbsp;</code></p><p><code>'hook_event_dispatcher.form_node_form.alter' =&gt; 'alterMclNodeForm', &nbsp; &nbsp; &nbsp;</code></p><p><code>'hook_event_dispatcher.form_node_form.alter' =&gt; 'alterMclNodeForm', &nbsp; &nbsp;</code></p><p><code>]; &nbsp;</code></p><p><code>} &nbsp;</code></p><p><code>/** &nbsp;&nbsp;</code></p><p><code>* Alter node form. &nbsp;&nbsp;</code></p><p><code>* &nbsp;&nbsp;</code></p><p><code>* @param \Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent $event &nbsp;&nbsp;</code></p><p><code>* &nbsp; The event. &nbsp;&nbsp;</code></p><p><code>*/ &nbsp;</code></p><p><code>public function alterMclNodeForm(FormIdAlterEvent $event): void { &nbsp; &nbsp;</code></p><p><code>$form = &amp;$event-&gt;getForm(); &nbsp; &nbsp;</code></p><p><code>// This is a example: In a form you need to hide buttons for some reason or &nbsp; &nbsp; &nbsp; &nbsp;</code></p><p><code>//similar things, which cannot be done from the display form of the content type, &nbsp; &nbsp;</code></p><p><code>//we can do it from here: &nbsp; &nbsp;</code></p><p><code>$this-&gt;hiddenRemoveButtonOfMediaEntityTable($form);&nbsp;</code></p><p><code>// This method is example. &nbsp;</code></p><p><code>}</code></p><p><code>}</code></p><p>&nbsp;</p><p>This would be the event subscriber, but take into account that this should ideally go inside a custom module that you have created for our specific need, the event subscriber by itself does not work, we must invoke it, and this is done in the services file .yml</p><p>&nbsp;</p><p>Something like this:</p><p>&nbsp;</p><p><code>services: &nbsp;</code></p><p><code>anyModule.event_subscriber: &nbsp; &nbsp;</code></p><p><code>class: Drupal\anyModule\EventSubscriber\EventSubscriber &nbsp; &nbsp;</code></p><p><code>arguments: &nbsp; &nbsp; &nbsp;</code></p><p><code>- "@current_user" &nbsp; &nbsp; &nbsp;</code></p><p><code>- "@entity_type.manager" &nbsp; &nbsp; &nbsp;</code></p><p><code>- "@database" &nbsp; &nbsp; &nbsp;</code></p><p><code>- "@file_system" &nbsp; &nbsp;</code></p><p><code>tags: &nbsp; &nbsp; &nbsp;</code></p><p><code>- { name: event_subscriber }</code></p><p>&nbsp;</p><p>With this it should work, it is important to remember that we must clean the cache and activate our custom module, something like this:</p><ul><li>ddev drush on anyModule ( If you use lando is the same, "lando drush on anyModule")</li><li>ddev drush cr ( If you use lando is the same, "lando drush cr")</li></ul><p>&nbsp;</p><p>Code from a site project that implements this functionality:</p><p><a href="https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php">https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php</a></p><h3>&nbsp;</h3><h3>Use Cases and Possibilities</h3><p>Event subscribers can be used for a wide variety of purposes in Drupal, including:</p><ul><li>Altering the forms</li><li>Altering nodes.</li><li>Responding to user authentication events</li><li>etc,...</li></ul><p>By using event subscribers, you can extend and customize your Drupal application to fit your specific needs, and react to various events happening throughout the system.</p><p>Here examples of original page of hook event dispatcher: <a href="https://github.com/pdenooijer/hook_event_dispatcher">https://github.com/pdenooijer/hook_event_dispatcher</a></p><h2>&nbsp;</h2><h2>Conclusion</h2><p>The interesting thing about using this approach, instead of simply applying an alter hook or any hook in a .module, is how neat and simplified the code looks, since you can tidy up your code with the object-oriented programming structure and apply dependency injection and with it, call multiple services and everything will be easier to understand and it will look much better, for large projects, I think this is a very cool alternative that is worth trying</p><p>&nbsp;</p><p>&nbsp;</p>
+      <h3>Introduction</h3><p>In this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.</p><p>&nbsp;</p><h3>What is an Event Subscriber?</h3><p>Event subscribers in Drupal are a way to extend and modify the behavior of your application by listening to specific events dispatched by the system. They are part of the Symfony Event Dispatcher component, which is integrated into Drupal. By subscribing to events, you can react to changes in the system, perform additional actions, or modify the default behavior of certain operations.</p><p>&nbsp;</p><h3>Example of an Event Subscriber</h3><pre><code class="language-plaintext">&lt;?php
+ namespace Drupal\anyModule\EventSubscriber; use Drupal\Core\Session\AccountProxy;
+ use Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent;
+ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+ use Drupal\core_event_dispatcher\Event\Entity\EntityPresaveEvent;
+ use Drupal\hook_event_dispatcher\HookEventDispatcherInterface; 
+ use Drupal\Core\Entity\EntityTypeManager;
+ use Drupal\Core\Entity\EntityInterface; 
+ use Drupal\Core\Database\Connection; use Drupal\Core\Cache\Cache;
+ use Drupal\Core\File\FileSystem;
+ 
+/**
+ * Any module Customization for event subscriber.
+ */
+class eventSubscriber implements EventSubscriberInterface {  
+/**   
+* Current user service.   
+*   
+* @var \Drupal\Core\Session\AccountProxy   
+*/  protected $currentUser;  
+/**   
+* The entity manager.   
+*   
+* @var \Drupal\Core\Entity\EntityTypeManager   
+*/  protected $entityTypeManager;  
+/**   
+* The database connection.   
+*   
+* @var \Drupal\Core\Database\Connection   
+*/  
+protected $connection;  
+/**   
+* The file system.   
+*   
+* @var \Drupal\Core\File\FileSystem   
+*/  protected $fileSystem;  
+/**   
+* {@inheritdoc}   
+*/  
+public function __construct(AccountProxy $current_user, EntityTypeManager $entity_type_manager, Connection $connection, FileSystem $file_system) {    
+	// Reference the current_user service.    
+	$this-&gt;currentUser = $current_user;    
+	$this-&gt;entityTypeManager = $entity_type_manager;    
+	$this-&gt;connection = $connection;    
+	$this-&gt;fileSystem = $file_system;  
+}  
+/**   
+* {@inheritdoc}   
+*/  
+public static function getSubscribedEvents() {    
+	return [      
+		'hook_event_dispatcher.form_node_form.alter' =&gt; 'alterMclNodeForm',      
+		'hook_event_dispatcher.form_node_form.alter' =&gt; 'alterMclNodeForm',    
+	];  
+}  
+/**   
+* Alter node form.   
+*   
+* @param \Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent $event   
+*   The event.   
+*/  
+public function alterMclNodeForm(FormIdAlterEvent $event): void {    
+	$form = &amp;$event-&gt;getForm();    
+	// This is a example: In a form you need to hide buttons for some reason or        
+	//similar things, which cannot be done from the display form of the content type,    
+	//we can do it from here:    
+	$this-&gt;hiddenRemoveButtonOfMediaEntityTable($form); 
+	// This method is example.  
+}
+}</code></pre><p>&nbsp;</p><p>This would be the event subscriber, but take into account that this should ideally go inside a custom module that you have created for our specific need, the event subscriber by itself does not work, we must invoke it, and this is done in the services file .yml</p><p>&nbsp;</p><p>Something like this:</p><pre><code class="language-plaintext">services:  
+anyModule.event_subscriber:    
+class: Drupal\anyModule\EventSubscriber\EventSubscriber    
+arguments:      
+- "@current_user"      
+- "@entity_type.manager"      
+- "@database"      
+- "@file_system"    
+tags:      
+- { name: event_subscriber }</code></pre><p>&nbsp;</p><p>With this it should work, it is important to remember that we must clean the cache and activate our custom module, something like this:</p><ul><li>ddev drush on anyModule ( If you use lando is the same, "lando drush on anyModule")</li><li>ddev drush cr ( If you use lando is the same, "lando drush cr")</li></ul><p>&nbsp;</p><p>Code from a site project that implements this functionality:</p><p><a href="https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php">https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php</a></p><h3>&nbsp;</h3><h3>Use Cases and Possibilities</h3><p>Event subscribers can be used for a wide variety of purposes in Drupal, including:</p><ul><li>Altering the forms</li><li>Altering nodes.</li><li>Responding to user authentication events</li><li>etc,...</li></ul><p>By using event subscribers, you can extend and customize your Drupal application to fit your specific needs, and react to various events happening throughout the system.</p><p>Here examples of original page of hook event dispatcher: <a href="https://github.com/pdenooijer/hook_event_dispatcher">https://github.com/pdenooijer/hook_event_dispatcher</a></p><h2>&nbsp;</h2><h2>Conclusion</h2><p>The interesting thing about using this approach, instead of simply applying an alter hook or any hook in a .module, is how neat and simplified the code looks, since you can tidy up your code with the object-oriented programming structure and apply dependency injection and with it, call multiple services and everything will be easier to understand and it will look much better, for large projects, I think this is a very cool alternative that is worth trying.</p>
     </div>
   </div>
 </article>
