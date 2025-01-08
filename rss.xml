@@ -7,6 +7,257 @@
     <language>en</language>
     
     <item>
+  <title>Setting up Kernel Testing in Drupal</title>
+  <link>https://brightplum.com/blog/setting-kernel-testing-drupal</link>
+  <description>&lt;span&gt;Setting up Kernel Testing in Drupal&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2025-01/quality-assurance-clipboard-icon.jpg?itok=ixlHZl2O" width="480" height="320" alt="Kernel testing Image"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2025-01-08T11:22:15-06:00" title="Wednesday, January 8, 2025 - 11:22"&gt;Wed, 01/08/2025 - 11:22&lt;/time&gt;
+&lt;/span&gt;
+
+            &lt;div&gt;&lt;h4&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Kernel tests&lt;/strong&gt; in Drupal are crucial for ensuring the integrity and functionality of custom modules and their interaction with core subsystems. These tests validate integration between system components within a reduced Drupal environment, offering deeper coverage than unit tests without the complexity of full functional tests.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&amp;nbsp;&lt;br&gt;You can also test services, controllers, specific functions of a service, among a lot of things, I clarify this because my original thought was that the original logic needed to be replicated in the test, and really the purpose is to be able to directly use the service, controller, function directly to test it in the kernel test. I have also noticed that hooks and event subscriber are really difficult to test, so I will investigate this and see if I am doing it wrong and if so, I will modify or do something detailed for those tests.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;This document provides a detailed guide to setting up and running Kernel tests in Drupal using &lt;strong&gt;DDEV&lt;/strong&gt;. We'll delve into technical concepts and provide practical examples to illustrate their importance and application in Drupal project development.&lt;/p&gt;&lt;hr&gt;&lt;h4 class="ql-heading" data-block-id="block-b2b79708-eec7-406f-9c72-6e5804b65e55"&gt;&lt;strong&gt;Steps to Configure Kernel Tests&lt;/strong&gt;&lt;/h4&gt;&lt;h4&gt;1. Verify PHPUnit Installation&lt;/h4&gt;&lt;p&gt;Before starting, it's essential to ensure that &lt;strong&gt;PHPUnit&lt;/strong&gt; is installed in your development environment.&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;vendor/bin/phpunit --version&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If the above command doesn't display the PHPUnit version, it means it's not installed. You can add it as a development dependency using Composer:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;composer require --dev phpunit/phpunit&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After installation, verify again:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;vendor/bin/phpunit --version&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;2. Configure the phpunit.xml File&lt;/h4&gt;&lt;p&gt;Copy the PHPUnit configuration file provided by Drupal to your project's root:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;cp web/core/phpunit.xml.dist phpunit.xml&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This file is essential for customizing test configurations according to your project's specific needs.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Contents of &lt;/strong&gt;&lt;code&gt;&lt;strong&gt;phpunit.xml&lt;/strong&gt;&lt;/code&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+&amp;lt;!-- For how to customize PHPUnit configuration, see core/tests/README.md. --&amp;gt;
+&amp;lt;phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="docroot/core/tests/bootstrap.php" colors="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutChangesToGlobalState="true"
+         failOnWarning="true"
+         printerClass="\Drupal\Tests\Listeners\HtmlOutputPrinter"
+         cacheResult="false"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"&amp;gt;
+  &amp;lt;php&amp;gt;
+    &amp;lt;!-- PHP Settings --&amp;gt;
+    &amp;lt;ini name="error_reporting" value="32767"/&amp;gt;
+    &amp;lt;ini name="memory_limit" value="-1"/&amp;gt;
+    &amp;lt;!-- Base URL for the site under test --&amp;gt;
+    &amp;lt;env name="SIMPLETEST_BASE_URL" value="https://[your_project].ddev.site"/&amp;gt;
+    &amp;lt;!-- Database connection string --&amp;gt;
+    &amp;lt;env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/&amp;gt;
+    &amp;lt;!-- Output directory for browser tests --&amp;gt;
+    &amp;lt;env name="BROWSERTEST_OUTPUT_DIRECTORY" value="./docroot/sites/simpletest/browser_output"/&amp;gt;
+    &amp;lt;!-- Optional additional configurations --&amp;gt;
+    &amp;lt;!-- &amp;lt;env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/&amp;gt; --&amp;gt;
+    &amp;lt;!-- &amp;lt;env name="MINK_DRIVER_CLASS" value=""/&amp;gt; --&amp;gt;
+    &amp;lt;!-- &amp;lt;env name="MINK_DRIVER_ARGS" value=""/&amp;gt; --&amp;gt;
+    &amp;lt;!-- &amp;lt;env name="MINK_DRIVER_ARGS_WEBDRIVER" value=""/&amp;gt; --&amp;gt;
+  &amp;lt;/php&amp;gt;
+  &amp;lt;testsuites&amp;gt;
+    &amp;lt;testsuite name="unit"&amp;gt;
+      &amp;lt;!-- Paths to unit tests for custom modules --&amp;gt;
+      &amp;lt;directory&amp;gt;./docroot/modules/custom/*/tests/src/Unit&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;./docroot/modules/custom/*/modules/*/tests/src/Unit&amp;lt;/directory&amp;gt;
+    &amp;lt;/testsuite&amp;gt;
+    &amp;lt;testsuite name="kernel"&amp;gt;
+      &amp;lt;!-- Paths to Kernel tests for custom modules --&amp;gt;
+      &amp;lt;directory&amp;gt;./docroot/modules/custom/*/tests/src/Kernel&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;./docroot/modules/custom/*/modules/*/tests/src/Kernel&amp;lt;/directory&amp;gt;
+    &amp;lt;/testsuite&amp;gt;
+    &amp;lt;testsuite name="functional"&amp;gt;
+      &amp;lt;!-- Paths to functional tests for custom modules --&amp;gt;
+      &amp;lt;directory&amp;gt;./docroot/modules/custom/*/tests/src/Functional&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;./docroot/modules/custom/*/modules/*/tests/src/Functional&amp;lt;/directory&amp;gt;
+    &amp;lt;/testsuite&amp;gt;
+    &amp;lt;testsuite name="functional-javascript"&amp;gt;
+      &amp;lt;!-- Paths to functional JavaScript tests for custom modules --&amp;gt;
+      &amp;lt;directory&amp;gt;./docroot/modules/custom/*/tests/src/FunctionalJavascript&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;./docroot/modules/custom/*/modules/*/tests/src/FunctionalJavascript&amp;lt;/directory&amp;gt;
+    &amp;lt;/testsuite&amp;gt;
+    &amp;lt;!-- You can uncomment the following test suite if needed --&amp;gt;
+    &amp;lt;!-- &amp;lt;testsuite name="build"&amp;gt;
+         &amp;lt;file&amp;gt;./tests/TestSuites/BuildTestSuite.php&amp;lt;/file&amp;gt;
+    &amp;lt;/testsuite&amp;gt; --&amp;gt;
+  &amp;lt;/testsuites&amp;gt;
+  &amp;lt;listeners&amp;gt;
+    &amp;lt;!-- Drupal listener for additional testing hooks --&amp;gt;
+    &amp;lt;listener class="\Drupal\Tests\Listeners\DrupalListener"&amp;gt;&amp;lt;/listener&amp;gt;
+  &amp;lt;/listeners&amp;gt;
+  &amp;lt;!-- Settings for coverage reports --&amp;gt;
+  &amp;lt;coverage&amp;gt;
+    &amp;lt;include&amp;gt;
+      &amp;lt;!-- Directories to include --&amp;gt;
+      &amp;lt;directory&amp;gt;./includes&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;./lib&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;./modules&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;../modules&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;../sites&amp;lt;/directory&amp;gt;
+    &amp;lt;/include&amp;gt;
+    &amp;lt;exclude&amp;gt;
+      &amp;lt;!-- Directories to exclude --&amp;gt;
+      &amp;lt;directory&amp;gt;./modules/*/src/Tests&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;./modules/*/tests&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;../modules/*/src/Tests&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;../modules/*/tests&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;../modules/*/*/src/Tests&amp;lt;/directory&amp;gt;
+      &amp;lt;directory&amp;gt;../modules/*/*/tests&amp;lt;/directory&amp;gt;
+      &amp;lt;!-- Exclude .api.php files from coverage --&amp;gt;
+      &amp;lt;directory suffix=".api.php"&amp;gt;./lib/**&amp;lt;/directory&amp;gt;
+      &amp;lt;directory suffix=".api.php"&amp;gt;./modules/**&amp;lt;/directory&amp;gt;
+      &amp;lt;directory suffix=".api.php"&amp;gt;../modules/**&amp;lt;/directory&amp;gt;
+    &amp;lt;/exclude&amp;gt;
+  &amp;lt;/coverage&amp;gt;
+&amp;lt;/phpunit&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;Important Notes:&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;SIMPLETEST_BASE_URL&lt;/strong&gt;: Replace &lt;code&gt;[your_project]&lt;/code&gt; with your actual project's name in DDEV.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;SIMPLETEST_DB&lt;/strong&gt;: Ensure the connection string reflects the correct credentials and host in your DDEV environment. (Can you use &lt;code&gt;ddev status&lt;/code&gt; for see data about connection db)*&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Directory&lt;/strong&gt;: You may need to change the directory to a valid one, in this case use &lt;code&gt;docroot&lt;/code&gt;, but you could use &lt;code&gt;web &lt;/code&gt;or something else.&lt;/li&gt;&lt;/ul&gt;&lt;h4 class="ql-heading" data-block-id="block-4edac493-9f12-4470-a8d4-f0453f2d9460"&gt;Understanding Kernel Tests in Drupal&lt;/h4&gt;&lt;h4&gt;What Are Kernel Tests in Drupal?&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;Kernel tests&lt;/strong&gt; are a mid-level automated testing approach that validates the integration between different system components within a reduced Drupal environment. These tests run using a lightweight Drupal bootstrap, allowing you to test interactions with core subsystems like the database and configuration system without loading the full presentation layer or a browser.&lt;/p&gt;&lt;p&gt;They are based on the &lt;code&gt;KernelTestBase&lt;/code&gt; class, which provides access to a minimal Drupal environment, enabling the testing of integration scenarios that go beyond unit tests but without the complexity of full functional tests.&lt;/p&gt;&lt;h4&gt;Why Are Kernel Tests Important?&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Integration Validation&lt;/strong&gt;: They ensure that custom components (entities, services, plugins, etc.) work correctly with Drupal's APIs and subsystems.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Efficiency&lt;/strong&gt;: Kernel tests are faster than full functional tests since they don't require a web server or browser.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Intermediate Coverage&lt;/strong&gt;: They provide deeper coverage than unit tests but are simpler to set up and run compared to functional or functional JavaScript tests.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Early Detection of Integration Issues&lt;/strong&gt;: They help identify integration bugs between custom code and Drupal subsystems before they reach production.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Controlled Environment&lt;/strong&gt;: They offer a consistent and controlled setup for testing subsystems like entity storage, custom queries, or event subscribers.&lt;/li&gt;&lt;/ul&gt;&lt;hr&gt;&lt;h4 class="ql-heading" data-block-id="block-785059df-f194-4d55-8460-6611d2a98af6"&gt;Common Use Cases for Kernel Tests in Drupal&lt;/h4&gt;&lt;h4&gt;1. CRUD Operations on Custom Entities&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Create, load, update, and delete entities.&lt;/li&gt;&lt;li&gt;Ensure custom fields are saved and retrieved correctly.&lt;/li&gt;&lt;/ul&gt;&lt;div class="ql-block" data-block-id="block-e37e7484-86c5-40e0-93ee-b0871f9df900"&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;public function testEntityCrudOperations() {
+    $entity = \Drupal::entityTypeManager()
+      -&amp;gt;getStorage('custom_entity')
+      -&amp;gt;create(['field_custom' =&amp;gt; 'value']);
+    $entity-&amp;gt;save();
+    $loaded_entity = \Drupal::entityTypeManager()
+      -&amp;gt;getStorage('custom_entity')
+      -&amp;gt;load($entity-&amp;gt;id());
+    $this-&amp;gt;assertEquals('value', $loaded_entity-&amp;gt;get('field_custom')-&amp;gt;value);
+}&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;2. Custom Form Validation&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Validate the behavior of custom forms built with the &lt;strong&gt;Form API&lt;/strong&gt;.&lt;/li&gt;&lt;li&gt;Test restrictions on required fields or data formats.&lt;/li&gt;&lt;/ul&gt;&lt;div class="ql-block" data-block-id="block-11b377b7-a8b9-4bcf-a30b-047e40e23d01"&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/div&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;use Drupal\Core\Form\FormState;
+public function testCustomFormValidation() {
+    $form = \Drupal::formBuilder()-&amp;gt;getForm('Drupal\custom_module\Form\CustomForm');
+    $form_state = new FormState();
+    $form_state-&amp;gt;setValues(['field_name' =&amp;gt; 'Invalid Value']);
+    
+    // Execute validations$form['#validate'][0]($form, $form_state);
+    $this-&amp;gt;assertTrue($form_state-&amp;gt;hasAnyErrors(), 'Validation failed as expected');
+}&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;3. Custom Services&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ensure the service returns the correct values.&lt;/li&gt;&lt;li&gt;Validate that the service handles configurations or dependencies properly.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;public function testCustomService() {
+    $service = \Drupal::service('custom_module.some_service');
+    $result = $service-&amp;gt;processData(['input' =&amp;gt; 'test']);
+    $this-&amp;gt;assertEquals('expected_output', $result);
+}&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;4. Event Subscribers&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ensure the subscriber reacts correctly to specific events, such as &lt;code&gt;hook_entity_insert&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;public function testEntityInsertSubscriber() {
+    $entity = \Drupal::entityTypeManager()
+      -&amp;gt;getStorage('node')
+      -&amp;gt;create(['type' =&amp;gt; 'article', 'title' =&amp;gt; 'Test']);
+    $entity-&amp;gt;save();
+    // Verify that the subscriber modified the entity as expected.
+    $this-&amp;gt;assertEquals('Modified Title', $entity-&amp;gt;getTitle());
+}&lt;/pre&gt;&lt;h4&gt;5. Custom Queries&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Validate that custom queries return correct results based on filters and conditions.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;public function testCustomQuery() {
+    $query = \Drupal::entityQuery('custom_entity')
+      -&amp;gt;condition('field_status', 'active');
+    $result = $query-&amp;gt;execute();
+    $this-&amp;gt;assertNotEmpty($result, 'Query returned active entities');
+}&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;6. Cache API&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Verify that data is properly stored and retrieved from the cache.&lt;/li&gt;&lt;li&gt;Ensure data is invalidated under the correct conditions.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;use Drupal\Core\Cache\CacheBackendInterface;
+
+public function testCacheStorage() {
+    $cache = \Drupal::cache('custom_cache');
+    $cache-&amp;gt;set('cache_key', 'cache_value', CacheBackendInterface::CACHE_PERMANENT);
+
+    $cached_data = $cache-&amp;gt;get('cache_key');
+    $this-&amp;gt;assertEquals('cache_value', $cached_data-&amp;gt;data);
+}&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;7. Typed Data API&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Test validation and serialization of complex structured data.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;public function testTypedDataValidation() {
+    $data = \Drupal::typedDataManager()-&amp;gt;create('string');
+    $data-&amp;gt;setValue('Test String');
+    $violations = $data-&amp;gt;validate();
+    $this-&amp;gt;assertTrue($violations-&amp;gt;count() === 0, 'Validation passed for valid data');
+}&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;8. Custom Rules&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Ensure that conditions and actions of a custom rule work as expected.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;public function testCustomRule() {
+    $rule = \Drupal::service('rules')-&amp;gt;load('custom_rule');
+    $result = $rule-&amp;gt;evaluate(['entity' =&amp;gt; $entity]);
+    $this-&amp;gt;assertTrue($result, 'Rule evaluated correctly');
+}&lt;/code&gt;&lt;/pre&gt;&lt;h4&gt;9. Migration test (No testing yet)&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;What to Test:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The idea is to test a migration and make it work.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;  /**
+   * Tests the migration process.
+   */
+  public function testMigration() {
+    // Load the migration.
+    $migrationPluginManager = \Drupal::service('plugin.manager.migration');
+    $migration = $migrationPluginManager-&amp;gt;createInstance('custom_migration_id');
+
+    // Execute the migration.
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+    $result = $executable-&amp;gt;import();
+
+    // Verify results.
+    $this-&amp;gt;assertEquals(MigrateExecutable::RESULT_COMPLETED, $result, 'Migration completed successfully.');
+    $this-&amp;gt;assertCount(5, \Drupal::entityTypeManager()-&amp;gt;getStorage('node')-&amp;gt;loadMultiple(), 'Correct number of nodes migrated.');
+  }&lt;/code&gt;&lt;/pre&gt;&lt;h3 class="ql-heading" data-block-id="block-79acfcfb-7dc4-47b6-9eb6-c126f7267eb8"&gt;How to perform a kernel test:&lt;/h3&gt;&lt;h4 class="ql-heading" data-block-id="block-b57669e5-aa90-4801-9b29-cc4730b439a0"&gt;Step 1: Create a Simple Custom Module&lt;/h4&gt;&lt;p&gt;Create a custom module named &lt;code&gt;example_module&lt;/code&gt;.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;File Structure:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;modules/
+└── custom/
+    └── example_module/
+        ├── example_module.info.yml
+        └── example_module.services.yml&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Content of &lt;/strong&gt;&lt;code&gt;&lt;strong&gt;example_module.info.yml&lt;/strong&gt;&lt;/code&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;name: Example Module
+type: module
+description: 'A simple example module for testing purposes.'
+package: Custom
+core_version_requirement: ^10&lt;/code&gt;&lt;/pre&gt;&lt;h4 class="ql-heading" data-block-id="block-c79e8f01-1d5c-42c2-bc03-99181b23fba4"&gt;Step 2: Create the Kernel Test&lt;/h4&gt;&lt;p&gt;Create the directory for tests and the test file:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;modules/
+└── custom/
+    └── example_module/
+        ├── tests/
+        │   └── src/
+        │       └── Kernel/
+        │           └── ExampleModuleKernelTest.php
+        ├── example_module.info.yml
+        └── example_module.services.yml&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Content of &lt;/strong&gt;&lt;code&gt;&lt;strong&gt;ExampleModuleKernelTest.php&lt;/strong&gt;&lt;/code&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;&amp;lt;?php
+
+namespace Drupal\Tests\example_module\Kernel;
+
+use Drupal\KernelTests\KernelTestBase;
+
+/**
+ * Tests for the Example Module.
+ *
+ * @group example_module
+ */
+class ExampleModuleKernelTest extends KernelTestBase {
+
+  /**
+   * Modules to enable.
+   *
+   * @var array
+   */
+  protected static $modules = [
+    'system',
+    'user',
+    'example_module',
+  ];
+
+  /**
+   * Test that the module is enabled.
+   */
+  public function testModuleIsEnabled() {
+    $this-&amp;gt;assertTrue(\Drupal::moduleHandler()-&amp;gt;moduleExists('example_module'), 'Example Module is enabled.');
+  }
+
+  /**
+   * Test creating a user entity.
+   */
+  public function testCreateUser() {
+    // Create a user entity.
+    $user = $this-&amp;gt;container-&amp;gt;get('entity_type.manager')
+      -&amp;gt;getStorage('user')
+      -&amp;gt;create([
+        'name' =&amp;gt; 'test_user',
+        'mail' =&amp;gt; 'test_user@example.com',
+        'status' =&amp;gt; 1,
+      ]);
+    $user-&amp;gt;save();
+
+    // Load the user entity.
+    $loaded_user = $this-&amp;gt;container-&amp;gt;get('entity_type.manager')
+      -&amp;gt;getStorage('user')
+      -&amp;gt;load($user-&amp;gt;id());
+
+    // Assert that the user was created successfully.
+    $this-&amp;gt;assertEquals('test_user', $loaded_user-&amp;gt;getAccountName(), 'User account name matches.');
+    $this-&amp;gt;assertEquals('test_user@example.com', $loaded_user-&amp;gt;getEmail(), 'User email matches.');
+  }
+
+}&lt;/code&gt;&lt;/pre&gt;&lt;h4 class="ql-heading" data-block-id="block-5d2b9f7d-258f-4eac-9a5c-de77af06dfc0"&gt;Step 3: Run the Test&lt;/h4&gt;&lt;p&gt;From your project's root directory, run:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;ddev ssh and run that next command:
+vendor/bin/phpunit modules/custom/example_module/tests/src/Kernel/ExampleModuleKernelTest.php --verbose&lt;/code&gt;&lt;/pre&gt;&lt;h4 class="ql-heading" data-block-id="block-8e61b468-748e-456d-a954-9b60f281330d"&gt;Code Explanation&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Namespace&lt;/strong&gt;: &lt;code&gt;Drupal\Tests\example_module\Kernel&lt;/code&gt; defines the namespace for your module's tests.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Class &lt;/strong&gt;&lt;code&gt;&lt;strong&gt;ExampleModuleKernelTest&lt;/strong&gt;&lt;/code&gt;: Extends &lt;code&gt;KernelTestBase&lt;/code&gt;, providing the necessary environment for Kernel tests.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Property &lt;/strong&gt;&lt;code&gt;&lt;strong&gt;protected static $modules&lt;/strong&gt;&lt;/code&gt;: Lists the modules that need to be enabled during the test. It includes &lt;code&gt;'system'&lt;/code&gt;, &lt;code&gt;'user'&lt;/code&gt;, and your &lt;code&gt;'example_module'&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Method &lt;/strong&gt;&lt;code&gt;&lt;strong&gt;testModuleIsEnabled&lt;/strong&gt;&lt;/code&gt;: Checks that your custom module is enabled.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Method &lt;/strong&gt;&lt;code&gt;&lt;strong&gt;testCreateUser&lt;/strong&gt;&lt;/code&gt;: Creates a user, saves it, reloads it, and verifies that the data matches the expected values.&lt;/li&gt;&lt;/ul&gt;&lt;h4 class="ql-heading" data-block-id="block-43f888b3-aba2-4490-abd3-e72602cf0c79"&gt;Important Notes&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Service Container&lt;/strong&gt;: We use &lt;code&gt;$this-&amp;gt;container&lt;/code&gt; to access Drupal services like &lt;code&gt;entity_type.manager&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Assertions&lt;/strong&gt;: Methods like &lt;code&gt;assertTrue&lt;/code&gt; and &lt;code&gt;assertEquals&lt;/code&gt; check specific conditions to determine if the test passes or fails.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Cleanup&lt;/strong&gt;: In more complex tests, you might need to clean up created data. In this case, the database resets between tests, so it's unnecessary.&lt;/li&gt;&lt;/ul&gt;&lt;h4 class="ql-heading" data-block-id="block-483d9ae2-dd8c-473a-acc2-90869d8dc1bc"&gt;What Does This Test Do?&lt;/h4&gt;&lt;p&gt;The test performs the following:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;strong&gt;Verifies that the module is enabled&lt;/strong&gt;: Ensures that &lt;code&gt;example_module&lt;/code&gt; is active in the test environment.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Creates and Verifies a User&lt;/strong&gt;:&lt;ul&gt;&lt;li&gt;Creates a new user with specific username and email.&lt;/li&gt;&lt;li&gt;Saves the user to the database.&lt;/li&gt;&lt;li&gt;Loads the user from the database.&lt;/li&gt;&lt;li&gt;Checks that the loaded username and email match the ones provided.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;This simple example covers key aspects:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Interaction with Drupal's entity system.&lt;/li&gt;&lt;li&gt;Use of the service container.&lt;/li&gt;&lt;li&gt;Making assertions to validate expected behavior.&lt;/li&gt;&lt;/ul&gt;&lt;h4 class="ql-heading" data-block-id="block-8be7f132-73d3-449e-b1b2-67b86762e96a"&gt;Conclusion&lt;/h4&gt;&lt;p&gt;Kernel tests are a powerful tool to ensure your custom modules function correctly within the Drupal ecosystem. By integrating them into your development workflow, you can efficiently detect and resolve integration issues, enhancing the quality and stability of your project.&lt;/p&gt;&lt;/div&gt;
+      
+      &lt;div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/1" hreflang="en"&gt;Drupal 10&lt;/a&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/2" hreflang="en"&gt;Drupal Modules&lt;/a&gt;&lt;/div&gt;
+          &lt;/div&gt;
+  </description>
+  <pubDate>Wed, 08 Jan 2025 17:22:15 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">24 at https://brightplum.com</guid>
+    </item>
+<item>
   <title>Providing Technical Guidance</title>
   <link>https://brightplum.com/blog/providing-technical-guidance</link>
   <description>&lt;span&gt;Providing Technical Guidance&lt;/span&gt;
