@@ -1,0 +1,42 @@
+# Bright Plum, Inc.
+
+> Bright Plum, Inc. is a fully remote, Drupal-focused agency focused on serving nonprofits, government agencies, healthcare IT organizations, and universities. We are a group of technical leaders ranging from architects to junior developers, many of whom are Acquia-certified with team members in all regions of the United States and Costa Rica. We operate with more than 15 years of experience in the open-source, complex publishing space and are an SBA 8a certified minority-owned business enterprise (MBE) through NMSDC.
+
+## Drupal Architecture
+
+- [We provide expert consulting for building a new or migrating an existing complex publishing platform to Drupal]
+
+## Drupal Backend Development
+
+- [We deliver secure, performant, and best-practice Drupal solutions for custom features, 3rd-party integrations, bug fixes, and migrations]
+
+## Drupal Frontend Development
+
+- [We focus on high-quality application of designs to Drupal by using modular code techniques, cross-browser testing, and mobile-first best practices]
+
+## Drupal Training & Maintenance
+
+- [We take care of maintenance, security updates, and bug fixes via yearly service plans and train your team on your Drupal platform]
+
+## Accessibility Audits
+
+- [We perform automated accessibility scans and fix issues to keep your Drupal platform WCAG compliant]
+
+## Basic Marketing & SEO
+
+- [We recommend optimizations to increase engagement of your Drupal platform with your key stakeholders]
+
+## Contact and socials
+
+- [Contact Us](fredric@brightplum.com)
+- [Tell Us About Your Project] (https://calendly.com/brightplum/30min?month=2025-01)
+- [Blog](https://brightplum.com/blog/)
+- [LinkedIn](https://www.linkedin.com/company/bright-plum-inc/)
+- [GitHub](https://github.com/brightplum)
+
+## Optional
+
+- [Capabilities](https://brightplum.com/capabilities/)
+- [Case Studies](https://brightplum.com/case-studies/)
+- [Who We are](https://brightplum.com/who-we-are/)
+- [Privacy Policy](https://brightplum.com/privacy-policy/)
