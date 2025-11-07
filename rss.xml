@@ -7,55 +7,6 @@
     <language>en</language>
     
     <item>
-  <title>First Industrial</title>
-  <link>https://brightplum.com/node/31</link>
-  <description>&lt;span&gt;First Industrial&lt;/span&gt;
-
-            &lt;div&gt;&lt;div&gt;
-  
-  
-  &lt;div&gt;
-    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2025-11/Desktop%20-%20small-crop.png?itok=BS4Bjvn1" width="425" height="480" alt="First industrial website"&gt;
-
-
-&lt;/div&gt;
-          &lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-      
-            &lt;div&gt;&lt;div&gt;
-  
-  
-  &lt;div&gt;
-    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2025-11/Desktop%20-%2010%20medium%20crop.png?itok=8H6-tWNM" width="480" height="343" alt="First industrial website"&gt;
-
-
-&lt;/div&gt;
-          &lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;time datetime="2025-11-07T14:25:34-06:00" title="Friday, November 7, 2025 - 14:25"&gt;Fri, 11/07/2025 - 14:25&lt;/time&gt;
-&lt;/span&gt;
-
-            &lt;div&gt;&lt;h2 dir="ltr"&gt;Highlights&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;ul&gt;&lt;li dir="ltr"&gt;&lt;strong&gt;Infrastructure Modernization&lt;/strong&gt; - The website now uses modern deployment workflows with staging environments, enabling safer updates and better version control.&lt;/li&gt;&lt;li dir="ltr"&gt;&lt;strong&gt;Accessibility Excellence&lt;/strong&gt; - Achieved 100% accessibility scores through comprehensive auditing and remediation, proactively protecting the client from compliance risks.&lt;/li&gt;&lt;li dir="ltr"&gt;&lt;strong&gt;Performance Optimization&lt;/strong&gt; - Improved mobile performance scores from 40% to 80% by optimizing images, removing unnecessary JavaScript, and implementing mobile-first approaches.&lt;/li&gt;&lt;li dir="ltr"&gt;&lt;strong&gt;Editorial Experience Enhancement&lt;/strong&gt; - Implemented user-friendly component-based systems, so content editors do not need technical knowledge to make updates.&lt;/li&gt;&lt;li dir="ltr"&gt;&lt;strong&gt;Automated Quality Assurance&lt;/strong&gt; - Implemented automated testing to verify site functionality with each code deployment, ensuring consistent performance and catching issues before they affect users.&lt;/li&gt;&lt;/ul&gt;&lt;h2 dir="ltr"&gt;Technical Peace of Mind Through Proactive Support&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;Bright Plum established comprehensive monitoring and maintenance processes that transformed First Industrial's relationship with their website.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;Rather than waiting for problems to emerge, the team implemented quarterly accessibility scans, automated testing, and regular infrastructure improvements.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;Regular reports demonstrate compliance, giving stakeholders confidence when reporting to leadership.&lt;/p&gt;&lt;p dir="ltr"&gt;&amp;nbsp;&lt;/p&gt;&lt;h2 dir="ltr"&gt;A Modern Development Workflow&lt;/h2&gt;&lt;p dir="ltr"&gt;We restructured the entire development process, implementing version control, staging environments, and automated deployment pipelines.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;This modernization eliminated the fear of changes and updates breaking the website.&lt;/p&gt;&lt;p dir="ltr"&gt;&amp;nbsp;&lt;/p&gt;&lt;h2 dir="ltr"&gt;User Experience and Performance Optimization&lt;/h2&gt;&lt;p dir="ltr"&gt;We identified and resolved critical bottlenecks affecting mobile users.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;Image optimization, JavaScript cleanup, and mobile-first design improvements doubled performance scores.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;We also identified an SEO issue that prevented search users from landing on the correct profile pages.&lt;/p&gt;&lt;p dir="ltr"&gt;&amp;nbsp;&lt;/p&gt;&lt;h2 dir="ltr"&gt;Empowering Editors Through Component Architecture&lt;/h2&gt;&lt;p dir="ltr"&gt;The original site required content editors to write HTML and manage complex CSS classes for layouts.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;The process was frustrating and susceptible to user error. We developed individual content components (feature cards, corporate stats sections, news blocks) that allow non-technical staff to manage content easily through Drupal's interface.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;This change reduced the client's dependence on developer intervention for what should be everyday tasks.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h2 dir="ltr"&gt;Strategic Design Refresh&lt;/h2&gt;&lt;p dir="ltr"&gt;We helped First Industrial get some of the benefits of a full redesign without the budget requirements of a full redesign.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;The refresh goes beyond aesthetics, better targeting their ideal clients and making the website more user-friendly for both visitors and editors.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;We converted static content sections into dynamic components, increased white-space for better readability, and reduced the need to scroll for critical information.&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;All improvements worked within the website’s existing structure.&lt;/p&gt;&lt;/div&gt;
-      
-            &lt;div&gt;&lt;p&gt;First Industrial Realty Trust is a leading owner, operator, developer, and acquirer of logistics properties. They provide industrial real estate solutions to Fortune 500 companies and smaller commercial firms across major industrial markets.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;First Industrial needed reliable technical support for their existing Drupal website, but faced uncertainty about maintaining and improving their digital presence without their original development partner.&lt;/p&gt;&lt;p dir="ltr"&gt;&amp;nbsp;&lt;/p&gt;&lt;p dir="ltr"&gt;Bright Plum stepped in to provide Drupal support and development services, acting as First Industrial's in-house web team. The result was stability, peace of mind, and more control for the marketing team.&lt;/p&gt;&lt;/div&gt;
-      
-  &lt;div&gt;
-    &lt;div&gt;Key elements&lt;/div&gt;
-              &lt;div&gt;&lt;ul&gt;&lt;li&gt;Website Refresh&lt;/li&gt;&lt;li&gt;Accessibility Compliance&lt;/li&gt;&lt;li&gt;Enhanced map and feature build&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-          &lt;/div&gt;
-</description>
-  <pubDate>Fri, 07 Nov 2025 20:25:34 +0000</pubDate>
-    <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">31 at https://brightplum.com</guid>
-    </item>
-<item>
   <title>From Despair to Delight: How We Rescued a Non-Profit's Digital Presence</title>
   <link>https://brightplum.com/blog/despair-delight-how-we-rescued-non-profits-digital-presence</link>
   <description>&lt;span&gt;From Despair to Delight: How We Rescued a Non-Profit's Digital Presence&lt;/span&gt;
@@ -749,6 +700,59 @@ pull-requests:
   <pubDate>Wed, 08 May 2024 18:45:57 +0000</pubDate>
     <dc:creator>admin</dc:creator>
     <guid isPermaLink="false">12 at https://brightplum.com</guid>
+    </item>
+<item>
+  <title>How to Implement Automatization Deployment Gitlab to Pantheon</title>
+  <link>https://brightplum.com/blog/how-implement-automatization-deployment-gitlab-pantheon</link>
+  <description>&lt;span&gt;How to Implement Automatization Deployment Gitlab to Pantheon&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/gitlab-pantheon.png?itok=S_y3VZr5" width="480" height="270" alt="gitlab pantheon"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2024-05-08T13:44:10-05:00" title="Wednesday, May 8, 2024 - 13:44"&gt;Wed, 05/08/2024 - 13:44&lt;/time&gt;
+&lt;/span&gt;
+
+            &lt;div&gt;&lt;p&gt;To start creating an automatization between Gitlab and Pantheon we need to following some steps.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;Create a file and script to make the magic and pushing everything to Pantheon from Gitlab.&lt;/p&gt;&lt;p&gt;Basic Script:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;stages:  
+- deploy before_script:  
+# See https://docs.gitlab.com/ee/ci/ssh_keys/README.html  
+- eval $(ssh-agent -s)  
+- echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - &amp;gt; /dev/null  - mkdir -p $HOME/.ssh &amp;amp;&amp;amp; echo "StrictHostKeyChecking no" &amp;gt;&amp;gt; "$HOME/.ssh/config"  
+- git config --global user.email "$GITLAB_USER_EMAIL"  
+- git config --global user.name "Gitlab CI"
+deploy:dev:  
+stage: deploy  
+environment:    
+name: dev    
+url: https://dev-$PANTHEON_SITE.pantheonsite.io/  
+script:    
+- git config checkout.defaultRemote origin    
+- git remote add pantheon $PANTHEON_GIT_URL    
+- git fetch pantheon    
+- git branch -v    
+- git checkout master    
+- git push pantheon master --force  
+only:    
+- master&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Gitlab by default use "&lt;code&gt;.gitlab-ci.yml&lt;/code&gt;" as a name for the file&lt;/p&gt;&lt;/li&gt;&lt;li&gt;Get this code and create a new file with the name &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; in your project root.&lt;/li&gt;&lt;li&gt;Commit and push this file to the repository project in Gitlab on the master branch.&lt;/li&gt;&lt;li&gt;Once you have this file in the Gitlab repository, let's configure some variables used on the script. For example &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE&lt;/code&gt;&lt;/li&gt;&lt;li&gt;To configure these variables we need to go to Gitlab Project page then in the left sidebar menu there is the a &lt;code&gt;Settings&lt;/code&gt; option. Click on this menu item and then click on &lt;code&gt;CI/CD &lt;/code&gt;submenu item.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Then go to that page and go to the &lt;code&gt;Variables&lt;/code&gt; section&lt;/li&gt;&lt;li&gt;Now create the variables that you used on the script. In this case we used &lt;code&gt;$PANTHEON_GIT_URL&lt;/code&gt; and &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;so now we need to set a value for them.&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_GIT_URL. &lt;/code&gt;Go to Pantheon and copy the git url and page on value field.&amp;nbsp;&lt;/li&gt;&lt;li&gt;For &lt;code&gt;$PANTHEON_SITE &lt;/code&gt;it is the name of the site.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Click on update variable and then we can start to pushing things automatically on pantheon.&lt;/li&gt;&lt;li&gt;Check in the left sidebar the CI/CD menu item all deployments and check the jobs.&amp;nbsp;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+      
+      &lt;div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/1" hreflang="en"&gt;Drupal 10&lt;/a&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/4" hreflang="en"&gt;Pantheon&lt;/a&gt;&lt;/div&gt;
+          &lt;/div&gt;
+  </description>
+  <pubDate>Wed, 08 May 2024 18:44:10 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">11 at https://brightplum.com</guid>
     </item>
 
   </channel>
