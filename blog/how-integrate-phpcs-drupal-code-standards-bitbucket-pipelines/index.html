@@ -21,9 +21,11 @@
     <meta charset="utf-8" />
 <meta name="description" content="Create a new pipeline in the root of the project with the file name bitbucket-pipelines.yml or if it exists add just the step and the trigger to the existed" />
 <link rel="canonical" href="https://brightplum.com/blog/how-integrate-phpcs-drupal-code-standards-bitbucket-pipelines" />
-<link rel="image_src" href="/sites/default/files/2024-08/Using-Bitbucket-Pipeline-in-a-PHP-App-Banner.jpg" />
 <meta name="author" content="Fredric Mitchell" />
-<meta property="og:site_name" content="brightplum-v4" />
+<link rel="image_src" href="/sites/default/files/2024-08/Using-Bitbucket-Pipeline-in-a-PHP-App-Banner.jpg" />
+<meta property="og:site_name" content="Bright Plum, Inc." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://brightplum.com/blog/how-integrate-phpcs-drupal-code-standards-bitbucket-pipelines" />
 <meta property="og:title" content="How to integrate Phpcs with Drupal code standards on bitbucket pipelines" />
 <meta property="og:description" content="Create a new pipeline in the root of the project with the file name bitbucket-pipelines.yml or if it exists add just the step and the trigger to the existed pipeline." />
 <meta property="og:image" content="https://brightplum.com/sites/default/files/2024-08/Using-Bitbucket-Pipeline-in-a-PHP-App-Banner.jpg" />
@@ -37,7 +39,7 @@
 
     <title>How to integrate Phpcs with Drupal code standards on bitbucket pipelines | Bright Plum, Inc.</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NTfcHbSWXPTKZsfykrHiQnhi_hVoAeX5QvtCsw15kDk.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_FMCrxrYjusz1vmKYvsaVbF_kR1klqHlsjPJGWeS3lMg.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_RXvFJhzwXpX0FL2xFrK9hKHmTMidiGcxDzDN_1zGf0c.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
 
     
   </head>
@@ -69,19 +71,16 @@
         
               <ul>
               <li>
-        <a href="/donorboost" data-drupal-link-system-path="node/33">DonorBoost</a>
+        <a href="/how-it-works" data-drupal-link-system-path="node/35">How It Works</a>
               </li>
           <li>
-        <a href="/how-we-work" data-drupal-link-system-path="node/29">How we work</a>
+        <a href="/how-it-works#tiers" data-drupal-link-system-path="node/35">Support Plans</a>
               </li>
           <li>
-        <a href="/case-studies" data-drupal-link-system-path="case-studies">Case studies</a>
+        <a href="/case-studies" data-drupal-link-system-path="node/38">Case Studies</a>
               </li>
           <li>
-        <a href="/partner-agencies" data-drupal-link-system-path="node/32">For Agencies</a>
-              </li>
-          <li>
-        <a href="/support-packages" data-drupal-link-system-path="node/34">Website Support</a>
+        <a href="/insights" data-drupal-link-system-path="node/36">Insights</a>
               </li>
         </ul>
   
@@ -95,7 +94,7 @@
     
       <div class="block__content">
       
-            <div><p class="button-white"><a href="/contact-us">Schedule a call today</a></p></div>
+            <div><p class="button-white"><a href="/contact">Book a discovery call</a></p></div>
       
     </div>
   </div>
@@ -188,20 +187,21 @@ pull-requests:
         <div class="footer__logos">
           <img class="footer__logo" src="/themes/custom/brightplum/images/footer-logo.svg" alt="Bright Plum">
           <img class="footer__logo-sba" src="/themes/custom/brightplum/images/footer-8aCertified.png" alt="SBA 8(a) Certified">
-          <img class="footer__logo-nmsdc" src="/themes/custom/brightplum/images/footer-nmsdcCertified.png" alt="SBA 8(a) Certified">
+          <img class="footer__logo-nmsdc" src="/themes/custom/brightplum/images/footer-nmsdcCertified.png" alt="NMSDC Certified">
         </div>
         <div class="footer__menu">
-          <a href="/support-packages">Support packages</a>
-          <a href="/how-we-work">How we work</a>
-          <a href="/capabilities">Capabilities</a>
-          <a href="/blog">Blog</a>
+          <a href="/how-it-works">How It Works</a>
+          <a href="/how-it-works#tiers">Support Plans</a>
+          <a href="/case-studies">Case Studies</a>
+          <a href="/insights">Insights</a>
+          <a href="/partner-agencies">For Agencies</a>
         </div>
         <div class="footer__copyright">
-          <p>Copyright © Bright Plum, Inc. 2025</p>
+          <p>Copyright © Bright Plum, Inc. 2026</p>
         </div>
       </div>
       <div class="footer__top--right button-white">
-        <a href="/contact-us">Tell us about your project</a>
+        <a href="/contact">Book a discovery call</a>
       </div>
     </div>
     <div class="footer__bottom">
@@ -221,8 +221,8 @@ pull-requests:
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/20","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"c41dc604b8d49136104c675f149d5a70ca3a4037e10d472855ad57fd5a9719e6"}}</script>
-<script src="/sites/default/files/js/js_bNtwSM06bdOZd_nxz0-L2hw-UZGQqIRAjwwAk6Wc-QA.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwCDaAoW"></script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/20","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"c207bda39b9febfe6feaf1b1042cecd02671ea4248333e79717fc7cc36d357a2"}}</script>
+<script src="/sites/default/files/js/js_yMXrIEfCPudRmExKWxtzvSd-iGdFBhhzBnha9u664OQ.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxLBwCDaAoW"></script>
 
     <script src="https://app.nimble.com/web-form/bundle.js" defer></script>
   </body>
