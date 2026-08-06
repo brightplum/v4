@@ -1,42 +1,32 @@
 # Bright Plum, Inc.
 
-> Bright Plum, Inc. is a fully remote, Drupal-focused agency focused on serving nonprofits, government agencies, healthcare IT organizations, and universities. We are a group of technical leaders ranging from architects to junior developers, many of whom are Acquia-certified with team members in all regions of the United States and Costa Rica. We operate with more than 15 years of experience in the open-source, complex publishing space and are an SBA 8a certified minority-owned business enterprise (MBE) through NMSDC.
+> Bright Plum is the proactive web operations partner for higher education. We provide ongoing Drupal and WordPress support — security, accessibility, performance, and platform stability — for the small marketing and communications teams at colleges and universities that need their sites to stay stable, compliant, and in control without adding headcount. We're an SBA 8(a)-certified, NMSDC minority-owned business enterprise (MBE) with 15+ years in the open-source, complex-publishing space.
 
-## Drupal Architecture
+## How it works
 
-- [We provide expert consulting for building a new or migrating an existing complex publishing platform to Drupal]
+Every engagement begins with a fixed-scope, fixed-price Website Risk Sprint that scores your site across six dimensions — security, accessibility, performance, platform health, documentation, and communication — and produces a prioritized roadmap you keep whether or not you continue with us. Ongoing support then runs on one of three plans, all built on a documented playbook and a dedicated account manager.
 
-## Drupal Backend Development
+- [How It Works — the Website Risk Sprint & Web Operations Radar](https://brightplum.com/how-it-works)
+- [Support Plans — Foundation, Standard, Strategic](https://brightplum.com/how-it-works#tiers)
 
-- [We deliver secure, performant, and best-practice Drupal solutions for custom features, 3rd-party integrations, bug fixes, and migrations]
+## Proof
 
-## Drupal Frontend Development
+- [Case Studies](https://brightplum.com/case-studies): higher-ed and nonprofit teams that turned inherited, at-risk sites into stable platforms
+- [The Sjögren's Foundation](https://brightplum.com/case-studies/sjogrens-foundation): stabilized the platform, automated operations, reclaimed 10+ staff hours a week
+- [American Hospital Association](https://brightplum.com/case-studies/american-hospital-association): rebranded the Coding Clinic Advisor site with real editorial control
 
-- [We focus on high-quality application of designs to Drupal by using modular code techniques, cross-browser testing, and mobile-first best practices]
+## Insights
 
-## Drupal Training & Maintenance
+- [Insights](https://brightplum.com/insights): practical notes for people who own a website they didn't build — the problems higher-ed teams hit, the process behind proactive support, and the proof
 
-- [We take care of maintenance, security updates, and bug fixes via yearly service plans and train your team on your Drupal platform]
+## Contact
 
-## Accessibility Audits
-
-- [We perform automated accessibility scans and fix issues to keep your Drupal platform WCAG compliant]
-
-## Basic Marketing & SEO
-
-- [We recommend optimizations to increase engagement of your Drupal platform with your key stakeholders]
-
-## Contact and socials
-
-- [Contact Us](fredric@brightplum.com)
-- [Tell Us About Your Project] (https://calendly.com/brightplum/30min?month=2025-01)
-- [Blog](https://brightplum.com/blog/)
+- [Book a discovery call](https://brightplum.com/contact): a 30-minute call to talk through where your sites stand — no pitch, no obligation
+- Email: hello@brightplum.com
 - [LinkedIn](https://www.linkedin.com/company/bright-plum-inc/)
 - [GitHub](https://github.com/brightplum)
 
-## Optional
+## About
 
-- [Capabilities](https://brightplum.com/capabilities/)
-- [Case Studies](https://brightplum.com/case-studies/)
-- [Who We are](https://brightplum.com/who-we-are/)
-- [Privacy Policy](https://brightplum.com/privacy-policy/)
+- [For Agencies](https://brightplum.com/partner-agencies): overflow higher-ed support for large Drupal agencies
+- [Privacy Policy](https://brightplum.com/privacy-policy)
