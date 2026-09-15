@@ -39,7 +39,7 @@
 
     <title>How to Implement Event Subscriber | Bright Plum, Inc.</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NTfcHbSWXPTKZsfykrHiQnhi_hVoAeX5QvtCsw15kDk.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_xMjPmLTId6IOUa7NsfxumswycqyRJGzS44geMfL61mc.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_cFRgXzcCvzo_ckFOqi8Dv2kV22NLOwNTYD9S_0RwObI.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
 
     
   </head>
@@ -80,7 +80,7 @@
         <a href="/case-studies" data-drupal-link-system-path="node/38">Case Studies</a>
               </li>
           <li>
-        <a href="/insights" data-drupal-link-system-path="node/36">Insights</a>
+        <a href="/blog" data-drupal-link-system-path="node/36">Blog</a>
               </li>
         </ul>
   
@@ -125,6 +125,7 @@
       <div class="block__content">
       
 
+
 <article data-history-node-id="21">
   <div class="blog-full">
     <div class="blog-full__header">
@@ -138,7 +139,10 @@
         </div>
       </div>
     </div>
-    <div class="blog-full__body container-blog">
+          <figure class="blog-full__hero container-blog"><img loading="eager" src="/sites/default/files/styles/wide/public/2024-08/How-To-Create-Event-Subscribers-In-Drupal-8-%28Part-1%29%201.png?itok=tOZecoQg" alt="Event-Subscribers" />
+
+</figure>
+        <div class="blog-full__body container-blog">
       <span class="blog-full__body--date">Submitted on: July 30 2024</span>
       <h3>Introduction</h3><p>In this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.</p><p>&nbsp;</p><h3>What is an Event Subscriber?</h3><p>Event subscribers in Drupal are a way to extend and modify the behavior of your application by listening to specific events dispatched by the system. They are part of the Symfony Event Dispatcher component, which is integrated into Drupal. By subscribing to events, you can react to changes in the system, perform additional actions, or modify the default behavior of certain operations.</p><p>&nbsp;</p><h3>Example of an Event Subscriber</h3><pre><code class="language-plaintext">&lt;?php
  namespace Drupal\anyModule\EventSubscriber; use Drupal\Core\Session\AccountProxy;
@@ -221,6 +225,16 @@ tags:
 - { name: event_subscriber }</code></pre><p>&nbsp;</p><p>With this it should work, it is important to remember that we must clean the cache and activate our custom module, something like this:</p><ul><li>ddev drush on anyModule ( If you use lando is the same, "lando drush on anyModule")</li><li>ddev drush cr ( If you use lando is the same, "lando drush cr")</li></ul><p>&nbsp;</p><p>Code from a site project that implements this functionality:</p><p><a href="https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php">https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php</a></p><h3>&nbsp;</h3><h3>Use Cases and Possibilities</h3><p>Event subscribers can be used for a wide variety of purposes in Drupal, including:</p><ul><li>Altering the forms</li><li>Altering nodes.</li><li>Responding to user authentication events</li><li>etc,...</li></ul><p>By using event subscribers, you can extend and customize your Drupal application to fit your specific needs, and react to various events happening throughout the system.</p><p>Here examples of original page of hook event dispatcher: <a href="https://github.com/pdenooijer/hook_event_dispatcher">https://github.com/pdenooijer/hook_event_dispatcher</a></p><h2>&nbsp;</h2><h2>Conclusion</h2><p>The interesting thing about using this approach, instead of simply applying an alter hook or any hook in a .module, is how neat and simplified the code looks, since you can tidy up your code with the object-oriented programming structure and apply dependency injection and with it, call multiple services and everything will be easier to understand and it will look much better, for large projects, I think this is a very cool alternative that is worth trying.</p>
     </div>
   </div>
+
+    <section class="pt-section pt-section--plum">
+    <div class="container pt-cta">
+      <h2 class="pt-h2">Rather talk than read?</h2>
+      <div class="pt-lede">
+        <p>If any of this sounds like your site, a 30-minute call is the fastest way to find out where you actually stand.</p>
+      </div>
+      <p class="pt-actions"><a class="button-white" href="/contact">Book a discovery call</a></p>
+    </div>
+  </section>
 </article>
 
     </div>
@@ -246,7 +260,7 @@ tags:
           <a href="/how-it-works">How It Works</a>
           <a href="/how-it-works#tiers">Support Plans</a>
           <a href="/case-studies">Case Studies</a>
-          <a href="/insights">Insights</a>
+          <a href="/blog">Blog</a>
           <a href="/partner-agencies">For Agencies</a>
         </div>
         <div class="footer__copyright">
