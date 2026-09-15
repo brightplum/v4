@@ -39,7 +39,7 @@
 
     <title>Setting up Kernel Testing in Drupal | Bright Plum, Inc.</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NTfcHbSWXPTKZsfykrHiQnhi_hVoAeX5QvtCsw15kDk.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_xMjPmLTId6IOUa7NsfxumswycqyRJGzS44geMfL61mc.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_cFRgXzcCvzo_ckFOqi8Dv2kV22NLOwNTYD9S_0RwObI.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
 
     
   </head>
@@ -80,7 +80,7 @@
         <a href="/case-studies" data-drupal-link-system-path="node/38">Case Studies</a>
               </li>
           <li>
-        <a href="/insights" data-drupal-link-system-path="node/36">Insights</a>
+        <a href="/blog" data-drupal-link-system-path="node/36">Blog</a>
               </li>
         </ul>
   
@@ -125,6 +125,7 @@
       <div class="block__content">
       
 
+
 <article data-history-node-id="24">
   <div class="blog-full">
     <div class="blog-full__header">
@@ -138,7 +139,10 @@
         </div>
       </div>
     </div>
-    <div class="blog-full__body container-blog">
+          <figure class="blog-full__hero container-blog"><img loading="eager" src="/sites/default/files/styles/wide/public/2025-01/quality-assurance-clipboard-icon.jpg?itok=63lIvKE-" alt="Kernel testing Image" />
+
+</figure>
+        <div class="blog-full__body container-blog">
       <span class="blog-full__body--date">Submitted on: January 8 2025</span>
       <h4><strong>Introduction</strong></h4><p><strong>Kernel tests</strong> in Drupal are crucial for ensuring the integrity and functionality of custom modules and their interaction with core subsystems. These tests validate integration between system components within a reduced Drupal environment, offering deeper coverage than unit tests without the complexity of full functional tests.</p><blockquote><p><strong>Note:</strong>&nbsp;<br>You can also test services, controllers, specific functions of a service, among a lot of things, I clarify this because my original thought was that the original logic needed to be replicated in the test, and really the purpose is to be able to directly use the service, controller, function directly to test it in the kernel test. I have also noticed that hooks and event subscriber are really difficult to test, so I will investigate this and see if I am doing it wrong and if so, I will modify or do something detailed for those tests.</p></blockquote><p>This document provides a detailed guide to setting up and running Kernel tests in Drupal using <strong>DDEV</strong>. We'll delve into technical concepts and provide practical examples to illustrate their importance and application in Drupal project development.</p><hr><h4 class="ql-heading" data-block-id="block-b2b79708-eec7-406f-9c72-6e5804b65e55"><strong>Steps to Configure Kernel Tests</strong></h4><h4>1. Verify PHPUnit Installation</h4><p>Before starting, it's essential to ensure that <strong>PHPUnit</strong> is installed in your development environment.</p><pre><code class="language-plaintext">vendor/bin/phpunit --version</code></pre><p>If the above command doesn't display the PHPUnit version, it means it's not installed. You can add it as a development dependency using Composer:</p><pre><code class="language-plaintext">composer require --dev phpunit/phpunit</code></pre><p>After installation, verify again:</p><pre><code class="language-plaintext">vendor/bin/phpunit --version</code></pre><h4>2. Configure the phpunit.xml File</h4><p>Copy the PHPUnit configuration file provided by Drupal to your project's root:</p><pre><code class="language-plaintext">cp web/core/phpunit.xml.dist phpunit.xml</code></pre><p>This file is essential for customizing test configurations according to your project's specific needs.</p><p><strong>Contents of </strong><code><strong>phpunit.xml</strong></code><strong>:</strong></p><pre><code class="language-plaintext">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;!-- For how to customize PHPUnit configuration, see core/tests/README.md. --&gt;
@@ -361,6 +365,16 @@ class ExampleModuleKernelTest extends KernelTestBase {
 vendor/bin/phpunit modules/custom/example_module/tests/src/Kernel/ExampleModuleKernelTest.php --verbose</code></pre><h4 class="ql-heading" data-block-id="block-8e61b468-748e-456d-a954-9b60f281330d">Code Explanation</h4><ul><li><strong>Namespace</strong>: <code>Drupal\Tests\example_module\Kernel</code> defines the namespace for your module's tests.</li><li><strong>Class </strong><code><strong>ExampleModuleKernelTest</strong></code>: Extends <code>KernelTestBase</code>, providing the necessary environment for Kernel tests.</li><li><strong>Property </strong><code><strong>protected static $modules</strong></code>: Lists the modules that need to be enabled during the test. It includes <code>'system'</code>, <code>'user'</code>, and your <code>'example_module'</code>.</li><li><strong>Method </strong><code><strong>testModuleIsEnabled</strong></code>: Checks that your custom module is enabled.</li><li><strong>Method </strong><code><strong>testCreateUser</strong></code>: Creates a user, saves it, reloads it, and verifies that the data matches the expected values.</li></ul><h4 class="ql-heading" data-block-id="block-43f888b3-aba2-4490-abd3-e72602cf0c79">Important Notes</h4><ul><li><strong>Service Container</strong>: We use <code>$this-&gt;container</code> to access Drupal services like <code>entity_type.manager</code>.</li><li><strong>Assertions</strong>: Methods like <code>assertTrue</code> and <code>assertEquals</code> check specific conditions to determine if the test passes or fails.</li><li><strong>Cleanup</strong>: In more complex tests, you might need to clean up created data. In this case, the database resets between tests, so it's unnecessary.</li></ul><h4 class="ql-heading" data-block-id="block-483d9ae2-dd8c-473a-acc2-90869d8dc1bc">What Does This Test Do?</h4><p>The test performs the following:</p><ol><li><strong>Verifies that the module is enabled</strong>: Ensures that <code>example_module</code> is active in the test environment.</li><li><strong>Creates and Verifies a User</strong>:<ul><li>Creates a new user with specific username and email.</li><li>Saves the user to the database.</li><li>Loads the user from the database.</li><li>Checks that the loaded username and email match the ones provided.</li></ul></li></ol><p>This simple example covers key aspects:</p><ul><li>Interaction with Drupal's entity system.</li><li>Use of the service container.</li><li>Making assertions to validate expected behavior.</li></ul><h4 class="ql-heading" data-block-id="block-8be7f132-73d3-449e-b1b2-67b86762e96a">Conclusion</h4><p>Kernel tests are a powerful tool to ensure your custom modules function correctly within the Drupal ecosystem. By integrating them into your development workflow, you can efficiently detect and resolve integration issues, enhancing the quality and stability of your project.</p>
     </div>
   </div>
+
+    <section class="pt-section pt-section--plum">
+    <div class="container pt-cta">
+      <h2 class="pt-h2">Rather talk than read?</h2>
+      <div class="pt-lede">
+        <p>If any of this sounds like your site, a 30-minute call is the fastest way to find out where you actually stand.</p>
+      </div>
+      <p class="pt-actions"><a class="button-white" href="/contact">Book a discovery call</a></p>
+    </div>
+  </section>
 </article>
 
     </div>
@@ -386,7 +400,7 @@ vendor/bin/phpunit modules/custom/example_module/tests/src/Kernel/ExampleModuleK
           <a href="/how-it-works">How It Works</a>
           <a href="/how-it-works#tiers">Support Plans</a>
           <a href="/case-studies">Case Studies</a>
-          <a href="/insights">Insights</a>
+          <a href="/blog">Blog</a>
           <a href="/partner-agencies">For Agencies</a>
         </div>
         <div class="footer__copyright">

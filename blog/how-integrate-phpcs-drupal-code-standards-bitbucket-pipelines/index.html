@@ -39,7 +39,7 @@
 
     <title>How to integrate Phpcs with Drupal code standards on bitbucket pipelines | Bright Plum, Inc.</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_NTfcHbSWXPTKZsfykrHiQnhi_hVoAeX5QvtCsw15kDk.css?delta=0&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_xMjPmLTId6IOUa7NsfxumswycqyRJGzS44geMfL61mc.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_cFRgXzcCvzo_ckFOqi8Dv2kV22NLOwNTYD9S_0RwObI.css?delta=1&amp;language=en&amp;theme=brightplum&amp;include=eJxLKspMzygpyCnN1U_PyU9KzNEtLqnMycxL1ymuLC5JzdVPSixOBQAaFw6x" />
 
     
   </head>
@@ -80,7 +80,7 @@
         <a href="/case-studies" data-drupal-link-system-path="node/38">Case Studies</a>
               </li>
           <li>
-        <a href="/insights" data-drupal-link-system-path="node/36">Insights</a>
+        <a href="/blog" data-drupal-link-system-path="node/36">Blog</a>
               </li>
         </ul>
   
@@ -125,6 +125,7 @@
       <div class="block__content">
       
 
+
 <article data-history-node-id="20">
   <div class="blog-full">
     <div class="blog-full__header">
@@ -138,7 +139,10 @@
         </div>
       </div>
     </div>
-    <div class="blog-full__body container-blog">
+          <figure class="blog-full__hero container-blog"><img loading="eager" src="/sites/default/files/styles/wide/public/2024-08/Using-Bitbucket-Pipeline-in-a-PHP-App-Banner.jpg?itok=Gz7PF4_V" alt="Using-Bitbucket-Pipeline" />
+
+</figure>
+        <div class="blog-full__body container-blog">
       <span class="blog-full__body--date">Submitted on: July 30 2024</span>
       <h2>Steps:</h2><p>Create a new pipeline in the root of the project with the file name <code>bitbucket-pipelines.yml</code> or if it exists add just the step and the trigger to the existed pipeline.</p><pre><code class="language-plaintext"># These are yaml anchors, reused later
 x-bash-env-steps:  
@@ -168,6 +172,16 @@ pull-requests:
 </code></pre>
     </div>
   </div>
+
+    <section class="pt-section pt-section--plum">
+    <div class="container pt-cta">
+      <h2 class="pt-h2">Rather talk than read?</h2>
+      <div class="pt-lede">
+        <p>If any of this sounds like your site, a 30-minute call is the fastest way to find out where you actually stand.</p>
+      </div>
+      <p class="pt-actions"><a class="button-white" href="/contact">Book a discovery call</a></p>
+    </div>
+  </section>
 </article>
 
     </div>
@@ -193,7 +207,7 @@ pull-requests:
           <a href="/how-it-works">How It Works</a>
           <a href="/how-it-works#tiers">Support Plans</a>
           <a href="/case-studies">Case Studies</a>
-          <a href="/insights">Insights</a>
+          <a href="/blog">Blog</a>
           <a href="/partner-agencies">For Agencies</a>
         </div>
         <div class="footer__copyright">
