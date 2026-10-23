@@ -7,6 +7,106 @@
     <language>en</language>
     
     <item>
+  <title>Drupal 10 ends December 9. Your site may already be exposed.</title>
+  <link>https://brightplum.com/blog/drupal-10-ends-december-9-your-site-may-already-be-exposed</link>
+  <description>&lt;span&gt;Drupal 10 ends December 9. Your site may already be exposed.&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2026-10/blog-drupal-10-end-of-life.webp?itok=lfJHd6dh" width="480" height="270" alt="A car dashboard with the seat belt, battery, oil and check engine lights all lit, and the fuel needle resting on empty"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2026-10-22T18:16:11-05:00" title="Thursday, October 22, 2026 - 18:16"&gt;Thu, 10/22/2026 - 18:16&lt;/time&gt;
+&lt;/span&gt;
+
+            &lt;div&gt;&lt;p&gt;&lt;em&gt;By Fredric, Principal of Bright Plum&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3&gt;The warning everyone stops reading&lt;/h3&gt;
+
+&lt;p&gt;Drupal 10 reaches end of life on December 9. When directors hear that, some assume the site will stop working. It won't. End of life means Drupal's core security team stops looking for vulnerabilities in Drupal 10 and stops fixing the ones it hears about.&lt;/p&gt;
+
+&lt;p&gt;Some sites lost that protection months ago. Drupal 10.4 stopped getting security fixes in December 2025, and 10.5 in June 2026. Only 10.6 is covered until December. If your site runs 10.4 or 10.5, your deadline already passed.&lt;/p&gt;
+
+&lt;p&gt;How does a site fall that far behind? Usually, nobody looked. Drupal's status report flags all kinds of problems in the same red: a misconfiguration, a missing write permission, an out-of-date version. You see red every time you log in, so you stop seeing it. The security update emails pile up the same way. You make your edit, the site still works, and you move on. How bad could it be?&lt;/p&gt;
+
+&lt;h3&gt;The real risk is trust&lt;/h3&gt;
+
+&lt;p&gt;Teams worry about stolen data. Most college sites don't hold much of it, and newsletter sign-ups usually run through a third-party embed. The bigger risk is someone changing your content.&lt;/p&gt;
+
+&lt;p&gt;Attackers don't hunt by hand anymore. An AI tool can scan the web for sites running a vulnerable version of Drupal. If it finds yours, the attacker can put whatever they want on a page that carries your university's name. The worst case harms your visitors. Even something merely offensive tells a prospective student that the university doesn't control its own website. If you can't protect a web page, why would they trust you with their application?&lt;/p&gt;
+
+&lt;p&gt;When something goes wrong, IT gets involved. Legal steps in only if there's a compliance problem. IT then sends your vendor a stack of requests: SOC 2 documentation, compliance paperwork, an audit of every process. Most of those answers come from the hosting platform, whether that's Pantheon, Acquia or another host. The vendor answers for the code updates and who has access.&lt;/p&gt;
+
+&lt;h3&gt;Don't wait for Drupal 12&lt;/h3&gt;
+
+&lt;p&gt;Drupal 12 ships the same week Drupal 10 dies. Clients ask us whether they should skip 11 and wait. Our answer is no.&lt;/p&gt;
+
+&lt;p&gt;The waiting habit comes from Drupal 7. Moving from 7 to 8 meant a full re-architecture, and it hurt. Drupal 8 felt like a bridge to Drupal 9, so plenty of teams sat on 7 and planned to skip a painful step.&lt;/p&gt;
+
+&lt;p&gt;That re-architecture is done. Its whole purpose was to keep major upgrades from hurting like that again. Drupal 9, 10, 11 and 12 each pick up security changes and add or remove features from core. None of them changes how your content is stored. Waiting buys you nothing except exposure.&lt;/p&gt;
+
+&lt;h3&gt;Why one upgrade takes a week and another takes three months&lt;/h3&gt;
+
+&lt;p&gt;Testing decides how long an upgrade takes.&lt;/p&gt;
+
+&lt;p&gt;We recommend every client invest in automated testing. Visual regression tests catch a page that looks wrong. Functional tests catch a feature that broke. Together they document how your site works and how it should work, for us and for your team. If those tests already run against your current site, the upgrade comes with a quality check built in. Fewer bugs surface late, so the timeline stays short.&lt;/p&gt;
+
+&lt;p&gt;Sign-off is the other thing that stretches an upgrade. We set a schedule up front, with a content freeze and a cutover date, so your stakeholders can block time to test. They check their pages, confirm their content is there, and make sure they can still edit. When nobody schedules that time, the date slips. Clients who've spent part of their retainer building automated tests need far less of it.&lt;/p&gt;
+
+&lt;p&gt;When we inherit a Drupal 10 site, we check two things first. What versions are core and the modules on? And how many contributed modules are installed, are they turned on, and what do they do? Then we walk through the site with you to learn which pages matter and what you do every day, and we map that to what's installed. Sometimes a site leans on a large contributed module for one small feature. Every security fix for that module becomes yours to wait on. Moving that feature into a small custom module, built around how you work, takes it off the list.&lt;/p&gt;
+
+&lt;h3&gt;What to do this week&lt;/h3&gt;
+
+&lt;p&gt;You can do the first two without a developer.&lt;/p&gt;
+
+&lt;p&gt;Open your status report and write down what it says. Note your Drupal version and your module versions. Search each version number and see what came after it. If a newer release carries a critical security fix, drupal.org will say so, and your site is exposed until you apply it.&lt;/p&gt;
+
+&lt;blockquote class="pull-quote"&gt;&lt;p&gt;You see red every time you log in, so you stop seeing it.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Then write down what your site has to do. List the four or five pages your team updates most and the tasks that would stop your team cold if they broke. Check your analytics against that list. The pages visitors use most belong on it.&lt;/p&gt;
+
+&lt;p&gt;Once you have both, a partner can tell you whether you're at low, medium or high risk. That's what our Website Risk Sprint does.&lt;/p&gt;
+
+&lt;h3&gt;What to ask your current vendor&lt;/h3&gt;
+
+&lt;p&gt;Ask two questions. How do you keep our site secure and accessible before something goes wrong? And when someone on my team or yours leaves, where does that knowledge go? The answers tell you how resilient your team and your vendor are. If the answer to the second is a person's name, you're one vacation away from starting over.&lt;/p&gt;
+
+&lt;h3&gt;If you can't finish by December 9&lt;/h3&gt;
+
+&lt;p&gt;Set a date you can hit for the Drupal 11 upgrade, then protect the site until you get there. Limit editing access to the people who need it. Email your host and ask what protection it can put in front of your site, such as Cloudflare or a web application firewall, the layer that filters traffic before it reaches your pages. That buys you time until the upgrade lands.&lt;/p&gt;
+
+&lt;h3&gt;What to tell your VP&lt;/h3&gt;
+
+&lt;p&gt;Frame the upgrade around trust. Attacks don't need a person behind them anymore. They're automated, and they move fast. Security releases are the best defense you have against that speed, and only if you apply them. It's the Red Queen from Alice in Wonderland: you have to keep running just to stay in place.&lt;/p&gt;
+
+&lt;p&gt;This work fits inside the maintenance budget from our &lt;a href="https://brightplum.com/blog/what-it-costs-maintain-university-website-year"&gt;first article&lt;/a&gt;. The $45,000 a year we described covers keeping Drupal core current, including a major upgrade like Drupal 10 to 11.&lt;/p&gt;
+
+&lt;p&gt;In one sentence: "We need to keep investing $45,000 a year in our primary site so it represents the university properly and doesn't get hacked."&lt;/p&gt;
+
+&lt;h3&gt;The part you can do yourself&lt;/h3&gt;
+
+&lt;p&gt;You don't need a developer to find out where you stand. Write down your version numbers, look up where they sit against the latest security releases, and list the pages and tasks that always have to work. Keep that list. When the next update comes, or your vendor sends a recommendation, you'll have something to measure it against.&lt;/p&gt;
+
+&lt;hr&gt;&lt;p&gt;&lt;em&gt;Release dates: &lt;a href="https://www.drupal.org/about/core/policies/core-release-cycles/schedule"&gt;Drupal core release schedule&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;
+      
+      &lt;div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/8" hreflang="en"&gt;Higher Education&lt;/a&gt;&lt;/div&gt;
+          &lt;/div&gt;
+  </description>
+  <pubDate>Thu, 22 Oct 2026 23:16:11 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">41 at https://brightplum.com</guid>
+    </item>
+<item>
   <title>What a small marketing team should expect from a web partner every month</title>
   <link>https://brightplum.com/blog/what-small-marketing-team-should-expect-web-partner-every-month</link>
   <description>&lt;span&gt;What a small marketing team should expect from a web partner every month&lt;/span&gt;
@@ -780,64 +880,6 @@ tags:
   <pubDate>Wed, 31 Jul 2024 03:01:32 +0000</pubDate>
     <dc:creator>admin</dc:creator>
     <guid isPermaLink="false">21 at https://brightplum.com</guid>
-    </item>
-<item>
-  <title>How to integrate Phpcs with Drupal code standards on bitbucket pipelines</title>
-  <link>https://brightplum.com/blog/how-integrate-phpcs-drupal-code-standards-bitbucket-pipelines</link>
-  <description>&lt;span&gt;How to integrate Phpcs with Drupal code standards on bitbucket pipelines&lt;/span&gt;
-
-            &lt;div&gt;&lt;div&gt;
-  
-  
-  &lt;div&gt;
-    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/Using-Bitbucket-Pipeline-in-a-PHP-App-Banner.jpg?itok=mJ8URlxO" width="480" height="252" alt="Using-Bitbucket-Pipeline"&gt;
-
-
-&lt;/div&gt;
-          &lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;time datetime="2024-07-30T21:37:45-05:00" title="Tuesday, July 30, 2024 - 21:37"&gt;Tue, 07/30/2024 - 21:37&lt;/time&gt;
-&lt;/span&gt;
-
-            &lt;div&gt;&lt;h2&gt;Steps:&lt;/h2&gt;&lt;p&gt;Create a new pipeline in the root of the project with the file name &lt;code&gt;bitbucket-pipelines.yml&lt;/code&gt; or if it exists add just the step and the trigger to the existed pipeline.&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;# These are yaml anchors, reused later
-x-bash-env-steps:  
-- &amp;amp;bash_env_export export BASH_ENV="$BITBUCKET_CLONE_DIR/.bashrc"  
-- &amp;amp;bash_env_source source $BASH_ENV
-# This is a larger yaml anchor, reused for each pipeline
-pull_requests: &amp;amp;pull_requests  
-- step:      
-name: 'PHPCS'      
-image: wodby/drupal-php:7.4      
-script:        
-- composer install        
-- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom
-- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/modules/custom        
-- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom        
-- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/modules/custom        
-- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom  
-- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme ./web/themes/custom        
-- ./vendor/bin/phpcs -q --colors --standard=Drupal --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom        
-- ./vendor/bin/phpcs -q --colors --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme --report=diff ./web/themes/custom
-options:  
-max-time: 30
-pipelines:  
-pull-requests:    
-# Using the custom pull_request pipeline on each pull request created.    
-'**': *pull_requests
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-      
-      &lt;div&gt;
-              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/3" hreflang="en"&gt;Bitbucket&lt;/a&gt;&lt;/div&gt;
-              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/1" hreflang="en"&gt;Drupal 10&lt;/a&gt;&lt;/div&gt;
-          &lt;/div&gt;
-  </description>
-  <pubDate>Wed, 31 Jul 2024 02:37:45 +0000</pubDate>
-    <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">20 at https://brightplum.com</guid>
     </item>
 
   </channel>
