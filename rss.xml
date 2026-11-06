@@ -7,6 +7,126 @@
     <language>en</language>
     
     <item>
+  <title>Nothing broke this year. Now defend your web budget.</title>
+  <link>https://brightplum.com/blog/nothing-broke-year-now-defend-your-web-budget</link>
+  <description>&lt;span&gt;Nothing broke this year. Now defend your web budget.&lt;/span&gt;
+
+            &lt;div&gt;&lt;div&gt;
+  
+  
+  &lt;div&gt;
+    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
+              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2026-11/blog-defend-web-budget.webp?itok=vJ4edjZo" width="480" height="270" alt="Open iron gates leading to the arched wooden front door of a university building"&gt;
+
+
+&lt;/div&gt;
+          &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
+&lt;span&gt;&lt;time datetime="2026-11-06T09:00:00-06:00" title="Friday, November 6, 2026 - 09:00"&gt;Fri, 11/06/2026 - 09:00&lt;/time&gt;
+&lt;/span&gt;
+
+            &lt;div&gt;&lt;p&gt;&lt;em&gt;By Fredric, Principal of Bright Plum&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Your site didn't go down this year. Nobody got breached. The accessibility audit didn't turn into a lawsuit. By every measure that matters, the year went well.&lt;/p&gt;
+
+&lt;p&gt;Then budget season starts. Last February, a marketing director at one of our college clients emailed to plan her next fiscal year. She opened by saying she'd been happy with how the website performed, and everything she asked us to scope after that was something people could see: a fresh look, consistent templates, CRM integrations, an AI chatbot. Nothing in her email protected the work that had made the year quiet.&lt;/p&gt;
+
+&lt;p&gt;I don't blame her. Visible work fits in a budget request. An absence doesn't.&lt;/p&gt;
+
+&lt;p&gt;Leadership sees it the same way. A few years ago, a longtime client hired a new CIO, and while reviewing budgets he cut our support on one of their two sites. When we followed up, the analyst and the director gave us the honest reason they'd kept us: peace of mind. The CIO's answer was fair. How do I measure that?&lt;/p&gt;
+
+&lt;p&gt;This is the answer I wish they'd had. Six scores, each tied to a written description anyone can check. The full rubric is free to download at the end.&lt;/p&gt;
+
+&lt;h3&gt;Why the usual evidence falls flat&lt;/h3&gt;
+
+&lt;p&gt;When directors build &lt;a href="https://brightplum.com/blog/what-it-costs-maintain-university-website-year"&gt;next year's web budget&lt;/a&gt;, most start with last year's. Did we go over? Did we use it all? What's still sitting in the backlog?&lt;/p&gt;
+
+&lt;p&gt;That tells you what you spent. It doesn't tell leadership what they got. A backlog reads as a to-do list, and a to-do list invites the question of why it isn't done.&lt;/p&gt;
+
+&lt;p&gt;Hours don't help either. Partners charge different rates, so a bigger budget doesn't always mean more work, and "we used 200 hours" means nothing to a VP. Leadership wants to know something simpler: is the website an asset or a liability?&lt;/p&gt;
+
+&lt;blockquote class="pull-quote"&gt;&lt;p&gt;Visible work fits in a budget request. An absence doesn't.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;Your website is where trust starts&lt;/h3&gt;
+
+&lt;p&gt;Most institutions run security awareness training. It teaches everyone the same habit: before you trust an email or a link, check the domain it came from.&lt;/p&gt;
+
+&lt;p&gt;Now think about a prospective student, or a parent, who has never heard of you. When they check your domain and type it into a browser, your website is what they find. It's the front door, and it's where they decide whether to trust you.&lt;/p&gt;
+
+&lt;p&gt;So the real question behind your web budget is whether the site, and the work it takes to run it, keeps that trust or puts it at risk. That's the line between an asset and a liability.&lt;/p&gt;
+
+&lt;h3&gt;Six dimensions of trust&lt;/h3&gt;
+
+&lt;p&gt;We score web operations across six dimensions. We picked them because together they cover everything that has to hold for a visitor to trust what they find.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Security.&lt;/strong&gt; AI tools now find vulnerabilities faster than most teams patch them. A vandalized or offline site breaks trust the moment someone lands on it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Accessibility.&lt;/strong&gt; It opens the site to people who need accommodations, and it's the law. A site that keeps getting sued for noncompliance has a trust problem before anyone reads a word.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Performance.&lt;/strong&gt; Whether someone arrives on a phone or a laptop, they expect the page to load fast and make sense. A slow, clumsy page tells them something about you.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Platform health.&lt;/strong&gt; The software, hosting and providers underneath the site. Are they supported? Will they be around? Are they worth what they cost?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Documentation and institutional knowledge.&lt;/strong&gt; If the one person who knows how something works goes on vacation, gets sick or takes another job, the next change to the site is a guess.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Communication and reporting.&lt;/strong&gt; Whether your team, leadership and the board understand how the parts fit together, well enough to answer a compliance question and stand up for the team that keeps the front door open.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;How a site earns its score&lt;/h3&gt;
+
+&lt;p&gt;Each dimension gets a score from 1 to 5. A 1 is ad hoc: things happen when someone remembers. A 2 is reactive: work happens when something breaks. A 3 is defined: a process exists and runs. A 4 is proactive: the process is tested and enforced. A 5 is managed: it's built into how the institution operates.&lt;/p&gt;
+
+&lt;p&gt;Most of the evidence comes from scans. We check the code against published vulnerabilities, crawl the site for accessibility failures, measure page speed, and confirm the platform is still in vendor support. Communication has nothing to scan, so we ask questions instead, the kind leadership should be able to answer today.&lt;/p&gt;
+
+&lt;p&gt;A few rules keep the scores honest.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;You can't skip a level.&lt;/strong&gt; A dimension earns the highest level where everything at that level and below is true. This year a client finished a long run of accessibility fixes and the score didn't move, because the follow-up scan that confirms the work hadn't been approved yet. The work was real. The evidence wasn't there, and the score showed the director exactly what her next approval would buy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some gaps hold a dimension at 2.&lt;/strong&gt; Six requirements cover risks nothing else does, like security updates applied in the last quarter and a full accessibility scan in the last year. Miss one and that dimension can't reach 3. Performance has none on purpose. A slow site is bad, but it isn't dangerous.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Progress shows even when the score doesn't.&lt;/strong&gt; Every score carries a count, like "one of four requirements met toward level 4." A good month shouldn't look like a flat one.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;If it doesn't fit, say why.&lt;/strong&gt; A requirement that doesn't apply to your site drops out of the count, but only with a written reason. A blank reason looks the same as a hidden gap.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aim for 4.&lt;/strong&gt; Level 5 depends on things only your institution controls, like its incident-response plan and whether leadership shows up to planning. Nobody gets to 5 alone.&lt;/p&gt;
+
+&lt;h3&gt;Why documentation tends to score lowest&lt;/h3&gt;
+
+&lt;p&gt;Across the sites we score, documentation usually comes in last. The cause is workload. Higher-ed web teams are small, and they spend their days on what the institution can see: campaign pages, content requests from every department, email, and meetings where the registrar's office or a faculty member needs help telling their story on the site.&lt;/p&gt;
+
+&lt;p&gt;Writing down how the tools behind that story work is the task that always waits until next week. Then someone leaves, and next week arrives.&lt;/p&gt;
+
+&lt;p&gt;We're part of this pattern too. Our records of a client's site are often better than what their own team keeps, which means the knowledge still lives in one place. It's our place instead of theirs. We're working to change that.&lt;/p&gt;
+
+&lt;h3&gt;Four questions you can ask without a developer&lt;/h3&gt;
+
+&lt;p&gt;You don't need a scan to find out where you stand. Ask your team these and listen for one thing: is the answer a document, or a name?&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;If the person who runs our site went on vacation and something broke, would we know what to do? Where is that written down?&lt;/li&gt;
+&lt;li&gt;If legal or leadership got notice that we're being sued over accessibility, what's our process? What evidence shows the work we've done?&lt;/li&gt;
+&lt;li&gt;If a serious security issue were announced tomorrow, how would we confirm whether it affects us, and who would fix it?&lt;/li&gt;
+&lt;li&gt;If the site went down, how would we restore it? Is that written down, and has anyone tested it?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If the answer is a person's name, that dimension is probably a 1 or a 2. You don't need to know the technical answers yourself. You need to know there's a process for each way the site could break the trust you've built.&lt;/p&gt;
+
+&lt;h3&gt;Bring it to your budget conversation&lt;/h3&gt;
+
+&lt;p&gt;Most higher-ed budget conversations start in January and February, with decisions due by March or April. Score your site before then.&lt;/p&gt;
+
+&lt;p&gt;That CIO asked how to measure peace of mind. Here's how: six scores your team can check against a written description, the distance between each one and level 4, and what it would take to close the gap.&lt;/p&gt;
+
+&lt;p&gt;The full rubric is free: &lt;a href="https://brightplum.com/sites/default/files/2026-11/web-operations-maturity-model.pdf"&gt;The Web Operations Maturity Model&lt;/a&gt; (PDF). It has every level of every dimension, the scoring rules, and these four questions. Use it, share it, and change it to fit your team.&lt;/p&gt;&lt;/div&gt;
+      
+      &lt;div&gt;
+              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/8" hreflang="en"&gt;Higher Education&lt;/a&gt;&lt;/div&gt;
+          &lt;/div&gt;
+  </description>
+  <pubDate>Fri, 06 Nov 2026 15:00:00 +0000</pubDate>
+    <dc:creator>admin</dc:creator>
+    <guid isPermaLink="false">42 at https://brightplum.com</guid>
+    </item>
+<item>
   <title>Drupal 10 ends December 9. Your site may already be exposed.</title>
   <link>https://brightplum.com/blog/drupal-10-ends-december-9-your-site-may-already-be-exposed</link>
   <description>&lt;span&gt;Drupal 10 ends December 9. Your site may already be exposed.&lt;/span&gt;
@@ -770,116 +890,6 @@ const removeHighWord = () =&amp;gt; {
   <pubDate>Wed, 31 Jul 2024 03:14:30 +0000</pubDate>
     <dc:creator>admin</dc:creator>
     <guid isPermaLink="false">22 at https://brightplum.com</guid>
-    </item>
-<item>
-  <title>How to Implement Event Subscriber</title>
-  <link>https://brightplum.com/blog/how-implement-event-subscriber</link>
-  <description>&lt;span&gt;How to Implement Event Subscriber&lt;/span&gt;
-
-            &lt;div&gt;&lt;div&gt;
-  
-  
-  &lt;div&gt;
-    &lt;div class="visually-hidden"&gt;Image&lt;/div&gt;
-              &lt;div&gt;  &lt;img loading="lazy" src="https://brightplum.com/sites/default/files/styles/large/public/2024-08/How-To-Create-Event-Subscribers-In-Drupal-8-%28Part-1%29%201.png?itok=FTk9mQKU" width="480" height="191" alt="Event-Subscribers"&gt;
-
-
-&lt;/div&gt;
-          &lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-      &lt;span&gt;&lt;span&gt;admin&lt;/span&gt;&lt;/span&gt;
-&lt;span&gt;&lt;time datetime="2024-07-30T22:01:32-05:00" title="Tuesday, July 30, 2024 - 22:01"&gt;Tue, 07/30/2024 - 22:01&lt;/time&gt;
-&lt;/span&gt;
-
-            &lt;div&gt;&lt;h3&gt;Introduction&lt;/h3&gt;&lt;p&gt;In this document, we will discuss how to implement an event subscriber in Drupal 9. We will provide a basic code example, explain its purpose, and discuss the possibilities of what can be achieved using event subscribers in Drupal.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;What is an Event Subscriber?&lt;/h3&gt;&lt;p&gt;Event subscribers in Drupal are a way to extend and modify the behavior of your application by listening to specific events dispatched by the system. They are part of the Symfony Event Dispatcher component, which is integrated into Drupal. By subscribing to events, you can react to changes in the system, perform additional actions, or modify the default behavior of certain operations.&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;h3&gt;Example of an Event Subscriber&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;&amp;lt;?php
- namespace Drupal\anyModule\EventSubscriber; use Drupal\Core\Session\AccountProxy;
- use Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent;
- use Symfony\Component\EventDispatcher\EventSubscriberInterface;
- use Drupal\core_event_dispatcher\Event\Entity\EntityPresaveEvent;
- use Drupal\hook_event_dispatcher\HookEventDispatcherInterface; 
- use Drupal\Core\Entity\EntityTypeManager;
- use Drupal\Core\Entity\EntityInterface; 
- use Drupal\Core\Database\Connection; use Drupal\Core\Cache\Cache;
- use Drupal\Core\File\FileSystem;
- 
-/**
- * Any module Customization for event subscriber.
- */
-class eventSubscriber implements EventSubscriberInterface {  
-/**   
-* Current user service.   
-*   
-* @var \Drupal\Core\Session\AccountProxy   
-*/  protected $currentUser;  
-/**   
-* The entity manager.   
-*   
-* @var \Drupal\Core\Entity\EntityTypeManager   
-*/  protected $entityTypeManager;  
-/**   
-* The database connection.   
-*   
-* @var \Drupal\Core\Database\Connection   
-*/  
-protected $connection;  
-/**   
-* The file system.   
-*   
-* @var \Drupal\Core\File\FileSystem   
-*/  protected $fileSystem;  
-/**   
-* {@inheritdoc}   
-*/  
-public function __construct(AccountProxy $current_user, EntityTypeManager $entity_type_manager, Connection $connection, FileSystem $file_system) {    
-	// Reference the current_user service.    
-	$this-&amp;gt;currentUser = $current_user;    
-	$this-&amp;gt;entityTypeManager = $entity_type_manager;    
-	$this-&amp;gt;connection = $connection;    
-	$this-&amp;gt;fileSystem = $file_system;  
-}  
-/**   
-* {@inheritdoc}   
-*/  
-public static function getSubscribedEvents() {    
-	return [      
-		'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm',      
-		'hook_event_dispatcher.form_node_form.alter' =&amp;gt; 'alterMclNodeForm',    
-	];  
-}  
-/**   
-* Alter node form.   
-*   
-* @param \Drupal\core_event_dispatcher\Event\Form\FormIdAlterEvent $event   
-*   The event.   
-*/  
-public function alterMclNodeForm(FormIdAlterEvent $event): void {    
-	$form = &amp;amp;$event-&amp;gt;getForm();    
-	// This is a example: In a form you need to hide buttons for some reason or        
-	//similar things, which cannot be done from the display form of the content type,    
-	//we can do it from here:    
-	$this-&amp;gt;hiddenRemoveButtonOfMediaEntityTable($form); 
-	// This method is example.  
-}
-}&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;This would be the event subscriber, but take into account that this should ideally go inside a custom module that you have created for our specific need, the event subscriber by itself does not work, we must invoke it, and this is done in the services file .yml&lt;/p&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Something like this:&lt;/p&gt;&lt;pre&gt;&lt;code class="language-plaintext"&gt;services:  
-anyModule.event_subscriber:    
-class: Drupal\anyModule\EventSubscriber\EventSubscriber    
-arguments:      
-- "@current_user"      
-- "@entity_type.manager"      
-- "@database"      
-- "@file_system"    
-tags:      
-- { name: event_subscriber }&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;With this it should work, it is important to remember that we must clean the cache and activate our custom module, something like this:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;ddev drush on anyModule ( If you use lando is the same, "lando drush on anyModule")&lt;/li&gt;&lt;li&gt;ddev drush cr ( If you use lando is the same, "lando drush cr")&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Code from a site project that implements this functionality:&lt;/p&gt;&lt;p&gt;&lt;a href="https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php"&gt;https://gitlab.com/brightplum/njcourts-gov/-/blob/development/docroot/modules/custom/njcourts_opinions/src/EventSubscriber/NjcourtsOpinionsSubscriber.php&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;&amp;nbsp;&lt;/h3&gt;&lt;h3&gt;Use Cases and Possibilities&lt;/h3&gt;&lt;p&gt;Event subscribers can be used for a wide variety of purposes in Drupal, including:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Altering the forms&lt;/li&gt;&lt;li&gt;Altering nodes.&lt;/li&gt;&lt;li&gt;Responding to user authentication events&lt;/li&gt;&lt;li&gt;etc,...&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;By using event subscribers, you can extend and customize your Drupal application to fit your specific needs, and react to various events happening throughout the system.&lt;/p&gt;&lt;p&gt;Here examples of original page of hook event dispatcher: &lt;a href="https://github.com/pdenooijer/hook_event_dispatcher"&gt;https://github.com/pdenooijer/hook_event_dispatcher&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&amp;nbsp;&lt;/h2&gt;&lt;h2&gt;Conclusion&lt;/h2&gt;&lt;p&gt;The interesting thing about using this approach, instead of simply applying an alter hook or any hook in a .module, is how neat and simplified the code looks, since you can tidy up your code with the object-oriented programming structure and apply dependency injection and with it, call multiple services and everything will be easier to understand and it will look much better, for large projects, I think this is a very cool alternative that is worth trying.&lt;/p&gt;&lt;/div&gt;
-      
-      &lt;div&gt;
-              &lt;div&gt;&lt;a href="https://brightplum.com/taxonomy/term/5" hreflang="en"&gt;Developer Processes&lt;/a&gt;&lt;/div&gt;
-          &lt;/div&gt;
-  </description>
-  <pubDate>Wed, 31 Jul 2024 03:01:32 +0000</pubDate>
-    <dc:creator>admin</dc:creator>
-    <guid isPermaLink="false">21 at https://brightplum.com</guid>
     </item>
 
   </channel>
